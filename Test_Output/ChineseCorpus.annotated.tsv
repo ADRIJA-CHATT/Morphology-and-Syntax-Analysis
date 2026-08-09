@@ -1,0 +1,449 @@
+sentence_id	token_id	surface	lemma	upos	feats	phonemes	syllables	start_sec	end_sec	source
+1	1	我	我	PRON	Person=1	wo3	1	0.0000	0.2222	stanza
+1	2	与	与	ADP		yu3	1	0.2622	0.4844	stanza
+1	3	父亲	父亲	NOUN		fu4 qin1	2	0.5244	0.9689	stanza
+1	4	不	不	ADV	Polarity=Neg	bu4	1	1.0089	1.2311	stanza
+1	5	相见	相见	VERB		xiang1 jian4	2	1.2711	1.7156	stanza
+1	6	已	已	ADV		yi3	1	1.7556	1.9778	stanza
+1	7	二	二	NUM	NumType=Card	er4	1	2.0178	2.2400	stanza
+1	8	年	年	NOUN		nian2	1	2.2800	2.5022	stanza
+1	9	余	余	VERB		yu2	1	2.5422	2.7644	stanza
+1	10	了	了	PART		le5	1	2.8044	3.0267	stanza
+1	11	，	，	PUNCT		，	0	3.0667	3.0667	stanza
+1	12	我	我	PRON	Person=1	wo3	1	3.1467	3.3689	stanza
+1	13	最	最	ADV		zui4	1	3.4089	3.6311	stanza
+1	14	不能	能	AUX	Polarity=Neg	bu4 neng2	2	3.6711	4.1156	stanza
+1	15	忘记	忘记	VERB		wang4 ji4	2	4.1556	4.6000	stanza
+1	16	的	的	SCONJ		de5	1	4.6400	4.8622	stanza
+1	17	是	是	AUX		shi4	1	4.9022	5.1244	stanza
+1	18	他	他	PRON	Person=3	ta1	1	5.1644	5.3867	stanza
+1	19	的	的	PART	Case=Gen	de5	1	5.4267	5.6489	stanza
+1	20	背影	背影	NOUN		bei4 ying3	2	5.6889	6.1333	stanza
+1	21	。	。	PUNCT		。	0	6.1733	6.1733	stanza
+2	1	那	那	DET		na4	1	6.5433	6.7656	stanza
+2	2	年	年	NOUN		nian2	1	6.8056	7.0278	stanza
+2	3	冬天	冬天	NOUN		dong1 tian1	2	7.0678	7.5122	stanza
+2	4	，	，	PUNCT		，	0	7.5522	7.5522	stanza
+2	5	祖	祖	PROPN		zu3	1	7.6322	7.8544	stanza
+2	6	母死	母死	VERB		mu3 si3	2	7.8944	8.3389	stanza
+2	7	了	了	PART		le5	1	8.3789	8.6011	stanza
+2	8	，	，	PUNCT		，	0	8.6411	8.6411	stanza
+2	9	父亲	父亲	NOUN		fu4 qin1	2	8.7211	9.1656	stanza
+2	10	的	的	PART	Case=Gen	de5	1	9.2056	9.4278	stanza
+2	11	差使	差使	NOUN		chai1 shi3	2	9.4678	9.9122	stanza
+2	12	也	也	SCONJ		ye3	1	9.9522	10.1744	stanza
+2	13	交卸	交卸	VERB		jiao1 xie4	2	10.2144	10.6589	stanza
+2	14	了	了	AUX	Aspect=Perf	le5	1	10.6989	10.9211	stanza
+2	15	，	，	PUNCT		，	0	10.9611	10.9611	stanza
+2	16	正是	是	AUX		zheng4 shi4	2	11.0411	11.4856	stanza
+2	17	祸	祸	NOUN		huo4	1	11.5256	11.7478	stanza
+2	18	不	不	ADV	Polarity=Neg	bu4	1	11.7878	12.0100	stanza
+2	19	单行	单行	ADJ		dan1 xing2	2	12.0500	12.4944	stanza
+2	20	的	的	SCONJ		de5	1	12.5344	12.7567	stanza
+2	21	日子	日子	NOUN		ri4 zi5	2	12.7967	13.2411	stanza
+2	22	。	。	PUNCT		。	0	13.2811	13.2811	stanza
+3	1	我	我	PRON	Person=1	wo3	1	13.6511	13.8733	stanza
+3	2	从	从	ADP		cong2	1	13.9133	14.1356	stanza
+3	3	北京	北京	PROPN		bei3 jing1	2	14.1756	14.6200	stanza
+3	4	到	到	VERB		dao4	1	14.6600	14.8822	stanza
+3	5	徐	徐	PROPN		xu2	1	14.9222	15.1444	stanza
+3	6	州	州	PART		zhou1	1	15.1844	15.4067	stanza
+3	7	，	，	PUNCT		，	0	15.4467	15.4467	stanza
+3	8	打算	打算	VERB		da3 suan4	2	15.5267	15.9711	stanza
+3	9	跟	跟	VERB		gen1	1	16.0111	16.2333	stanza
+3	10	着	着	AUX	Aspect=Prog	zhe5	1	16.2733	16.4956	stanza
+3	11	父亲	父亲	NOUN		fu4 qin1	2	16.5356	16.9800	stanza
+3	12	奔丧	奔丧	VERB		ben1 sang1	2	17.0200	17.4644	stanza
+3	13	回家	回家	VERB		hui2 jia1	2	17.5044	17.9489	stanza
+3	14	。	。	PUNCT		。	0	17.9889	17.9889	stanza
+4	1	到	到	VERB		dao4	1	18.3589	18.5811	stanza
+4	2	徐	徐	PROPN		xu2	1	18.6211	18.8433	stanza
+4	3	州	州	PART		zhou1	1	18.8833	19.1056	stanza
+4	4	见	见	VERB		jian4	1	19.1456	19.3678	stanza
+4	5	着	着	AUX	Aspect=Prog	zhe5	1	19.4078	19.6300	stanza
+4	6	父亲	父亲	NOUN		fu4 qin1	2	19.6700	20.1144	stanza
+4	7	，	，	PUNCT		，	0	20.1544	20.1544	stanza
+4	8	看见	看见	VERB		kan4 jian4	2	20.2344	20.6789	stanza
+4	9	满院	满院	PROPN		man3 yuan4	2	20.7189	21.1633	stanza
+4	10	狼	狼	PART		lang2	1	21.2033	21.4256	stanza
+4	11	藉	藉	VERB		ji2	1	21.4656	21.6878	stanza
+4	12	的	的	SCONJ		de5	1	21.7278	21.9500	stanza
+4	13	东西	东西	NOUN		dong1 xi1	2	21.9900	22.4344	stanza
+4	14	，	，	PUNCT		，	0	22.4744	22.4744	stanza
+4	15	又	又	SCONJ		you4	1	22.5544	22.7767	stanza
+4	16	想起	想起	VERB		xiang3 qi3	2	22.8167	23.2611	stanza
+4	17	祖母	祖母	NOUN		zu3 mu3	2	23.3011	23.7456	stanza
+4	18	，	，	PUNCT		，	0	23.7856	23.7856	stanza
+4	19	不	不	ADV	Polarity=Neg	bu4	1	23.8656	24.0878	stanza
+4	20	禁簌	禁簌	VERB		jin4 su4	2	24.1278	24.5722	stanza
+4	21	簌	簌	ADJ		su4	1	24.6122	24.8344	stanza
+4	22	地	地	SCONJ		di4	1	24.8744	25.0967	stanza
+4	23	流下	流下	VERB		liu2 xia4	2	25.1367	25.5811	stanza
+4	24	眼泪	眼泪	NOUN		yan3 lei4	2	25.6211	26.0656	stanza
+4	25	。	。	PUNCT		。	0	26.1056	26.1056	stanza
+5	1	父亲	父亲	NOUN		fu4 qin1	2	26.4756	26.9200	stanza
+5	2	说	说	VERB		shuo1	1	26.9600	27.1822	stanza
+5	3	：	：	PUNCT		：	0	27.2222	27.2222	stanza
+5	4	“	“	PUNCT		“	0	27.3022	27.3022	stanza
+5	5	事	事	NOUN		shi4	1	27.3822	27.6044	stanza
+5	6	已	已	ADV		yi3	1	27.6444	27.8667	stanza
+5	7	如此	如此	VERB		ru2 ci3	2	27.9067	28.3511	stanza
+5	8	，	，	PUNCT		，	0	28.3911	28.3911	stanza
+5	9	不	不	ADV	Polarity=Neg	bu4	1	28.4711	28.6933	stanza
+5	10	必	必	AUX		bi4	1	28.7333	28.9556	stanza
+5	11	难过	难过	ADJ		nan2 guo4	2	28.9956	29.4400	stanza
+5	12	，	，	PUNCT		，	0	29.4800	29.4800	stanza
+5	13	好	好	ADV		hao3	1	29.5600	29.7822	stanza
+5	14	在	在	VERB		zai4	1	29.8222	30.0444	stanza
+5	15	天	天	PROPN		tian1	1	30.0844	30.3067	stanza
+5	16	无绝	无绝	VERB		wu2 jue2	2	30.3467	30.7911	stanza
+5	17	人	人	NOUN		ren2	1	30.8311	31.0533	stanza
+5	18	之	之	PART	Case=Gen	zhi1	1	31.0933	31.3156	stanza
+5	19	路	路	NOUN		lu4	1	31.3556	31.5778	stanza
+5	20	！	！	PUNCT		！	0	31.6178	31.6178	stanza
+5	21	”	”	PUNCT		”	0	31.8678	31.8678	stanza
+6	1	回家	回家	VERB		hui2 jia1	2	32.0678	32.5122	stanza
+6	2	变卖	变卖	VERB		bian4 mai4	2	32.5522	32.9967	stanza
+6	3	典质	典质	NOUN		dian3 zhi4	2	33.0367	33.4811	stanza
+6	4	，	，	PUNCT		，	0	33.5211	33.5211	stanza
+6	5	父亲	父亲	NOUN		fu4 qin1	2	33.6011	34.0456	stanza
+6	6	还	还	SCONJ		hai2	1	34.0856	34.3078	stanza
+6	7	了	了	AUX	Aspect=Perf	le5	1	34.3478	34.5700	stanza
+6	8	亏空	亏空	VERB		kui1 kong1	2	34.6100	35.0544	stanza
+6	9	；	；	PUNCT		；	0	35.0944	35.0944	stanza
+6	10	又	又	SCONJ		you4	1	35.1744	35.3967	stanza
+6	11	借钱办	借钱办	VERB		jie4 qian2 ban4	3	35.4367	36.1033	stanza
+6	12	了	了	AUX	Aspect=Perf	le5	1	36.1433	36.3656	stanza
+6	13	丧事	丧事	NOUN		sang1 shi4	2	36.4056	36.8500	stanza
+6	14	。	。	PUNCT		。	0	36.8900	36.8900	stanza
+7	1	这些	这些	DET		zhe4 xie1	2	37.2600	37.7044	stanza
+7	2	日子	日子	NOUN		ri4 zi5	2	37.7444	38.1889	stanza
+7	3	，	，	PUNCT		，	0	38.2289	38.2289	stanza
+7	4	家中	家中	NOUN		jia1 zhong1	2	38.3089	38.7533	stanza
+7	5	光景	光景	NOUN		guang1 jing3	2	38.7933	39.2378	stanza
+7	6	很是	很是	ADV		hen3 shi4	2	39.2778	39.7222	stanza
+7	7	惨澹	惨澹	ADJ		can3 dan4	2	39.7622	40.2067	stanza
+7	8	，	，	PUNCT		，	0	40.2467	40.2467	stanza
+7	9	一半	一半	NUM	NumType=Card	yi2 ban4	2	40.3267	40.7711	stanza
+7	10	为了	为了	ADP		wei4 le5	2	40.8111	41.2556	stanza
+7	11	丧事	丧事	VERB		sang1 shi4	2	41.2956	41.7400	stanza
+7	12	，	，	PUNCT		，	0	41.7800	41.7800	stanza
+7	13	一半	一半	NUM	NumType=Card	yi2 ban4	2	41.8600	42.3044	stanza
+7	14	为了	为了	ADP		wei4 le5	2	42.3444	42.7889	stanza
+7	15	父亲	父亲	NOUN		fu4 qin1	2	42.8289	43.2733	stanza
+7	16	赋闲	赋闲	VERB		fu4 xian2	2	43.3133	43.7578	stanza
+7	17	。	。	PUNCT		。	0	43.7978	43.7978	stanza
+8	1	丧事	丧事	VERB		sang1 shi4	2	44.1678	44.6122	stanza
+8	2	完毕	完毕	VERB		wan2 bi4	2	44.6522	45.0967	stanza
+8	3	，	，	PUNCT		，	0	45.1367	45.1367	stanza
+8	4	父亲	父亲	NOUN		fu4 qin1	2	45.2167	45.6611	stanza
+8	5	要	要	AUX		yao4	1	45.7011	45.9233	stanza
+8	6	到	到	VERB		dao4	1	45.9633	46.1856	stanza
+8	7	南京	南京	PROPN		nan2 jing1	2	46.2256	46.6700	stanza
+8	8	谋事	谋事	VERB		mou2 shi4	2	46.7100	47.1544	stanza
+8	9	，	，	PUNCT		，	0	47.1944	47.1944	stanza
+8	10	我	我	PRON	Person=1	wo3	1	47.2744	47.4967	stanza
+8	11	也	也	SCONJ		ye3	1	47.5367	47.7589	stanza
+8	12	要回	要回	VERB		yao4 hui2	2	47.7989	48.2433	stanza
+8	13	北京	北京	PROPN		bei3 jing1	2	48.2833	48.7278	stanza
+8	14	念书	念书	VERB		nian4 shu1	2	48.7678	49.2122	stanza
+8	15	，	，	PUNCT		，	0	49.2522	49.2522	stanza
+8	16	我们	我	PRON	Number=Plur|Person=1	wo3 men5	2	49.3322	49.7767	stanza
+8	17	便	便	SCONJ		bian4	1	49.8167	50.0389	stanza
+8	18	同行	同行	VERB		tong2 hang2	2	50.0789	50.5233	stanza
+8	19	。	。	PUNCT		。	0	50.5633	50.5633	stanza
+9	1	到	到	VERB		dao4	1	50.9333	51.1556	stanza
+9	2	南京	南京	PROPN		nan2 jing1	2	51.1956	51.6400	stanza
+9	3	时	时	ADP		shi2	1	51.6800	51.9022	stanza
+9	4	，	，	PUNCT		，	0	51.9422	51.9422	stanza
+9	5	有	有	VERB		you3	1	52.0222	52.2444	stanza
+9	6	朋友	朋友	NOUN		peng2 you3	2	52.2844	52.7289	stanza
+9	7	约	约	ADV		yue1	1	52.7689	52.9911	stanza
+9	8	去	去	VERB		qu4	1	53.0311	53.2533	stanza
+9	9	游逛	游逛	VERB		you2 guang4	2	53.2933	53.7378	stanza
+9	10	，	，	PUNCT		，	0	53.7778	53.7778	stanza
+9	11	勾留	勾留	VERB		gou1 liu2	2	53.8578	54.3022	stanza
+9	12	了	了	AUX	Aspect=Perf	le5	1	54.3422	54.5644	stanza
+9	13	一	一	NUM	NumType=Card	yi1	1	54.6044	54.8267	stanza
+9	14	日	日	NOUN		ri4	1	54.8667	55.0889	stanza
+9	15	；	；	PUNCT		；	0	55.1289	55.1289	stanza
+9	16	第二	第二	NUM	NumType=Ord	di4 er4	2	55.2089	55.6533	stanza
+9	17	日	日	NOUN		ri4	1	55.6933	55.9156	stanza
+9	18	上午	上午	NOUN		shang4 wu3	2	55.9556	56.4000	stanza
+9	19	便	便	SCONJ		bian4	1	56.4400	56.6622	stanza
+9	20	须	须	AUX		xu1	1	56.7022	56.9244	stanza
+9	21	渡	渡	VERB		du4	1	56.9644	57.1867	stanza
+9	22	江	江	PROPN		jiang1	1	57.2267	57.4489	stanza
+9	23	到	到	VERB		dao4	1	57.4889	57.7111	stanza
+9	24	浦口	浦口	PROPN		pu3 kou3	2	57.7511	58.1956	stanza
+9	25	，	，	PUNCT		，	0	58.2356	58.2356	stanza
+9	26	下午	下午	NOUN		xia4 wu3	2	58.3156	58.7600	stanza
+9	27	上车	上车	VERB		shang4 che1	2	58.8000	59.2444	stanza
+9	28	北去	北去	VERB		bei3 qu4	2	59.2844	59.7289	stanza
+9	29	。	。	PUNCT		。	0	59.7689	59.7689	stanza
+10	1	父亲	父亲	NOUN		fu4 qin1	2	60.1389	60.5833	stanza
+10	2	因为	因为	ADP		yin1 wei4	2	60.6233	61.0678	stanza
+10	3	事忙	事忙	VERB		shi4 mang2	2	61.1078	61.5522	stanza
+10	4	，	，	PUNCT		，	0	61.5922	61.5922	stanza
+10	5	本	本	ADV		ben3	1	61.6722	61.8944	stanza
+10	6	已	已	ADV		yi3	1	61.9344	62.1567	stanza
+10	7	说定	说定	VERB		shuo1 ding4	2	62.1967	62.6411	stanza
+10	8	不	不	ADV	Polarity=Neg	bu4	1	62.6811	62.9033	stanza
+10	9	送我	送我	VERB		song4 wo3	2	62.9433	63.3878	stanza
+10	10	，	，	PUNCT		，	0	63.4278	63.4278	stanza
+10	11	叫旅	叫旅	VERB		jiao4 lv3	2	63.5078	63.9522	stanza
+10	12	馆	馆	PART		guan3	1	63.9922	64.2144	stanza
+10	13	里	里	NOUN		li3	1	64.2544	64.4767	stanza
+10	14	一	一	NUM	NumType=Card	yi1	1	64.5167	64.7389	stanza
+10	15	个	个	NOUN		ge4	1	64.7789	65.0011	stanza
+10	16	熟识	熟识	VERB		shu2 shi2	2	65.0411	65.4856	stanza
+10	17	的	的	SCONJ		de5	1	65.5256	65.7478	stanza
+10	18	茶房	茶房	NOUN		cha2 fang2	2	65.7878	66.2322	stanza
+10	19	陪	陪	VERB		pei2	1	66.2722	66.4944	stanza
+10	20	我	我	PRON	Person=1	wo3	1	66.5344	66.7567	stanza
+10	21	同去	同去	VERB		tong2 qu4	2	66.7967	67.2411	stanza
+10	22	。	。	PUNCT		。	0	67.2811	67.2811	stanza
+11	1	他	他	PRON	Person=3	ta1	1	67.6511	67.8733	stanza
+11	2	再三	再三	ADV		zai4 san1	2	67.9133	68.3578	stanza
+11	3	嘱咐	嘱咐	VERB		zhu3 fu4	2	68.3978	68.8422	stanza
+11	4	茶房	茶房	NOUN		cha2 fang2	2	68.8822	69.3267	stanza
+11	5	，	，	PUNCT		，	0	69.3667	69.3667	stanza
+11	6	甚是	甚是	ADV		shen4 shi4	2	69.4467	69.8911	stanza
+11	7	仔细	仔细	ADJ		zi3 xi4	2	69.9311	70.3756	stanza
+11	8	。	。	PUNCT		。	0	70.4156	70.4156	stanza
+12	1	但	但	SCONJ		dan4	1	70.7856	71.0078	stanza
+12	2	他	他	PRON	Person=3	ta1	1	71.0478	71.2700	stanza
+12	3	终于	终于	ADV		zhong1 yu2	2	71.3100	71.7544	stanza
+12	4	不	不	ADV	Polarity=Neg	bu4	1	71.7944	72.0167	stanza
+12	5	放心	放心	ADJ		fang4 xin1	2	72.0567	72.5011	stanza
+12	6	，	，	PUNCT		，	0	72.5411	72.5411	stanza
+12	7	怕	怕	VERB		pa4	1	72.6211	72.8433	stanza
+12	8	茶房	茶房	NOUN		cha2 fang2	2	72.8833	73.3278	stanza
+12	9	不	不	ADV	Polarity=Neg	bu4	1	73.3678	73.5900	stanza
+12	10	妥帖	妥帖	ADJ		tuo3 tie1	2	73.6300	74.0744	stanza
+12	11	；	；	PUNCT		；	0	74.1144	74.1144	stanza
+12	12	颇	颇	ADV		po3	1	74.1944	74.4167	stanza
+12	13	踌	踌	ADJ		chou2	1	74.4567	74.6789	stanza
+12	14	躇	躇	VERB		chu2	1	74.7189	74.9411	stanza
+12	15	了	了	AUX	Aspect=Perf	le5	1	74.9811	75.2033	stanza
+12	16	一	一	NUM	NumType=Card	yi1	1	75.2433	75.4656	stanza
+12	17	会	会	NOUN		hui4	1	75.5056	75.7278	stanza
+12	18	。	。	PUNCT		。	0	75.7678	75.7678	stanza
+13	1	其实	其实	ADV		qi2 shi2	2	76.1378	76.5822	stanza
+13	2	我	我	PRON	Person=1	wo3	1	76.6222	76.8444	stanza
+13	3	那	那	DET		na4	1	76.8844	77.1067	stanza
+13	4	年	年	NOUN		nian2	1	77.1467	77.3689	stanza
+13	5	已	已	ADV		yi3	1	77.4089	77.6311	stanza
+13	6	二十	二十	NUM	NumType=Card	er4 shi2	2	77.6711	78.1156	stanza
+13	7	岁	岁	NOUN		sui4	1	78.1556	78.3778	stanza
+13	8	，	，	PUNCT		，	0	78.4178	78.4178	stanza
+13	9	北京	北京	PROPN		bei3 jing1	2	78.4978	78.9422	stanza
+13	10	已	已	ADV		yi3	1	78.9822	79.2044	stanza
+13	11	来往	来往	VERB		lai2 wang3	2	79.2444	79.6889	stanza
+13	12	过	过	AUX	Aspect=Perf	guo4	1	79.7289	79.9511	stanza
+13	13	两	两	NUM	NumType=Card	liang3	1	79.9911	80.2133	stanza
+13	14	三	三	NUM	NumType=Card	san1	1	80.2533	80.4756	stanza
+13	15	次	次	NOUN		ci4	1	80.5156	80.7378	stanza
+13	16	，	，	PUNCT		，	0	80.7778	80.7778	stanza
+13	17	是	是	VERB		shi4	1	80.8578	81.0800	stanza
+13	18	没有	有	VERB	Polarity=Neg	mei2 you3	2	81.1200	81.5644	stanza
+13	19	什么	什么	PRON		shen2 me5	2	81.6044	82.0489	stanza
+13	20	要紧	要紧	ADJ		yao4 jin3	2	82.0889	82.5333	stanza
+13	21	的	的	PART		de5	1	82.5733	82.7956	stanza
+13	22	了	了	PART		le5	1	82.8356	83.0578	stanza
+13	23	。	。	PUNCT		。	0	83.0978	83.0978	stanza
+14	1	他	他	PRON	Person=3	ta1	1	83.4678	83.6900	stanza
+14	2	踌躇	踌躇	VERB		chou2 chu2	2	83.7300	84.1744	stanza
+14	3	了	了	AUX	Aspect=Perf	le5	1	84.2144	84.4367	stanza
+14	4	一	一	NUM	NumType=Card	yi1	1	84.4767	84.6989	stanza
+14	5	会	会	NOUN		hui4	1	84.7389	84.9611	stanza
+14	6	，	，	PUNCT		，	0	85.0011	85.0011	stanza
+14	7	终于	终于	ADV		zhong1 yu2	2	85.0811	85.5256	stanza
+14	8	决定	决定	VERB		jue2 ding4	2	85.5656	86.0100	stanza
+14	9	还是	还是	SCONJ		hai2 shi4	2	86.0500	86.4944	stanza
+14	10	自己	自己	PRON		zi4 ji3	2	86.5344	86.9789	stanza
+14	11	送	送	VERB		song4	1	87.0189	87.2411	stanza
+14	12	我	我	PRON	Person=1	wo3	1	87.2811	87.5033	stanza
+14	13	去	去	VERB		qu4	1	87.5433	87.7656	stanza
+14	14	。	。	PUNCT		。	0	87.8056	87.8056	stanza
+15	1	我	我	PRON	Person=1	wo3	1	88.1756	88.3978	stanza
+15	2	再三	再三	ADV		zai4 san1	2	88.4378	88.8822	stanza
+15	3	劝	劝	VERB	Voice=Cau	quan4	1	88.9222	89.1444	stanza
+15	4	他	他	PRON	Person=3	ta1	1	89.1844	89.4067	stanza
+15	5	不	不	ADV	Polarity=Neg	bu4	1	89.4467	89.6689	stanza
+15	6	必	必	AUX		bi4	1	89.7089	89.9311	stanza
+15	7	去	去	VERB		qu4	1	89.9711	90.1933	stanza
+15	8	；	；	PUNCT		；	0	90.2333	90.2333	stanza
+15	9	他	他	PRON	Person=3	ta1	1	90.3133	90.5356	stanza
+15	10	只	只	ADV		zhi3	1	90.5756	90.7978	stanza
+15	11	说	说	VERB		shuo1	1	90.8378	91.0600	stanza
+15	12	：	：	PUNCT		：	0	91.1000	91.1000	stanza
+15	13	“	“	PUNCT		“	0	91.1800	91.1800	stanza
+15	14	不要	要	AUX	Polarity=Neg	bu2 yao4	2	91.2600	91.7044	stanza
+15	15	紧	紧	ADJ		jin3	1	91.7444	91.9667	stanza
+15	16	，	，	PUNCT		，	0	92.0067	92.0067	stanza
+15	17	他们	他	PRON	Number=Plur|Person=3	ta1 men5	2	92.0867	92.5311	stanza
+15	18	去	去	VERB		qu4	1	92.5711	92.7933	stanza
+15	19	不好	不好	ADJ		bu4 hao3	2	92.8333	93.2778	stanza
+15	20	！	！	PUNCT		！	0	93.3178	93.3178	stanza
+15	21	”	”	PUNCT		”	0	93.5678	93.5678	stanza
+16	1	我们	我	PRON	Number=Plur|Person=1	wo3 men5	2	93.7678	94.2122	stanza
+16	2	过	过	VERB		guo4	1	94.2522	94.4744	stanza
+16	3	了	了	AUX	Aspect=Perf	le5	1	94.5144	94.7367	stanza
+16	4	江	江	PROPN		jiang1	1	94.7767	94.9989	stanza
+16	5	，	，	PUNCT		，	0	95.0389	95.0389	stanza
+16	6	进	进	VERB		jin4	1	95.1189	95.3411	stanza
+16	7	了	了	AUX	Aspect=Perf	le5	1	95.3811	95.6033	stanza
+16	8	车站	车站	NOUN		che1 zhan4	2	95.6433	96.0878	stanza
+16	9	。	。	PUNCT		。	0	96.1278	96.1278	stanza
+17	1	我	我	PRON	Person=1	wo3	1	96.4978	96.7200	stanza
+17	2	买票	买票	VERB		mai3 piao4	2	96.7600	97.2044	stanza
+17	3	，	，	PUNCT		，	0	97.2444	97.2444	stanza
+17	4	他	他	PRON	Person=3	ta1	1	97.3244	97.5467	stanza
+17	5	忙	忙	VERB		mang2	1	97.5867	97.8089	stanza
+17	6	着	着	AUX	Aspect=Prog	zhe5	1	97.8489	98.0711	stanza
+17	7	照看	照看	VERB		zhao4 kan4	2	98.1111	98.5556	stanza
+17	8	行李	行李	NOUN		xing2 li3	2	98.5956	99.0400	stanza
+17	9	。	。	PUNCT		。	0	99.0800	99.0800	stanza
+18	1	行李	行李	NOUN		xing2 li3	2	99.4500	99.8944	stanza
+18	2	太多	太多	ADJ		tai4 duo1	2	99.9344	100.3789	stanza
+18	3	了	了	PART		le5	1	100.4189	100.6411	stanza
+18	4	，	，	PUNCT		，	0	100.6811	100.6811	stanza
+18	5	得	得	PART		de2	1	100.7611	100.9833	stanza
+18	6	向	向	ADP		xiang4	1	101.0233	101.2456	stanza
+18	7	脚夫	脚夫	NOUN		jiao3 fu1	2	101.2856	101.7300	stanza
+18	8	行些	行些	VERB		xing2 xie1	2	101.7700	102.2144	stanza
+18	9	小费	小费	NOUN		xiao3 fei4	2	102.2544	102.6989	stanza
+18	10	才	才	SCONJ		cai2	1	102.7389	102.9611	stanza
+18	11	可	可	AUX		ke3	1	103.0011	103.2233	stanza
+18	12	过去	过去	VERB		guo4 qu4	2	103.2633	103.7078	stanza
+18	13	。	。	PUNCT		。	0	103.7478	103.7478	stanza
+19	1	他	他	PRON	Person=3	ta1	1	104.1178	104.3400	stanza
+19	2	便	便	SCONJ		bian4	1	104.3800	104.6022	stanza
+19	3	又	又	SCONJ		you4	1	104.6422	104.8644	stanza
+19	4	忙	忙	VERB		mang2	1	104.9044	105.1267	stanza
+19	5	着	着	AUX	Aspect=Prog	zhe5	1	105.1667	105.3889	stanza
+19	6	和	和	ADP		he2	1	105.4289	105.6511	stanza
+19	7	他们	他	PRON	Number=Plur|Person=3	ta1 men5	2	105.6911	106.1356	stanza
+19	8	讲	讲	VERB		jiang3	1	106.1756	106.3978	stanza
+19	9	价钱	价钱	NOUN		jia4 qian2	2	106.4378	106.8822	stanza
+19	10	。	。	PUNCT		。	0	106.9222	106.9222	stanza
+20	1	我	我	PRON	Person=1	wo3	1	107.2922	107.5144	stanza
+20	2	那时	那时	NOUN		na4 shi2	2	107.5544	107.9989	stanza
+20	3	真	真	ADV		zhen1	1	108.0389	108.2611	stanza
+20	4	是	是	VERB		shi4	1	108.3011	108.5233	stanza
+20	5	聪明	聪明	ADJ		cong1 ming2	2	108.5633	109.0078	stanza
+20	6	过分	过分	ADJ		guo4 fen4	2	109.0478	109.4922	stanza
+20	7	，	，	PUNCT		，	0	109.5322	109.5322	stanza
+20	8	总觉	总觉	VERB		zong3 jue2	2	109.6122	110.0567	stanza
+20	9	他	他	PRON	Person=3	ta1	1	110.0967	110.3189	stanza
+20	10	说话	说话	VERB		shuo1 hua4	2	110.3589	110.8033	stanza
+20	11	不大	不大	ADJ		bu4 da4	2	110.8433	111.2878	stanza
+20	12	漂亮	漂亮	ADJ		piao4 liang4	2	111.3278	111.7722	stanza
+20	13	，	，	PUNCT		，	0	111.8122	111.8122	stanza
+20	14	非	非	VERB		fei1	1	111.8922	112.1144	stanza
+20	15	自己	自己	PRON		zi4 ji3	2	112.1544	112.5989	stanza
+20	16	插嘴	插嘴	VERB		cha1 zui3	2	112.6389	113.0833	stanza
+20	17	不可	可	AUX	Polarity=Neg	bu4 ke3	2	113.1233	113.5678	stanza
+20	18	，	，	PUNCT		，	0	113.6078	113.6078	stanza
+20	19	但	但	SCONJ		dan4	1	113.6878	113.9100	stanza
+20	20	他	他	PRON	Person=3	ta1	1	113.9500	114.1722	stanza
+20	21	终于	终于	ADV		zhong1 yu2	2	114.2122	114.6567	stanza
+20	22	讲定	讲定	VERB		jiang3 ding4	2	114.6967	115.1411	stanza
+20	23	了	了	AUX	Aspect=Perf	le5	1	115.1811	115.4033	stanza
+20	24	价钱	价钱	NOUN		jia4 qian2	2	115.4433	115.8878	stanza
+20	25	；	；	PUNCT		；	0	115.9278	115.9278	stanza
+20	26	就	就	SCONJ		jiu4	1	116.0078	116.2300	stanza
+20	27	送	送	VERB		song4	1	116.2700	116.4922	stanza
+20	28	我	我	PRON	Person=1	wo3	1	116.5322	116.7544	stanza
+20	29	上车	上车	VERB		shang4 che1	2	116.7944	117.2389	stanza
+20	30	。	。	PUNCT		。	0	117.2789	117.2789	stanza
+21	1	他	他	PRON	Person=3	ta1	1	117.6489	117.8711	stanza
+21	2	给	给	VERB		gei3	1	117.9111	118.1333	stanza
+21	3	我	我	PRON	Person=1	wo3	1	118.1733	118.3956	stanza
+21	4	拣定	拣定	VERB		jian3 ding4	2	118.4356	118.8800	stanza
+21	5	了	了	AUX	Aspect=Perf	le5	1	118.9200	119.1422	stanza
+21	6	靠	靠	VERB		kao4	1	119.1822	119.4044	stanza
+21	7	车门	车门	NOUN		che1 men2	2	119.4444	119.8889	stanza
+21	8	的	的	SCONJ		de5	1	119.9289	120.1511	stanza
+21	9	一	一	NUM	NumType=Card	yi1	1	120.1911	120.4133	stanza
+21	10	张	张	NOUN		zhang1	1	120.4533	120.6756	stanza
+21	11	椅子	椅子	NOUN		yi3 zi5	2	120.7156	121.1600	stanza
+21	12	；	；	PUNCT		；	0	121.2000	121.2000	stanza
+21	13	我	我	PRON	Person=1	wo3	1	121.2800	121.5022	stanza
+21	14	将	将	ADP		jiang1	1	121.5422	121.7644	stanza
+21	15	他	他	PRON	Person=3	ta1	1	121.8044	122.0267	stanza
+21	16	给	给	VERB		gei3	1	122.0667	122.2889	stanza
+21	17	我	我	PRON	Person=1	wo3	1	122.3289	122.5511	stanza
+21	18	做	做	VERB		zuo4	1	122.5911	122.8133	stanza
+21	19	的	的	SCONJ		de5	1	122.8533	123.0756	stanza
+21	20	紫	紫	NOUN		zi3	1	123.1156	123.3378	stanza
+21	21	毛	毛	NOUN		mao2	1	123.3778	123.6000	stanza
+21	22	大衣	大衣	NOUN		da4 yi1	2	123.6400	124.0844	stanza
+21	23	铺好	铺好	VERB		pu4 hao3	2	124.1244	124.5689	stanza
+21	24	座位	座位	NOUN		zuo4 wei4	2	124.6089	125.0533	stanza
+21	25	。	。	PUNCT		。	0	125.0933	125.0933	stanza
+22	1	他	他	PRON	Person=3	ta1	1	125.4633	125.6856	stanza
+22	2	嘱	嘱	VERB		zhu3	1	125.7256	125.9478	stanza
+22	3	我	我	PRON	Person=1	wo3	1	125.9878	126.2100	stanza
+22	4	路上	路上	NOUN		lu4 shang4	2	126.2500	126.6944	stanza
+22	5	小心	小心	ADJ		xiao3 xin1	2	126.7344	127.1789	stanza
+22	6	，	，	PUNCT		，	0	127.2189	127.2189	stanza
+22	7	夜里	夜里	NOUN		ye4 li3	2	127.2989	127.7433	stanza
+22	8	要警	要警	VERB		yao4 jing3	2	127.7833	128.2278	stanza
+22	9	醒些	醒些	VERB		xing3 xie1	2	128.2678	128.7122	stanza
+22	10	，	，	PUNCT		，	0	128.7522	128.7522	stanza
+22	11	不要	要	AUX	Polarity=Neg	bu2 yao4	2	128.8322	129.2767	stanza
+22	12	受凉	受凉	VERB		shou4 liang2	2	129.3167	129.7611	stanza
+22	13	。	。	PUNCT		。	0	129.8011	129.8011	stanza
+23	1	又	又	SCONJ		you4	1	130.1711	130.3933	stanza
+23	2	嘱托	嘱托	VERB		zhu3 tuo1	2	130.4333	130.8778	stanza
+23	3	茶房好	茶房好	ADJ		cha2 fang2 hao3	3	130.9178	131.5844	stanza
+23	4	好照	好照	ADJ		hao3 zhao4	2	131.6244	132.0689	stanza
+23	5	应	应	AUX		ying1	1	132.1089	132.3311	stanza
+23	6	我	我	PRON	Person=1	wo3	1	132.3711	132.5933	stanza
+23	7	。	。	PUNCT		。	0	132.6333	132.6333	stanza
+24	1	我	我	PRON	Person=1	wo3	1	133.0033	133.2256	stanza
+24	2	心里	心里	NOUN		xin1 li3	2	133.2656	133.7100	stanza
+24	3	暗笑	暗笑	VERB		an4 xiao4	2	133.7500	134.1944	stanza
+24	4	他	他	PRON	Person=3	ta1	1	134.2344	134.4567	stanza
+24	5	的	的	PART	Case=Gen	de5	1	134.4967	134.7189	stanza
+24	6	迂	迂	NOUN		yu1	1	134.7589	134.9811	stanza
+24	7	；	；	PUNCT		；	0	135.0211	135.0211	stanza
+24	8	他们	他	PRON	Number=Plur|Person=3	ta1 men5	2	135.1011	135.5456	stanza
+24	9	只认	只认	VERB		zhi3 ren4	2	135.5856	136.0300	stanza
+24	10	得钱	得钱	VERB		de2 qian2	2	136.0700	136.5144	stanza
+24	11	，	，	PUNCT		，	0	136.5544	136.5544	stanza
+24	12	托	托	VERB		tuo1	1	136.6344	136.8567	stanza
+24	13	他们	他	PRON	Number=Plur|Person=3	ta1 men5	2	136.8967	137.3411	stanza
+24	14	只	只	ADV		zhi3	1	137.3811	137.6033	stanza
+24	15	是	是	AUX		shi4	1	137.6433	137.8656	stanza
+24	16	白托	白托	PROPN		bai2 tuo1	2	137.9056	138.3500	stanza
+24	17	！	！	PUNCT		！	0	138.3900	138.3900	stanza
+25	1	而且	而且	SCONJ		er2 qie3	2	138.7600	139.2044	stanza
+25	2	我	我	PRON	Person=1	wo3	1	139.2444	139.4667	stanza
+25	3	这样	这样	PRON		zhe4 yang4	2	139.5067	139.9511	stanza
+25	4	大	大	PART		da4	1	139.9911	140.2133	stanza
+25	5	年纪	年纪	NOUN		nian2 ji4	2	140.2533	140.6978	stanza
+25	6	的	的	PART	Case=Gen	de5	1	140.7378	140.9600	stanza
+25	7	人	人	NOUN		ren2	1	141.0000	141.2222	stanza
+25	8	，	，	PUNCT		，	0	141.2622	141.2622	stanza
+25	9	难道	难道	VERB		nan2 dao4	2	141.3422	141.7867	stanza
+25	10	还	还	SCONJ		hai2	1	141.8267	142.0489	stanza
+25	11	不能	能	AUX	Polarity=Neg	bu4 neng2	2	142.0889	142.5333	stanza
+25	12	料理	料理	VERB		liao4 li3	2	142.5733	143.0178	stanza
+25	13	自己	自己	PRON		zi4 ji3	2	143.0578	143.5022	stanza
+25	14	么	么	PART	PartType=Int	me5	1	143.5422	143.7644	stanza
+25	15	？	？	PUNCT		？	0	143.8044	143.8044	stanza
+26	1	我	我	PRON	Person=1	wo3	1	144.1744	144.3967	stanza
+26	2	现在	现在	NOUN		xian4 zai4	2	144.4367	144.8811	stanza
+26	3	想想	想想	VERB		xiang3 xiang3	2	144.9211	145.3656	stanza
+26	4	，	，	PUNCT		，	0	145.4056	145.4056	stanza
+26	5	我	我	PRON	Person=1	wo3	1	145.4856	145.7078	stanza
+26	6	那时	那时	NOUN		na4 shi2	2	145.7478	146.1922	stanza
+26	7	真	真	ADV		zhen1	1	146.2322	146.4544	stanza
+26	8	是	是	AUX		shi4	1	146.4944	146.7167	stanza
+26	9	太	太	ADV		tai4	1	146.7567	146.9789	stanza
+26	10	聪明	聪明	ADJ		cong1 ming2	2	147.0189	147.4633	stanza
+26	11	了	了	PART		le5	1	147.5033	147.7256	stanza
+26	12	。	。	PUNCT		。	0	147.7656	147.7656	stanza

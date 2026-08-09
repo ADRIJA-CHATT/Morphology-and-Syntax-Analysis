@@ -1,0 +1,183 @@
+[SENTENCE 1]
+    0.00-    0.22  Jag	lemma=jag	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+    0.26-    0.48  heter	lemma=heta	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+
+[SENTENCE 2]
+    0.64-    0.87  Simon	lemma=Simon	upos=PROPN	feats=Case=Nom	phon=-	syll=1	src=stanza
+    0.91-    1.13  och	lemma=och	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+    1.17-    1.39  jag	lemma=jag	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+    1.43-    1.65  är	lemma=vara	upos=AUX	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+    1.69-    1.92  fjorton	lemma=fjorton	upos=NUM	feats=Case=Nom|NumType=Card	phon=-	syll=1	src=stanza
+    1.96-    2.18  år	lemma=år	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	phon=-	syll=1	src=stanza
+    2.22-    2.22  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 3]
+    2.59-    2.81  Jag	lemma=jag	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+    2.85-    3.07  bor	lemma=bo	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+    3.11-    3.33  tillsammans	lemma=tillsammans	upos=ADV	feats=-	phon=-	syll=1	src=stanza
+    3.37-    3.60  med	lemma=med	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+    3.64-    3.86  min	lemma=jag	upos=PRON	feats=Definite=Def|Gender=Com|Number=Sing|Poss=Yes|PronType=Prs	phon=-	syll=1	src=stanza
+    3.90-    4.12  mamma	lemma=mamma	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Sing	phon=-	syll=1	src=stanza
+    4.16-    4.16  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+    4.24-    4.46  min	lemma=jag	upos=PRON	feats=Definite=Def|Gender=Com|Number=Sing|Poss=Yes|PronType=Prs	phon=-	syll=1	src=stanza
+    4.50-    4.73  pappa	lemma=pappa	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Sing	phon=-	syll=1	src=stanza
+    4.77-    4.99  och	lemma=och	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+    5.03-    5.25  mina	lemma=jag	upos=PRON	feats=Definite=Def|Number=Plur|Poss=Yes|PronType=Prs	phon=-	syll=1	src=stanza
+    5.29-    5.51  två	lemma=två	upos=NUM	feats=Case=Nom|NumType=Card	phon=-	syll=1	src=stanza
+    5.55-    5.77  systrar	lemma=syster	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Plur	phon=-	syll=1	src=stanza
+    5.81-    5.81  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 4]
+    6.18-    6.41  Min	lemma=jag	upos=PRON	feats=Definite=Def|Gender=Com|Number=Sing|Poss=Yes|PronType=Prs	phon=-	syll=1	src=stanza
+    6.45-    6.67  mamma	lemma=mamma	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Sing	phon=-	syll=1	src=stanza
+    6.71-    6.93  heter	lemma=heta	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+    6.97-    7.19  Annika	lemma=Annika	upos=PROPN	feats=Case=Nom	phon=-	syll=1	src=stanza
+    7.23-    7.23  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 5]
+    7.60-    7.83  Hon	lemma=hon	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+    7.87-    8.09  arbetar	lemma=arbeta	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+    8.13-    8.35  som	lemma=som	upos=SCONJ	feats=-	phon=-	syll=1	src=stanza
+    8.39-    8.61  läkare	lemma=läkare	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Sing	phon=-	syll=1	src=stanza
+    8.65-    8.87  på	lemma=på	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+    8.91-    9.14  ett	lemma=en	upos=DET	feats=Definite=Ind|Gender=Neut|Number=Sing|PronType=Art	phon=-	syll=1	src=stanza
+    9.18-    9.40  sjukhus	lemma=sjukhus	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+    9.44-    9.44  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 6]
+    9.81-   10.03  Min	lemma=jag	upos=PRON	feats=Definite=Def|Gender=Com|Number=Sing|Poss=Yes|PronType=Prs	phon=-	syll=1	src=stanza
+   10.07-   10.29  pappa	lemma=pappa	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Sing	phon=-	syll=1	src=stanza
+   10.33-   10.56  heter	lemma=heta	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   10.60-   10.82  Josef	lemma=Josef	upos=PROPN	feats=Case=Nom	phon=-	syll=1	src=stanza
+   10.86-   10.86  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 7]
+   11.23-   11.45  Han	lemma=han	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+   11.49-   11.71  arbetar	lemma=arbeta	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   11.75-   11.97  inte	lemma=inte	upos=PART	feats=Polarity=Neg	phon=-	syll=1	src=stanza
+   12.01-   12.24  längre	lemma=länge	upos=ADV	feats=Degree=Cmp	phon=-	syll=1	src=stanza
+   12.28-   12.50  eftersom	lemma=eftersom	upos=SCONJ	feats=-	phon=-	syll=1	src=stanza
+   12.54-   12.76  han	lemma=han	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+   12.80-   13.02  är	lemma=vara	upos=AUX	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   13.06-   13.29  pensionär	lemma=pensionär	upos=ADJ	feats=Case=Nom|Definite=Ind|Degree=Pos|Gender=Com|Number=Sing	phon=-	syll=1	src=stanza
+   13.33-   13.33  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 8]
+   13.70-   13.92  Förut	lemma=förut	upos=ADV	feats=-	phon=-	syll=1	src=stanza
+   13.96-   14.18  arbetade	lemma=arbeta	upos=VERB	feats=Mood=Ind|Tense=Past|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   14.22-   14.44  han	lemma=han	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+   14.48-   14.70  som	lemma=som	upos=SCONJ	feats=-	phon=-	syll=1	src=stanza
+   14.74-   14.97  målare	lemma=målare	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Sing	phon=-	syll=1	src=stanza
+   15.01-   15.01  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 9]
+   15.38-   15.60  Mina	lemma=jag	upos=PRON	feats=Definite=Def|Number=Plur|Poss=Yes|PronType=Prs	phon=-	syll=1	src=stanza
+   15.64-   15.86  systrar	lemma=syster	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Plur	phon=-	syll=1	src=stanza
+   15.90-   16.12  heter	lemma=heta	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   16.16-   16.39  Josefin	lemma=Josefin	upos=PROPN	feats=Case=Nom	phon=-	syll=1	src=stanza
+   16.43-   16.65  och	lemma=och	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   16.69-   16.91  Sofia	lemma=Sofia	upos=PROPN	feats=Case=Nom	phon=-	syll=1	src=stanza
+   16.95-   16.95  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 10]
+   17.32-   17.54  De	lemma=de	upos=PRON	feats=Case=Nom|Definite=Def|Number=Plur|PronType=Prs	phon=-	syll=1	src=stanza
+   17.58-   17.80  är	lemma=vara	upos=AUX	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   17.84-   18.07  tvillingar	lemma=tvilling	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Plur	phon=-	syll=1	src=stanza
+   18.11-   18.11  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   18.19-   18.41  men	lemma=men	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   18.45-   18.67  de	lemma=de	upos=PRON	feats=Case=Nom|Definite=Def|Number=Plur|PronType=Prs	phon=-	syll=1	src=stanza
+   18.71-   18.93  liknar	lemma=likna	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   18.97-   19.20  inte	lemma=inte	upos=PART	feats=Polarity=Neg	phon=-	syll=1	src=stanza
+   19.24-   19.46  varandra	lemma=varandra	upos=PRON	feats=Case=Acc|Definite=Def|Number=Plur|PronType=Rcp	phon=-	syll=1	src=stanza
+   19.50-   19.50  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 11]
+   19.87-   20.09  Josefin	lemma=Josefin	upos=PROPN	feats=Case=Nom	phon=-	syll=1	src=stanza
+   20.13-   20.35  har	lemma=ha	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   20.39-   20.61  brunt	lemma=brun	upos=ADJ	feats=Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+   20.65-   20.88  hår	lemma=hår	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+   20.92-   21.14  och	lemma=och	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   21.18-   21.40  Sofia	lemma=Sofia	upos=PROPN	feats=Case=Nom	phon=-	syll=1	src=stanza
+   21.44-   21.66  har	lemma=ha	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   21.70-   21.93  blont	lemma=blon	upos=ADJ	feats=Case=Nom|Definite=Ind|Degree=Pos|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+   21.97-   22.19  hår	lemma=hår	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+   22.23-   22.23  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 12]
+   22.60-   22.82  De	lemma=de	upos=PRON	feats=Case=Nom|Definite=Def|Number=Plur|PronType=Prs	phon=-	syll=1	src=stanza
+   22.86-   23.08  är	lemma=vara	upos=AUX	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   23.12-   23.34  två	lemma=två	upos=NUM	feats=Case=Nom|NumType=Card	phon=-	syll=1	src=stanza
+   23.38-   23.61  år	lemma=år	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	phon=-	syll=1	src=stanza
+   23.65-   23.87  yngre	lemma=ung	upos=ADJ	feats=Case=Nom|Degree=Cmp	phon=-	syll=1	src=stanza
+   23.91-   24.13  än	lemma=än	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   24.17-   24.39  mig	lemma=jag	upos=PRON	feats=Case=Acc|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+   24.43-   24.43  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 13]
+   24.80-   25.03  Jag	lemma=jag	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+   25.07-   25.29  har	lemma=ha	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   25.33-   25.55  även	lemma=även	upos=ADV	feats=-	phon=-	syll=1	src=stanza
+   25.59-   25.81  en	lemma=en	upos=DET	feats=Definite=Ind|Gender=Com|Number=Sing|PronType=Art	phon=-	syll=1	src=stanza
+   25.85-   26.07  storebror	lemma=storebra	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Sing	phon=-	syll=1	src=stanza
+   26.11-   26.11  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   26.19-   26.42  men	lemma=men	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   26.46-   26.68  han	lemma=han	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+   26.72-   26.94  bor	lemma=bo	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   26.98-   27.20  inte	lemma=inte	upos=PART	feats=Polarity=Neg	phon=-	syll=1	src=stanza
+   27.24-   27.47  hemma	lemma=hemma	upos=ADV	feats=-	phon=-	syll=1	src=stanza
+   27.51-   27.51  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 14]
+   27.88-   28.10  Han	lemma=han	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+   28.14-   28.36  heter	lemma=heta	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   28.40-   28.62  Niklas	lemma=Niklas	upos=PROPN	feats=Case=Nom	phon=-	syll=1	src=stanza
+   28.66-   28.88  och	lemma=och	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   28.92-   29.15  är	lemma=vara	upos=AUX	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   29.19-   29.41  23	lemma=23	upos=NUM	feats=Case=Nom|NumType=Card	phon=-	syll=1	src=stanza
+   29.45-   29.67  år	lemma=år	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Neut|Number=Plur	phon=-	syll=1	src=stanza
+   29.71-   29.71  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 15]
+   30.08-   30.30  Han	lemma=han	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+   30.34-   30.57  bor	lemma=bo	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   30.61-   30.83  i	lemma=i	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   30.87-   31.09  en	lemma=en	upos=DET	feats=Definite=Ind|Gender=Com|Number=Sing|PronType=Art	phon=-	syll=1	src=stanza
+   31.13-   31.35  lägenhet	lemma=lägenhet	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Sing	phon=-	syll=1	src=stanza
+   31.39-   31.61  nära	lemma=nära	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   31.65-   31.88  vårt	lemma=vi	upos=PRON	feats=Definite=Def|Gender=Neut|Number=Sing|Poss=Yes|PronType=Prs	phon=-	syll=1	src=stanza
+   31.92-   32.14  hus	lemma=hus	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+   32.18-   32.40  med	lemma=med	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   32.44-   32.66  sin	lemma=sig	upos=PRON	feats=Definite=Def|Gender=Com|Number=Sing|Poss=Yes|PronType=Prs	phon=-	syll=1	src=stanza
+   32.70-   32.93  flickvän	lemma=flickvän	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Sing	phon=-	syll=1	src=stanza
+   32.97-   32.97  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 16]
+   33.34-   33.56  Jag	lemma=jag	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Sing|PronType=Prs	phon=-	syll=1	src=stanza
+   33.60-   33.82  har	lemma=ha	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   33.86-   34.08  även	lemma=även	upos=ADV	feats=-	phon=-	syll=1	src=stanza
+   34.12-   34.34  två	lemma=två	upos=NUM	feats=Case=Nom|NumType=Card	phon=-	syll=1	src=stanza
+   34.38-   34.61  kusiner	lemma=kusin	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Plur	phon=-	syll=1	src=stanza
+   34.65-   34.65  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   34.73-   34.95  men	lemma=men	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   34.99-   35.21  vi	lemma=vi	upos=PRON	feats=Case=Nom|Definite=Def|Gender=Com|Number=Plur|PronType=Prs	phon=-	syll=1	src=stanza
+   35.25-   35.47  träffas	lemma=träffa	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Pass	phon=-	syll=1	src=stanza
+   35.51-   35.74  inte	lemma=inte	upos=PART	feats=Polarity=Neg	phon=-	syll=1	src=stanza
+   35.78-   36.00  så	lemma=så	upos=ADV	feats=-	phon=-	syll=1	src=stanza
+   36.04-   36.26  ofta	lemma=ofta	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+   36.30-   36.30  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 17]
+   36.67-   36.89  De	lemma=de	upos=PRON	feats=Case=Nom|Definite=Def|Number=Plur|PronType=Prs	phon=-	syll=1	src=stanza
+   36.93-   37.15  bor	lemma=bo	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   37.19-   37.42  i	lemma=i	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   37.46-   37.68  Danmark	lemma=Danmark	upos=PROPN	feats=Case=Nom	phon=-	syll=1	src=stanza
+   37.72-   37.94  och	lemma=och	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   37.98-   38.20  kommer	lemma=komma	upos=VERB	feats=Mood=Ind|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   38.24-   38.47  bara	lemma=bara	upos=ADV	feats=-	phon=-	syll=1	src=stanza
+   38.51-   38.73  till	lemma=till	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   38.77-   38.99  Sverige	lemma=Sverige	upos=PROPN	feats=Case=Nom	phon=-	syll=1	src=stanza
+   39.03-   39.25  några	lemma=någon	upos=DET	feats=Definite=Ind|Number=Plur|PronType=Ind	phon=-	syll=1	src=stanza
+   39.29-   39.51  gånger	lemma=gång	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Com|Number=Plur	phon=-	syll=1	src=stanza
+   39.55-   39.78  per	lemma=per	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   39.82-   40.04  år	lemma=år	upos=NOUN	feats=Case=Nom|Definite=Ind|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+   40.08-   40.08  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza

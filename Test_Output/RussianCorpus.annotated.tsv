@@ -1,0 +1,179 @@
+sentence_id	token_id	surface	lemma	upos	feats	phonemes	syllables	start_sec	end_sec	source
+1	1	Недавно	недавно	ADV	Degree=Pos		1	0.0000	0.2222	stanza
+1	2	я	я	PRON	Case=Nom|Number=Sing|Person=1|PronType=Prs		1	0.2622	0.4844	stanza
+1	3	прочитал	прочесть	VERB	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act		1	0.5244	0.7467	stanza
+1	4	книгу	книга	NOUN	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing		1	0.7867	1.0089	stanza
+1	5	о	о	ADP			1	1.0489	1.2711	stanza
+1	6	том	то	PRON	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing|PronType=Dem		1	1.3111	1.5333	stanza
+1	7	,	,	PUNCT			0	1.5733	1.5733	stanza
+1	8	как	как	ADV	Degree=Pos		1	1.6533	1.8756	stanza
+1	9	ставить	ставить	VERB	Aspect=Imp|VerbForm=Inf|Voice=Act		1	1.9156	2.1378	stanza
+1	10	и	и	CCONJ			1	2.1778	2.4000	stanza
+1	11	достигать	достигать	VERB	Aspect=Imp|VerbForm=Inf|Voice=Act		1	2.4400	2.6622	stanza
+1	12	цели	цель	NOUN	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing		1	2.7022	2.9244	stanza
+1	13	.	.	PUNCT			0	2.9644	2.9644	stanza
+2	1	Поэтому	поэтому	ADV	Degree=Pos		1	3.3344	3.5567	stanza
+2	2	я	я	PRON	Case=Nom|Number=Sing|Person=1|PronType=Prs		1	3.5967	3.8189	stanza
+2	3	решил	решить	VERB	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act		1	3.8589	4.0811	stanza
+2	4	составить	составить	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	4.1211	4.3433	stanza
+2	5	свой	свой	DET	Case=Acc|Gender=Masc|Number=Sing|Poss=Yes|PronType=Prs|Reflex=Yes		1	4.3833	4.6056	stanza
+2	6	план	план	NOUN	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing		1	4.6456	4.8678	stanza
+2	7	на	на	ADP			1	4.9078	5.1300	stanza
+2	8	год	год	NOUN	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing		1	5.1700	5.3922	stanza
+2	9	.	.	PUNCT			0	5.4322	5.4322	stanza
+3	1	Вот	вот	PART			1	5.8022	6.0244	stanza
+3	2	,	,	PUNCT			0	6.0644	6.0644	stanza
+3	3	как	как	ADV	Degree=Pos		1	6.1444	6.3667	stanza
+3	4	он	он	PRON	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs		1	6.4067	6.6289	stanza
+3	5	выглядит	выглядеть	VERB	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act		1	6.6689	6.8911	stanza
+3	6	:	:	PUNCT			0	6.9311	6.9311	stanza
+4	1	1	1	NUM	NumType=Card		1	7.1311	7.3533	stanza
+4	2	.	.	PUNCT			0	7.3933	7.3933	stanza
+5	1	Улучшить	улучшить	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	7.7633	7.9856	stanza
+5	2	английский	английский	ADJ	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing		1	8.0256	8.2478	stanza
+5	3	язык	язык	NOUN	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing		1	8.2878	8.5100	stanza
+5	4	.	.	PUNCT			0	8.5500	8.5500	stanza
+6	1	Я	я	PRON	Case=Nom|Number=Sing|Person=1|PronType=Prs		1	8.9200	9.1422	stanza
+6	2	достаточно	достаточно	ADV	Degree=Pos		1	9.1822	9.4044	stanza
+6	3	хорошо	хорошо	ADV	Degree=Pos		1	9.4444	9.6667	stanza
+6	4	говорю	говорить	VERB	Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act		1	9.7067	9.9289	stanza
+6	5	на	на	ADP			1	9.9689	10.1911	stanza
+6	6	английском	английский	ADJ	Case=Loc|Degree=Pos|Gender=Masc|Number=Sing		1	10.2311	10.4533	stanza
+6	7	,	,	PUNCT			0	10.4933	10.4933	stanza
+6	8	но	но	CCONJ			1	10.5733	10.7956	stanza
+6	9	,	,	PUNCT			0	10.8356	10.8356	stanza
+6	10	если	если	SCONJ			1	10.9156	11.1378	stanza
+6	11	я	я	PRON	Case=Nom|Number=Sing|Person=1|PronType=Prs		1	11.1778	11.4000	stanza
+6	12	хочу	хотеть	VERB	Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act		1	11.4400	11.6622	stanza
+6	13	устроиться	устроиться	VERB	Aspect=Perf|VerbForm=Inf|Voice=Mid		1	11.7022	11.9244	stanza
+6	14	работу	работа	NOUN	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing		1	11.9644	12.1867	stanza
+6	15	в	в	ADP			1	12.2267	12.4489	stanza
+6	16	международную	международный	ADJ	Case=Acc|Degree=Pos|Gender=Fem|Number=Sing		1	12.4889	12.7111	stanza
+6	17	компанию	компания	NOUN	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing		1	12.7511	12.9733	stanza
+6	18	,	,	PUNCT			0	13.0133	13.0133	stanza
+6	19	моего	мой	DET	Case=Gen|Gender=Masc|Number=Sing|Poss=Yes|PronType=Prs		1	13.0933	13.3156	stanza
+6	20	уровня	уровень	NOUN	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing		1	13.3556	13.5778	stanza
+6	21	будет	быть	AUX	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act		1	13.6178	13.8400	stanza
+6	22	недостаточно	недостаточный	ADJ	Degree=Pos|Gender=Neut|Number=Sing|Variant=Short		1	13.8800	14.1022	stanza
+6	23	.	.	PUNCT			0	14.1422	14.1422	stanza
+7	1	Мне	я	PRON	Case=Dat|Number=Sing|Person=1|PronType=Prs		1	14.5122	14.7344	stanza
+7	2	нужно	нужный	ADJ	Degree=Pos|Gender=Neut|Number=Sing|Variant=Short		1	14.7744	14.9967	stanza
+7	3	будет	быть	AUX	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act		1	15.0367	15.2589	stanza
+7	4	пройти	пройти	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	15.2989	15.5211	stanza
+7	5	дополнительные	дополнительный	ADJ	Animacy=Inan|Case=Acc|Degree=Pos|Number=Plur		1	15.5611	15.7833	stanza
+7	6	курсы	курс	NOUN	Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur		1	15.8233	16.0456	stanza
+7	7	бизнес	бизнес	NOUN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing		1	16.0856	16.3078	stanza
+7	8	-	-	PUNCT			0	16.3478	16.3478	stanza
+7	9	английского	английский	ADJ	Case=Gen|Degree=Pos|Gender=Masc|Number=Sing		1	16.4278	16.6500	stanza
+7	10	и	и	CCONJ			1	16.6900	16.9122	stanza
+7	11	получить	получить	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	16.9522	17.1744	stanza
+7	12	сертификат	сертификат	NOUN	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing		1	17.2144	17.4367	stanza
+7	13	.	.	PUNCT			0	17.4767	17.4767	stanza
+8	1	2	2	NUM	NumType=Card		1	17.8467	18.0689	stanza
+8	2	.	.	PUNCT			0	18.1089	18.1089	stanza
+9	1	Сходить	сходить	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	18.4789	18.7011	stanza
+9	2	в	в	ADP			1	18.7411	18.9633	stanza
+9	3	поход	поход	NOUN	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing		1	19.0033	19.2256	stanza
+9	4	.	.	PUNCT			0	19.2656	19.2656	stanza
+10	1	Я	я	PRON	Case=Nom|Number=Sing|Person=1|PronType=Prs		1	19.6356	19.8578	stanza
+10	2	всегда	всегда	ADV	Degree=Pos		1	19.8978	20.1200	stanza
+10	3	хотел	хотеть	VERB	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act		1	20.1600	20.3822	stanza
+10	4	провести	провести	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	20.4222	20.6444	stanza
+10	5	ночь	ночь	NOUN	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing		1	20.6844	20.9067	stanza
+10	6	на	на	ADP			1	20.9467	21.1689	stanza
+10	7	природе	природа	NOUN	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing		1	21.2089	21.4311	stanza
+10	8	.	.	PUNCT			0	21.4711	21.4711	stanza
+11	1	Даже	даже	PART			1	21.8411	22.0633	stanza
+11	2	купил	купить	VERB	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act		1	22.1033	22.3256	stanza
+11	3	палатку	палатка	NOUN	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing		1	22.3656	22.5878	stanza
+11	4	.	.	PUNCT			0	22.6278	22.6278	stanza
+12	1	В	в	ADP			1	22.9978	23.2200	stanza
+12	2	этом	этот	DET	Case=Loc|Gender=Masc|Number=Sing|PronType=Dem		1	23.2600	23.4822	stanza
+12	3	году	год	NOUN	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing		1	23.5222	23.7444	stanza
+12	4	я	я	PRON	Case=Nom|Number=Sing|Person=1|PronType=Prs		1	23.7844	24.0067	stanza
+12	5	обязательно	обязательно	ADV	Degree=Pos		1	24.0467	24.2689	stanza
+12	6	поеду	поехать	VERB	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act		1	24.3089	24.5311	stanza
+12	7	с	с	ADP			1	24.5711	24.7933	stanza
+12	8	палаткой	палатка	NOUN	Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing		1	24.8333	25.0556	stanza
+12	9	к	к	ADP			1	25.0956	25.3178	stanza
+12	10	морю	море	NOUN	Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing		1	25.3578	25.5800	stanza
+12	11	или	или	CCONJ			1	25.6200	25.8422	stanza
+12	12	в	в	ADP			1	25.8822	26.1044	stanza
+12	13	горы	гора	NOUN	Animacy=Inan|Case=Acc|Gender=Fem|Number=Plur		1	26.1444	26.3667	stanza
+12	14	.	.	PUNCT			0	26.4067	26.4067	stanza
+13	1	Для	для	ADP			1	26.7767	26.9989	stanza
+13	2	этого	это	PRON	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing|PronType=Dem		1	27.0389	27.2611	stanza
+13	3	мне	я	PRON	Case=Dat|Number=Sing|Person=1|PronType=Prs		1	27.3011	27.5233	stanza
+13	4	надо	надо	ADV	Degree=Pos		1	27.5633	27.7856	stanza
+13	5	будет	быть	AUX	Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act		1	27.8256	28.0478	stanza
+13	6	разработать	разработать	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	28.0878	28.3100	stanza
+13	7	маршрут	маршрут	NOUN	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing		1	28.3500	28.5722	stanza
+13	8	,	,	PUNCT			0	28.6122	28.6122	stanza
+13	9	собрать	собрать	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	28.6922	28.9144	stanza
+13	10	друзей	друг	NOUN	Animacy=Anim|Case=Acc|Gender=Masc|Number=Plur		1	28.9544	29.1767	stanza
+13	11	и	и	CCONJ			1	29.2167	29.4389	stanza
+13	12	организовать	организовывать	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	29.4789	29.7011	stanza
+13	13	поездку	поездка	NOUN	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing		1	29.7411	29.9633	stanza
+13	14	.	.	PUNCT			0	30.0033	30.0033	stanza
+14	1	3	3	NUM	NumType=Card		1	30.3733	30.5956	stanza
+14	2	.	.	PUNCT			0	30.6356	30.6356	stanza
+15	1	Сдать	сдать	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	31.0056	31.2278	stanza
+15	2	на	на	ADP			1	31.2678	31.4900	stanza
+15	3	права	право	NOUN	Animacy=Inan|Case=Acc|Gender=Neut|Number=Plur		1	31.5300	31.7522	stanza
+15	4	.	.	PUNCT			0	31.7922	31.7922	stanza
+16	1	Я	я	PRON	Case=Nom|Number=Sing|Person=1|PronType=Prs		1	32.1622	32.3844	stanza
+16	2	давно	давно	ADV	Degree=Pos		1	32.4244	32.6467	stanza
+16	3	откладывал	откладывать	VERB	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act		1	32.6867	32.9089	stanza
+16	4	деньги	деньги	NOUN	Animacy=Inan|Case=Acc|Gender=Fem|Number=Plur		1	32.9489	33.1711	stanza
+16	5	на	на	ADP			1	33.2111	33.4333	stanza
+16	6	машину	машина	NOUN	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing		1	33.4733	33.6956	stanza
+16	7	,	,	PUNCT			0	33.7356	33.7356	stanza
+16	8	работая	работать	VERB	Aspect=Imp|Tense=Pres|VerbForm=Conv|Voice=Act		1	33.8156	34.0378	stanza
+16	9	на	на	ADP			1	34.0778	34.3000	stanza
+16	10	каникулах	каникулы	NOUN	Animacy=Inan|Case=Loc|Gender=Fem|Number=Plur		1	34.3400	34.5622	stanza
+16	11	и	и	CCONJ			1	34.6022	34.8244	stanza
+16	12	по	по	ADP			1	34.8644	35.0867	stanza
+16	13	вечерам	вечер	NOUN	Animacy=Inan|Case=Dat|Gender=Masc|Number=Plur		1	35.1267	35.3489	stanza
+16	14	.	.	PUNCT			0	35.3889	35.3889	stanza
+17	1	Но	но	CCONJ			1	35.7589	35.9811	stanza
+17	2	,	,	PUNCT			0	36.0211	36.0211	stanza
+17	3	прежде	прежде	ADV	Degree=Pos		1	36.1011	36.3233	stanza
+17	4	чем	чем	SCONJ			1	36.3633	36.5856	stanza
+17	5	купить	купить	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	36.6256	36.8478	stanza
+17	6	авто	авто	NOUN	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing		1	36.8878	37.1100	stanza
+17	7	,	,	PUNCT			0	37.1500	37.1500	stanza
+17	8	мне	я	PRON	Case=Dat|Number=Sing|Person=1|PronType=Prs		1	37.2300	37.4522	stanza
+17	9	надо	надо	ADV	Degree=Pos		1	37.4922	37.7144	stanza
+17	10	получить	получить	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	37.7544	37.9767	stanza
+17	11	права	право	NOUN	Animacy=Inan|Case=Acc|Gender=Neut|Number=Plur		1	38.0167	38.2389	stanza
+17	12	.	.	PUNCT			0	38.2789	38.2789	stanza
+18	1	В	в	ADP			1	38.6489	38.8711	stanza
+18	2	этом	этот	DET	Case=Loc|Gender=Masc|Number=Sing|PronType=Dem		1	38.9111	39.1333	stanza
+18	3	году	год	NOUN	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing		1	39.1733	39.3956	stanza
+18	4	я	я	PRON	Case=Nom|Number=Sing|Person=1|PronType=Prs		1	39.4356	39.6578	stanza
+18	5	запишусь	записаться	VERB	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Fut|VerbForm=Fin|Voice=Mid		1	39.6978	39.9200	stanza
+18	6	в	в	ADP			1	39.9600	40.1822	stanza
+18	7	школу	школа	NOUN	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing		1	40.2222	40.4444	stanza
+18	8	вождения	вождение	NOUN	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing		1	40.4844	40.7067	stanza
+18	9	,	,	PUNCT			0	40.7467	40.7467	stanza
+18	10	пройду	пройти	VERB	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act		1	40.8267	41.0489	stanza
+18	11	обучение	обучение	NOUN	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing		1	41.0889	41.3111	stanza
+18	12	,	,	PUNCT			0	41.3511	41.3511	stanza
+18	13	выучу	выучать	VERB	Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act		1	41.4311	41.6533	stanza
+18	14	правила	правило	NOUN	Animacy=Inan|Case=Acc|Gender=Neut|Number=Plur		1	41.6933	41.9156	stanza
+18	15	дорожного	дорожный	ADJ	Case=Gen|Degree=Pos|Gender=Neut|Number=Sing		1	41.9556	42.1778	stanza
+18	16	движения	движение	NOUN	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing		1	42.2178	42.4400	stanza
+18	17	и	и	CCONJ			1	42.4800	42.7022	stanza
+18	18	сдам	сдам	NOUN	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing		1	42.7422	42.9644	stanza
+18	19	экзамен	экзамен	NOUN	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing		1	43.0044	43.2267	stanza
+18	20	.	.	PUNCT			0	43.2667	43.2667	stanza
+19	1	Я	я	PRON	Case=Nom|Number=Sing|Person=1|PronType=Prs		1	43.6367	43.8589	stanza
+19	2	полон	полный	ADJ	Degree=Pos|Gender=Masc|Number=Sing|Variant=Short		1	43.8989	44.1211	stanza
+19	3	решимости	решимость	NOUN	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing		1	44.1611	44.3833	stanza
+19	4	достичь	достичь	VERB	Aspect=Perf|VerbForm=Inf|Voice=Act		1	44.4233	44.6456	stanza
+19	5	своих	свой	DET	Case=Gen|Number=Plur|Poss=Yes|PronType=Prs|Reflex=Yes		1	44.6856	44.9078	stanza
+19	6	целей	цель	NOUN	Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur		1	44.9478	45.1700	stanza
+19	7	в	в	ADP			1	45.2100	45.4322	stanza
+19	8	этом	этот	DET	Case=Loc|Gender=Masc|Number=Sing|PronType=Dem		1	45.4722	45.6944	stanza
+19	9	году	год	NOUN	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing		1	45.7344	45.9567	stanza
+19	10	.	.	PUNCT			0	45.9967	45.9967	stanza

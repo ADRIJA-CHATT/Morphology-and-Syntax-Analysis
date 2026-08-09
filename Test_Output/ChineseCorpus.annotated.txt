@@ -1,0 +1,499 @@
+[SENTENCE 1]
+    0.00-    0.22  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+    0.26-    0.48  与	lemma=与	upos=ADP	feats=-	phon=yu3	syll=1	src=stanza
+    0.52-    0.97  父亲	lemma=父亲	upos=NOUN	feats=-	phon=fu4 qin1	syll=2	src=stanza
+    1.01-    1.23  不	lemma=不	upos=ADV	feats=Polarity=Neg	phon=bu4	syll=1	src=stanza
+    1.27-    1.72  相见	lemma=相见	upos=VERB	feats=-	phon=xiang1 jian4	syll=2	src=stanza
+    1.76-    1.98  已	lemma=已	upos=ADV	feats=-	phon=yi3	syll=1	src=stanza
+    2.02-    2.24  二	lemma=二	upos=NUM	feats=NumType=Card	phon=er4	syll=1	src=stanza
+    2.28-    2.50  年	lemma=年	upos=NOUN	feats=-	phon=nian2	syll=1	src=stanza
+    2.54-    2.76  余	lemma=余	upos=VERB	feats=-	phon=yu2	syll=1	src=stanza
+    2.80-    3.03  了	lemma=了	upos=PART	feats=-	phon=le5	syll=1	src=stanza
+    3.07-    3.07  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+    3.15-    3.37  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+    3.41-    3.63  最	lemma=最	upos=ADV	feats=-	phon=zui4	syll=1	src=stanza
+    3.67-    4.12  不能	lemma=能	upos=AUX	feats=Polarity=Neg	phon=bu4 neng2	syll=2	src=stanza
+    4.16-    4.60  忘记	lemma=忘记	upos=VERB	feats=-	phon=wang4 ji4	syll=2	src=stanza
+    4.64-    4.86  的	lemma=的	upos=SCONJ	feats=-	phon=de5	syll=1	src=stanza
+    4.90-    5.12  是	lemma=是	upos=AUX	feats=-	phon=shi4	syll=1	src=stanza
+    5.16-    5.39  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+    5.43-    5.65  的	lemma=的	upos=PART	feats=Case=Gen	phon=de5	syll=1	src=stanza
+    5.69-    6.13  背影	lemma=背影	upos=NOUN	feats=-	phon=bei4 ying3	syll=2	src=stanza
+    6.17-    6.17  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 2]
+    6.54-    6.77  那	lemma=那	upos=DET	feats=-	phon=na4	syll=1	src=stanza
+    6.81-    7.03  年	lemma=年	upos=NOUN	feats=-	phon=nian2	syll=1	src=stanza
+    7.07-    7.51  冬天	lemma=冬天	upos=NOUN	feats=-	phon=dong1 tian1	syll=2	src=stanza
+    7.55-    7.55  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+    7.63-    7.85  祖	lemma=祖	upos=PROPN	feats=-	phon=zu3	syll=1	src=stanza
+    7.89-    8.34  母死	lemma=母死	upos=VERB	feats=-	phon=mu3 si3	syll=2	src=stanza
+    8.38-    8.60  了	lemma=了	upos=PART	feats=-	phon=le5	syll=1	src=stanza
+    8.64-    8.64  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+    8.72-    9.17  父亲	lemma=父亲	upos=NOUN	feats=-	phon=fu4 qin1	syll=2	src=stanza
+    9.21-    9.43  的	lemma=的	upos=PART	feats=Case=Gen	phon=de5	syll=1	src=stanza
+    9.47-    9.91  差使	lemma=差使	upos=NOUN	feats=-	phon=chai1 shi3	syll=2	src=stanza
+    9.95-   10.17  也	lemma=也	upos=SCONJ	feats=-	phon=ye3	syll=1	src=stanza
+   10.21-   10.66  交卸	lemma=交卸	upos=VERB	feats=-	phon=jiao1 xie4	syll=2	src=stanza
+   10.70-   10.92  了	lemma=了	upos=AUX	feats=Aspect=Perf	phon=le5	syll=1	src=stanza
+   10.96-   10.96  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   11.04-   11.49  正是	lemma=是	upos=AUX	feats=-	phon=zheng4 shi4	syll=2	src=stanza
+   11.53-   11.75  祸	lemma=祸	upos=NOUN	feats=-	phon=huo4	syll=1	src=stanza
+   11.79-   12.01  不	lemma=不	upos=ADV	feats=Polarity=Neg	phon=bu4	syll=1	src=stanza
+   12.05-   12.49  单行	lemma=单行	upos=ADJ	feats=-	phon=dan1 xing2	syll=2	src=stanza
+   12.53-   12.76  的	lemma=的	upos=SCONJ	feats=-	phon=de5	syll=1	src=stanza
+   12.80-   13.24  日子	lemma=日子	upos=NOUN	feats=-	phon=ri4 zi5	syll=2	src=stanza
+   13.28-   13.28  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 3]
+   13.65-   13.87  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+   13.91-   14.14  从	lemma=从	upos=ADP	feats=-	phon=cong2	syll=1	src=stanza
+   14.18-   14.62  北京	lemma=北京	upos=PROPN	feats=-	phon=bei3 jing1	syll=2	src=stanza
+   14.66-   14.88  到	lemma=到	upos=VERB	feats=-	phon=dao4	syll=1	src=stanza
+   14.92-   15.14  徐	lemma=徐	upos=PROPN	feats=-	phon=xu2	syll=1	src=stanza
+   15.18-   15.41  州	lemma=州	upos=PART	feats=-	phon=zhou1	syll=1	src=stanza
+   15.45-   15.45  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   15.53-   15.97  打算	lemma=打算	upos=VERB	feats=-	phon=da3 suan4	syll=2	src=stanza
+   16.01-   16.23  跟	lemma=跟	upos=VERB	feats=-	phon=gen1	syll=1	src=stanza
+   16.27-   16.50  着	lemma=着	upos=AUX	feats=Aspect=Prog	phon=zhe5	syll=1	src=stanza
+   16.54-   16.98  父亲	lemma=父亲	upos=NOUN	feats=-	phon=fu4 qin1	syll=2	src=stanza
+   17.02-   17.46  奔丧	lemma=奔丧	upos=VERB	feats=-	phon=ben1 sang1	syll=2	src=stanza
+   17.50-   17.95  回家	lemma=回家	upos=VERB	feats=-	phon=hui2 jia1	syll=2	src=stanza
+   17.99-   17.99  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 4]
+   18.36-   18.58  到	lemma=到	upos=VERB	feats=-	phon=dao4	syll=1	src=stanza
+   18.62-   18.84  徐	lemma=徐	upos=PROPN	feats=-	phon=xu2	syll=1	src=stanza
+   18.88-   19.11  州	lemma=州	upos=PART	feats=-	phon=zhou1	syll=1	src=stanza
+   19.15-   19.37  见	lemma=见	upos=VERB	feats=-	phon=jian4	syll=1	src=stanza
+   19.41-   19.63  着	lemma=着	upos=AUX	feats=Aspect=Prog	phon=zhe5	syll=1	src=stanza
+   19.67-   20.11  父亲	lemma=父亲	upos=NOUN	feats=-	phon=fu4 qin1	syll=2	src=stanza
+   20.15-   20.15  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   20.23-   20.68  看见	lemma=看见	upos=VERB	feats=-	phon=kan4 jian4	syll=2	src=stanza
+   20.72-   21.16  满院	lemma=满院	upos=PROPN	feats=-	phon=man3 yuan4	syll=2	src=stanza
+   21.20-   21.43  狼	lemma=狼	upos=PART	feats=-	phon=lang2	syll=1	src=stanza
+   21.47-   21.69  藉	lemma=藉	upos=VERB	feats=-	phon=ji2	syll=1	src=stanza
+   21.73-   21.95  的	lemma=的	upos=SCONJ	feats=-	phon=de5	syll=1	src=stanza
+   21.99-   22.43  东西	lemma=东西	upos=NOUN	feats=-	phon=dong1 xi1	syll=2	src=stanza
+   22.47-   22.47  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   22.55-   22.78  又	lemma=又	upos=SCONJ	feats=-	phon=you4	syll=1	src=stanza
+   22.82-   23.26  想起	lemma=想起	upos=VERB	feats=-	phon=xiang3 qi3	syll=2	src=stanza
+   23.30-   23.75  祖母	lemma=祖母	upos=NOUN	feats=-	phon=zu3 mu3	syll=2	src=stanza
+   23.79-   23.79  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   23.87-   24.09  不	lemma=不	upos=ADV	feats=Polarity=Neg	phon=bu4	syll=1	src=stanza
+   24.13-   24.57  禁簌	lemma=禁簌	upos=VERB	feats=-	phon=jin4 su4	syll=2	src=stanza
+   24.61-   24.83  簌	lemma=簌	upos=ADJ	feats=-	phon=su4	syll=1	src=stanza
+   24.87-   25.10  地	lemma=地	upos=SCONJ	feats=-	phon=di4	syll=1	src=stanza
+   25.14-   25.58  流下	lemma=流下	upos=VERB	feats=-	phon=liu2 xia4	syll=2	src=stanza
+   25.62-   26.07  眼泪	lemma=眼泪	upos=NOUN	feats=-	phon=yan3 lei4	syll=2	src=stanza
+   26.11-   26.11  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 5]
+   26.48-   26.92  父亲	lemma=父亲	upos=NOUN	feats=-	phon=fu4 qin1	syll=2	src=stanza
+   26.96-   27.18  说	lemma=说	upos=VERB	feats=-	phon=shuo1	syll=1	src=stanza
+   27.22-   27.22  ：	lemma=：	upos=PUNCT	feats=-	phon=：	syll=0	src=stanza
+   27.30-   27.30  “	lemma=“	upos=PUNCT	feats=-	phon=“	syll=0	src=stanza
+   27.38-   27.60  事	lemma=事	upos=NOUN	feats=-	phon=shi4	syll=1	src=stanza
+   27.64-   27.87  已	lemma=已	upos=ADV	feats=-	phon=yi3	syll=1	src=stanza
+   27.91-   28.35  如此	lemma=如此	upos=VERB	feats=-	phon=ru2 ci3	syll=2	src=stanza
+   28.39-   28.39  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   28.47-   28.69  不	lemma=不	upos=ADV	feats=Polarity=Neg	phon=bu4	syll=1	src=stanza
+   28.73-   28.96  必	lemma=必	upos=AUX	feats=-	phon=bi4	syll=1	src=stanza
+   29.00-   29.44  难过	lemma=难过	upos=ADJ	feats=-	phon=nan2 guo4	syll=2	src=stanza
+   29.48-   29.48  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   29.56-   29.78  好	lemma=好	upos=ADV	feats=-	phon=hao3	syll=1	src=stanza
+   29.82-   30.04  在	lemma=在	upos=VERB	feats=-	phon=zai4	syll=1	src=stanza
+   30.08-   30.31  天	lemma=天	upos=PROPN	feats=-	phon=tian1	syll=1	src=stanza
+   30.35-   30.79  无绝	lemma=无绝	upos=VERB	feats=-	phon=wu2 jue2	syll=2	src=stanza
+   30.83-   31.05  人	lemma=人	upos=NOUN	feats=-	phon=ren2	syll=1	src=stanza
+   31.09-   31.32  之	lemma=之	upos=PART	feats=Case=Gen	phon=zhi1	syll=1	src=stanza
+   31.36-   31.58  路	lemma=路	upos=NOUN	feats=-	phon=lu4	syll=1	src=stanza
+   31.62-   31.62  ！	lemma=！	upos=PUNCT	feats=-	phon=！	syll=0	src=stanza
+   31.87-   31.87  ”	lemma=”	upos=PUNCT	feats=-	phon=”	syll=0	src=stanza
+
+[SENTENCE 6]
+   32.07-   32.51  回家	lemma=回家	upos=VERB	feats=-	phon=hui2 jia1	syll=2	src=stanza
+   32.55-   33.00  变卖	lemma=变卖	upos=VERB	feats=-	phon=bian4 mai4	syll=2	src=stanza
+   33.04-   33.48  典质	lemma=典质	upos=NOUN	feats=-	phon=dian3 zhi4	syll=2	src=stanza
+   33.52-   33.52  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   33.60-   34.05  父亲	lemma=父亲	upos=NOUN	feats=-	phon=fu4 qin1	syll=2	src=stanza
+   34.09-   34.31  还	lemma=还	upos=SCONJ	feats=-	phon=hai2	syll=1	src=stanza
+   34.35-   34.57  了	lemma=了	upos=AUX	feats=Aspect=Perf	phon=le5	syll=1	src=stanza
+   34.61-   35.05  亏空	lemma=亏空	upos=VERB	feats=-	phon=kui1 kong1	syll=2	src=stanza
+   35.09-   35.09  ；	lemma=；	upos=PUNCT	feats=-	phon=；	syll=0	src=stanza
+   35.17-   35.40  又	lemma=又	upos=SCONJ	feats=-	phon=you4	syll=1	src=stanza
+   35.44-   36.10  借钱办	lemma=借钱办	upos=VERB	feats=-	phon=jie4 qian2 ban4	syll=3	src=stanza
+   36.14-   36.37  了	lemma=了	upos=AUX	feats=Aspect=Perf	phon=le5	syll=1	src=stanza
+   36.41-   36.85  丧事	lemma=丧事	upos=NOUN	feats=-	phon=sang1 shi4	syll=2	src=stanza
+   36.89-   36.89  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 7]
+   37.26-   37.70  这些	lemma=这些	upos=DET	feats=-	phon=zhe4 xie1	syll=2	src=stanza
+   37.74-   38.19  日子	lemma=日子	upos=NOUN	feats=-	phon=ri4 zi5	syll=2	src=stanza
+   38.23-   38.23  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   38.31-   38.75  家中	lemma=家中	upos=NOUN	feats=-	phon=jia1 zhong1	syll=2	src=stanza
+   38.79-   39.24  光景	lemma=光景	upos=NOUN	feats=-	phon=guang1 jing3	syll=2	src=stanza
+   39.28-   39.72  很是	lemma=很是	upos=ADV	feats=-	phon=hen3 shi4	syll=2	src=stanza
+   39.76-   40.21  惨澹	lemma=惨澹	upos=ADJ	feats=-	phon=can3 dan4	syll=2	src=stanza
+   40.25-   40.25  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   40.33-   40.77  一半	lemma=一半	upos=NUM	feats=NumType=Card	phon=yi2 ban4	syll=2	src=stanza
+   40.81-   41.26  为了	lemma=为了	upos=ADP	feats=-	phon=wei4 le5	syll=2	src=stanza
+   41.30-   41.74  丧事	lemma=丧事	upos=VERB	feats=-	phon=sang1 shi4	syll=2	src=stanza
+   41.78-   41.78  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   41.86-   42.30  一半	lemma=一半	upos=NUM	feats=NumType=Card	phon=yi2 ban4	syll=2	src=stanza
+   42.34-   42.79  为了	lemma=为了	upos=ADP	feats=-	phon=wei4 le5	syll=2	src=stanza
+   42.83-   43.27  父亲	lemma=父亲	upos=NOUN	feats=-	phon=fu4 qin1	syll=2	src=stanza
+   43.31-   43.76  赋闲	lemma=赋闲	upos=VERB	feats=-	phon=fu4 xian2	syll=2	src=stanza
+   43.80-   43.80  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 8]
+   44.17-   44.61  丧事	lemma=丧事	upos=VERB	feats=-	phon=sang1 shi4	syll=2	src=stanza
+   44.65-   45.10  完毕	lemma=完毕	upos=VERB	feats=-	phon=wan2 bi4	syll=2	src=stanza
+   45.14-   45.14  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   45.22-   45.66  父亲	lemma=父亲	upos=NOUN	feats=-	phon=fu4 qin1	syll=2	src=stanza
+   45.70-   45.92  要	lemma=要	upos=AUX	feats=-	phon=yao4	syll=1	src=stanza
+   45.96-   46.19  到	lemma=到	upos=VERB	feats=-	phon=dao4	syll=1	src=stanza
+   46.23-   46.67  南京	lemma=南京	upos=PROPN	feats=-	phon=nan2 jing1	syll=2	src=stanza
+   46.71-   47.15  谋事	lemma=谋事	upos=VERB	feats=-	phon=mou2 shi4	syll=2	src=stanza
+   47.19-   47.19  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   47.27-   47.50  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+   47.54-   47.76  也	lemma=也	upos=SCONJ	feats=-	phon=ye3	syll=1	src=stanza
+   47.80-   48.24  要回	lemma=要回	upos=VERB	feats=-	phon=yao4 hui2	syll=2	src=stanza
+   48.28-   48.73  北京	lemma=北京	upos=PROPN	feats=-	phon=bei3 jing1	syll=2	src=stanza
+   48.77-   49.21  念书	lemma=念书	upos=VERB	feats=-	phon=nian4 shu1	syll=2	src=stanza
+   49.25-   49.25  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   49.33-   49.78  我们	lemma=我	upos=PRON	feats=Number=Plur|Person=1	phon=wo3 men5	syll=2	src=stanza
+   49.82-   50.04  便	lemma=便	upos=SCONJ	feats=-	phon=bian4	syll=1	src=stanza
+   50.08-   50.52  同行	lemma=同行	upos=VERB	feats=-	phon=tong2 hang2	syll=2	src=stanza
+   50.56-   50.56  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 9]
+   50.93-   51.16  到	lemma=到	upos=VERB	feats=-	phon=dao4	syll=1	src=stanza
+   51.20-   51.64  南京	lemma=南京	upos=PROPN	feats=-	phon=nan2 jing1	syll=2	src=stanza
+   51.68-   51.90  时	lemma=时	upos=ADP	feats=-	phon=shi2	syll=1	src=stanza
+   51.94-   51.94  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   52.02-   52.24  有	lemma=有	upos=VERB	feats=-	phon=you3	syll=1	src=stanza
+   52.28-   52.73  朋友	lemma=朋友	upos=NOUN	feats=-	phon=peng2 you3	syll=2	src=stanza
+   52.77-   52.99  约	lemma=约	upos=ADV	feats=-	phon=yue1	syll=1	src=stanza
+   53.03-   53.25  去	lemma=去	upos=VERB	feats=-	phon=qu4	syll=1	src=stanza
+   53.29-   53.74  游逛	lemma=游逛	upos=VERB	feats=-	phon=you2 guang4	syll=2	src=stanza
+   53.78-   53.78  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   53.86-   54.30  勾留	lemma=勾留	upos=VERB	feats=-	phon=gou1 liu2	syll=2	src=stanza
+   54.34-   54.56  了	lemma=了	upos=AUX	feats=Aspect=Perf	phon=le5	syll=1	src=stanza
+   54.60-   54.83  一	lemma=一	upos=NUM	feats=NumType=Card	phon=yi1	syll=1	src=stanza
+   54.87-   55.09  日	lemma=日	upos=NOUN	feats=-	phon=ri4	syll=1	src=stanza
+   55.13-   55.13  ；	lemma=；	upos=PUNCT	feats=-	phon=；	syll=0	src=stanza
+   55.21-   55.65  第二	lemma=第二	upos=NUM	feats=NumType=Ord	phon=di4 er4	syll=2	src=stanza
+   55.69-   55.92  日	lemma=日	upos=NOUN	feats=-	phon=ri4	syll=1	src=stanza
+   55.96-   56.40  上午	lemma=上午	upos=NOUN	feats=-	phon=shang4 wu3	syll=2	src=stanza
+   56.44-   56.66  便	lemma=便	upos=SCONJ	feats=-	phon=bian4	syll=1	src=stanza
+   56.70-   56.92  须	lemma=须	upos=AUX	feats=-	phon=xu1	syll=1	src=stanza
+   56.96-   57.19  渡	lemma=渡	upos=VERB	feats=-	phon=du4	syll=1	src=stanza
+   57.23-   57.45  江	lemma=江	upos=PROPN	feats=-	phon=jiang1	syll=1	src=stanza
+   57.49-   57.71  到	lemma=到	upos=VERB	feats=-	phon=dao4	syll=1	src=stanza
+   57.75-   58.20  浦口	lemma=浦口	upos=PROPN	feats=-	phon=pu3 kou3	syll=2	src=stanza
+   58.24-   58.24  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   58.32-   58.76  下午	lemma=下午	upos=NOUN	feats=-	phon=xia4 wu3	syll=2	src=stanza
+   58.80-   59.24  上车	lemma=上车	upos=VERB	feats=-	phon=shang4 che1	syll=2	src=stanza
+   59.28-   59.73  北去	lemma=北去	upos=VERB	feats=-	phon=bei3 qu4	syll=2	src=stanza
+   59.77-   59.77  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 10]
+   60.14-   60.58  父亲	lemma=父亲	upos=NOUN	feats=-	phon=fu4 qin1	syll=2	src=stanza
+   60.62-   61.07  因为	lemma=因为	upos=ADP	feats=-	phon=yin1 wei4	syll=2	src=stanza
+   61.11-   61.55  事忙	lemma=事忙	upos=VERB	feats=-	phon=shi4 mang2	syll=2	src=stanza
+   61.59-   61.59  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   61.67-   61.89  本	lemma=本	upos=ADV	feats=-	phon=ben3	syll=1	src=stanza
+   61.93-   62.16  已	lemma=已	upos=ADV	feats=-	phon=yi3	syll=1	src=stanza
+   62.20-   62.64  说定	lemma=说定	upos=VERB	feats=-	phon=shuo1 ding4	syll=2	src=stanza
+   62.68-   62.90  不	lemma=不	upos=ADV	feats=Polarity=Neg	phon=bu4	syll=1	src=stanza
+   62.94-   63.39  送我	lemma=送我	upos=VERB	feats=-	phon=song4 wo3	syll=2	src=stanza
+   63.43-   63.43  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   63.51-   63.95  叫旅	lemma=叫旅	upos=VERB	feats=-	phon=jiao4 lv3	syll=2	src=stanza
+   63.99-   64.21  馆	lemma=馆	upos=PART	feats=-	phon=guan3	syll=1	src=stanza
+   64.25-   64.48  里	lemma=里	upos=NOUN	feats=-	phon=li3	syll=1	src=stanza
+   64.52-   64.74  一	lemma=一	upos=NUM	feats=NumType=Card	phon=yi1	syll=1	src=stanza
+   64.78-   65.00  个	lemma=个	upos=NOUN	feats=-	phon=ge4	syll=1	src=stanza
+   65.04-   65.49  熟识	lemma=熟识	upos=VERB	feats=-	phon=shu2 shi2	syll=2	src=stanza
+   65.53-   65.75  的	lemma=的	upos=SCONJ	feats=-	phon=de5	syll=1	src=stanza
+   65.79-   66.23  茶房	lemma=茶房	upos=NOUN	feats=-	phon=cha2 fang2	syll=2	src=stanza
+   66.27-   66.49  陪	lemma=陪	upos=VERB	feats=-	phon=pei2	syll=1	src=stanza
+   66.53-   66.76  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+   66.80-   67.24  同去	lemma=同去	upos=VERB	feats=-	phon=tong2 qu4	syll=2	src=stanza
+   67.28-   67.28  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 11]
+   67.65-   67.87  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+   67.91-   68.36  再三	lemma=再三	upos=ADV	feats=-	phon=zai4 san1	syll=2	src=stanza
+   68.40-   68.84  嘱咐	lemma=嘱咐	upos=VERB	feats=-	phon=zhu3 fu4	syll=2	src=stanza
+   68.88-   69.33  茶房	lemma=茶房	upos=NOUN	feats=-	phon=cha2 fang2	syll=2	src=stanza
+   69.37-   69.37  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   69.45-   69.89  甚是	lemma=甚是	upos=ADV	feats=-	phon=shen4 shi4	syll=2	src=stanza
+   69.93-   70.38  仔细	lemma=仔细	upos=ADJ	feats=-	phon=zi3 xi4	syll=2	src=stanza
+   70.42-   70.42  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 12]
+   70.79-   71.01  但	lemma=但	upos=SCONJ	feats=-	phon=dan4	syll=1	src=stanza
+   71.05-   71.27  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+   71.31-   71.75  终于	lemma=终于	upos=ADV	feats=-	phon=zhong1 yu2	syll=2	src=stanza
+   71.79-   72.02  不	lemma=不	upos=ADV	feats=Polarity=Neg	phon=bu4	syll=1	src=stanza
+   72.06-   72.50  放心	lemma=放心	upos=ADJ	feats=-	phon=fang4 xin1	syll=2	src=stanza
+   72.54-   72.54  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   72.62-   72.84  怕	lemma=怕	upos=VERB	feats=-	phon=pa4	syll=1	src=stanza
+   72.88-   73.33  茶房	lemma=茶房	upos=NOUN	feats=-	phon=cha2 fang2	syll=2	src=stanza
+   73.37-   73.59  不	lemma=不	upos=ADV	feats=Polarity=Neg	phon=bu4	syll=1	src=stanza
+   73.63-   74.07  妥帖	lemma=妥帖	upos=ADJ	feats=-	phon=tuo3 tie1	syll=2	src=stanza
+   74.11-   74.11  ；	lemma=；	upos=PUNCT	feats=-	phon=；	syll=0	src=stanza
+   74.19-   74.42  颇	lemma=颇	upos=ADV	feats=-	phon=po3	syll=1	src=stanza
+   74.46-   74.68  踌	lemma=踌	upos=ADJ	feats=-	phon=chou2	syll=1	src=stanza
+   74.72-   74.94  躇	lemma=躇	upos=VERB	feats=-	phon=chu2	syll=1	src=stanza
+   74.98-   75.20  了	lemma=了	upos=AUX	feats=Aspect=Perf	phon=le5	syll=1	src=stanza
+   75.24-   75.47  一	lemma=一	upos=NUM	feats=NumType=Card	phon=yi1	syll=1	src=stanza
+   75.51-   75.73  会	lemma=会	upos=NOUN	feats=-	phon=hui4	syll=1	src=stanza
+   75.77-   75.77  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 13]
+   76.14-   76.58  其实	lemma=其实	upos=ADV	feats=-	phon=qi2 shi2	syll=2	src=stanza
+   76.62-   76.84  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+   76.88-   77.11  那	lemma=那	upos=DET	feats=-	phon=na4	syll=1	src=stanza
+   77.15-   77.37  年	lemma=年	upos=NOUN	feats=-	phon=nian2	syll=1	src=stanza
+   77.41-   77.63  已	lemma=已	upos=ADV	feats=-	phon=yi3	syll=1	src=stanza
+   77.67-   78.12  二十	lemma=二十	upos=NUM	feats=NumType=Card	phon=er4 shi2	syll=2	src=stanza
+   78.16-   78.38  岁	lemma=岁	upos=NOUN	feats=-	phon=sui4	syll=1	src=stanza
+   78.42-   78.42  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   78.50-   78.94  北京	lemma=北京	upos=PROPN	feats=-	phon=bei3 jing1	syll=2	src=stanza
+   78.98-   79.20  已	lemma=已	upos=ADV	feats=-	phon=yi3	syll=1	src=stanza
+   79.24-   79.69  来往	lemma=来往	upos=VERB	feats=-	phon=lai2 wang3	syll=2	src=stanza
+   79.73-   79.95  过	lemma=过	upos=AUX	feats=Aspect=Perf	phon=guo4	syll=1	src=stanza
+   79.99-   80.21  两	lemma=两	upos=NUM	feats=NumType=Card	phon=liang3	syll=1	src=stanza
+   80.25-   80.48  三	lemma=三	upos=NUM	feats=NumType=Card	phon=san1	syll=1	src=stanza
+   80.52-   80.74  次	lemma=次	upos=NOUN	feats=-	phon=ci4	syll=1	src=stanza
+   80.78-   80.78  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   80.86-   81.08  是	lemma=是	upos=VERB	feats=-	phon=shi4	syll=1	src=stanza
+   81.12-   81.56  没有	lemma=有	upos=VERB	feats=Polarity=Neg	phon=mei2 you3	syll=2	src=stanza
+   81.60-   82.05  什么	lemma=什么	upos=PRON	feats=-	phon=shen2 me5	syll=2	src=stanza
+   82.09-   82.53  要紧	lemma=要紧	upos=ADJ	feats=-	phon=yao4 jin3	syll=2	src=stanza
+   82.57-   82.80  的	lemma=的	upos=PART	feats=-	phon=de5	syll=1	src=stanza
+   82.84-   83.06  了	lemma=了	upos=PART	feats=-	phon=le5	syll=1	src=stanza
+   83.10-   83.10  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 14]
+   83.47-   83.69  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+   83.73-   84.17  踌躇	lemma=踌躇	upos=VERB	feats=-	phon=chou2 chu2	syll=2	src=stanza
+   84.21-   84.44  了	lemma=了	upos=AUX	feats=Aspect=Perf	phon=le5	syll=1	src=stanza
+   84.48-   84.70  一	lemma=一	upos=NUM	feats=NumType=Card	phon=yi1	syll=1	src=stanza
+   84.74-   84.96  会	lemma=会	upos=NOUN	feats=-	phon=hui4	syll=1	src=stanza
+   85.00-   85.00  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   85.08-   85.53  终于	lemma=终于	upos=ADV	feats=-	phon=zhong1 yu2	syll=2	src=stanza
+   85.57-   86.01  决定	lemma=决定	upos=VERB	feats=-	phon=jue2 ding4	syll=2	src=stanza
+   86.05-   86.49  还是	lemma=还是	upos=SCONJ	feats=-	phon=hai2 shi4	syll=2	src=stanza
+   86.53-   86.98  自己	lemma=自己	upos=PRON	feats=-	phon=zi4 ji3	syll=2	src=stanza
+   87.02-   87.24  送	lemma=送	upos=VERB	feats=-	phon=song4	syll=1	src=stanza
+   87.28-   87.50  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+   87.54-   87.77  去	lemma=去	upos=VERB	feats=-	phon=qu4	syll=1	src=stanza
+   87.81-   87.81  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 15]
+   88.18-   88.40  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+   88.44-   88.88  再三	lemma=再三	upos=ADV	feats=-	phon=zai4 san1	syll=2	src=stanza
+   88.92-   89.14  劝	lemma=劝	upos=VERB	feats=Voice=Cau	phon=quan4	syll=1	src=stanza
+   89.18-   89.41  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+   89.45-   89.67  不	lemma=不	upos=ADV	feats=Polarity=Neg	phon=bu4	syll=1	src=stanza
+   89.71-   89.93  必	lemma=必	upos=AUX	feats=-	phon=bi4	syll=1	src=stanza
+   89.97-   90.19  去	lemma=去	upos=VERB	feats=-	phon=qu4	syll=1	src=stanza
+   90.23-   90.23  ；	lemma=；	upos=PUNCT	feats=-	phon=；	syll=0	src=stanza
+   90.31-   90.54  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+   90.58-   90.80  只	lemma=只	upos=ADV	feats=-	phon=zhi3	syll=1	src=stanza
+   90.84-   91.06  说	lemma=说	upos=VERB	feats=-	phon=shuo1	syll=1	src=stanza
+   91.10-   91.10  ：	lemma=：	upos=PUNCT	feats=-	phon=：	syll=0	src=stanza
+   91.18-   91.18  “	lemma=“	upos=PUNCT	feats=-	phon=“	syll=0	src=stanza
+   91.26-   91.70  不要	lemma=要	upos=AUX	feats=Polarity=Neg	phon=bu2 yao4	syll=2	src=stanza
+   91.74-   91.97  紧	lemma=紧	upos=ADJ	feats=-	phon=jin3	syll=1	src=stanza
+   92.01-   92.01  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   92.09-   92.53  他们	lemma=他	upos=PRON	feats=Number=Plur|Person=3	phon=ta1 men5	syll=2	src=stanza
+   92.57-   92.79  去	lemma=去	upos=VERB	feats=-	phon=qu4	syll=1	src=stanza
+   92.83-   93.28  不好	lemma=不好	upos=ADJ	feats=-	phon=bu4 hao3	syll=2	src=stanza
+   93.32-   93.32  ！	lemma=！	upos=PUNCT	feats=-	phon=！	syll=0	src=stanza
+   93.57-   93.57  ”	lemma=”	upos=PUNCT	feats=-	phon=”	syll=0	src=stanza
+
+[SENTENCE 16]
+   93.77-   94.21  我们	lemma=我	upos=PRON	feats=Number=Plur|Person=1	phon=wo3 men5	syll=2	src=stanza
+   94.25-   94.47  过	lemma=过	upos=VERB	feats=-	phon=guo4	syll=1	src=stanza
+   94.51-   94.74  了	lemma=了	upos=AUX	feats=Aspect=Perf	phon=le5	syll=1	src=stanza
+   94.78-   95.00  江	lemma=江	upos=PROPN	feats=-	phon=jiang1	syll=1	src=stanza
+   95.04-   95.04  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   95.12-   95.34  进	lemma=进	upos=VERB	feats=-	phon=jin4	syll=1	src=stanza
+   95.38-   95.60  了	lemma=了	upos=AUX	feats=Aspect=Perf	phon=le5	syll=1	src=stanza
+   95.64-   96.09  车站	lemma=车站	upos=NOUN	feats=-	phon=che1 zhan4	syll=2	src=stanza
+   96.13-   96.13  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 17]
+   96.50-   96.72  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+   96.76-   97.20  买票	lemma=买票	upos=VERB	feats=-	phon=mai3 piao4	syll=2	src=stanza
+   97.24-   97.24  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+   97.32-   97.55  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+   97.59-   97.81  忙	lemma=忙	upos=VERB	feats=-	phon=mang2	syll=1	src=stanza
+   97.85-   98.07  着	lemma=着	upos=AUX	feats=Aspect=Prog	phon=zhe5	syll=1	src=stanza
+   98.11-   98.56  照看	lemma=照看	upos=VERB	feats=-	phon=zhao4 kan4	syll=2	src=stanza
+   98.60-   99.04  行李	lemma=行李	upos=NOUN	feats=-	phon=xing2 li3	syll=2	src=stanza
+   99.08-   99.08  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 18]
+   99.45-   99.89  行李	lemma=行李	upos=NOUN	feats=-	phon=xing2 li3	syll=2	src=stanza
+   99.93-  100.38  太多	lemma=太多	upos=ADJ	feats=-	phon=tai4 duo1	syll=2	src=stanza
+  100.42-  100.64  了	lemma=了	upos=PART	feats=-	phon=le5	syll=1	src=stanza
+  100.68-  100.68  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+  100.76-  100.98  得	lemma=得	upos=PART	feats=-	phon=de2	syll=1	src=stanza
+  101.02-  101.25  向	lemma=向	upos=ADP	feats=-	phon=xiang4	syll=1	src=stanza
+  101.29-  101.73  脚夫	lemma=脚夫	upos=NOUN	feats=-	phon=jiao3 fu1	syll=2	src=stanza
+  101.77-  102.21  行些	lemma=行些	upos=VERB	feats=-	phon=xing2 xie1	syll=2	src=stanza
+  102.25-  102.70  小费	lemma=小费	upos=NOUN	feats=-	phon=xiao3 fei4	syll=2	src=stanza
+  102.74-  102.96  才	lemma=才	upos=SCONJ	feats=-	phon=cai2	syll=1	src=stanza
+  103.00-  103.22  可	lemma=可	upos=AUX	feats=-	phon=ke3	syll=1	src=stanza
+  103.26-  103.71  过去	lemma=过去	upos=VERB	feats=-	phon=guo4 qu4	syll=2	src=stanza
+  103.75-  103.75  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 19]
+  104.12-  104.34  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+  104.38-  104.60  便	lemma=便	upos=SCONJ	feats=-	phon=bian4	syll=1	src=stanza
+  104.64-  104.86  又	lemma=又	upos=SCONJ	feats=-	phon=you4	syll=1	src=stanza
+  104.90-  105.13  忙	lemma=忙	upos=VERB	feats=-	phon=mang2	syll=1	src=stanza
+  105.17-  105.39  着	lemma=着	upos=AUX	feats=Aspect=Prog	phon=zhe5	syll=1	src=stanza
+  105.43-  105.65  和	lemma=和	upos=ADP	feats=-	phon=he2	syll=1	src=stanza
+  105.69-  106.14  他们	lemma=他	upos=PRON	feats=Number=Plur|Person=3	phon=ta1 men5	syll=2	src=stanza
+  106.18-  106.40  讲	lemma=讲	upos=VERB	feats=-	phon=jiang3	syll=1	src=stanza
+  106.44-  106.88  价钱	lemma=价钱	upos=NOUN	feats=-	phon=jia4 qian2	syll=2	src=stanza
+  106.92-  106.92  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 20]
+  107.29-  107.51  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+  107.55-  108.00  那时	lemma=那时	upos=NOUN	feats=-	phon=na4 shi2	syll=2	src=stanza
+  108.04-  108.26  真	lemma=真	upos=ADV	feats=-	phon=zhen1	syll=1	src=stanza
+  108.30-  108.52  是	lemma=是	upos=VERB	feats=-	phon=shi4	syll=1	src=stanza
+  108.56-  109.01  聪明	lemma=聪明	upos=ADJ	feats=-	phon=cong1 ming2	syll=2	src=stanza
+  109.05-  109.49  过分	lemma=过分	upos=ADJ	feats=-	phon=guo4 fen4	syll=2	src=stanza
+  109.53-  109.53  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+  109.61-  110.06  总觉	lemma=总觉	upos=VERB	feats=-	phon=zong3 jue2	syll=2	src=stanza
+  110.10-  110.32  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+  110.36-  110.80  说话	lemma=说话	upos=VERB	feats=-	phon=shuo1 hua4	syll=2	src=stanza
+  110.84-  111.29  不大	lemma=不大	upos=ADJ	feats=-	phon=bu4 da4	syll=2	src=stanza
+  111.33-  111.77  漂亮	lemma=漂亮	upos=ADJ	feats=-	phon=piao4 liang4	syll=2	src=stanza
+  111.81-  111.81  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+  111.89-  112.11  非	lemma=非	upos=VERB	feats=-	phon=fei1	syll=1	src=stanza
+  112.15-  112.60  自己	lemma=自己	upos=PRON	feats=-	phon=zi4 ji3	syll=2	src=stanza
+  112.64-  113.08  插嘴	lemma=插嘴	upos=VERB	feats=-	phon=cha1 zui3	syll=2	src=stanza
+  113.12-  113.57  不可	lemma=可	upos=AUX	feats=Polarity=Neg	phon=bu4 ke3	syll=2	src=stanza
+  113.61-  113.61  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+  113.69-  113.91  但	lemma=但	upos=SCONJ	feats=-	phon=dan4	syll=1	src=stanza
+  113.95-  114.17  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+  114.21-  114.66  终于	lemma=终于	upos=ADV	feats=-	phon=zhong1 yu2	syll=2	src=stanza
+  114.70-  115.14  讲定	lemma=讲定	upos=VERB	feats=-	phon=jiang3 ding4	syll=2	src=stanza
+  115.18-  115.40  了	lemma=了	upos=AUX	feats=Aspect=Perf	phon=le5	syll=1	src=stanza
+  115.44-  115.89  价钱	lemma=价钱	upos=NOUN	feats=-	phon=jia4 qian2	syll=2	src=stanza
+  115.93-  115.93  ；	lemma=；	upos=PUNCT	feats=-	phon=；	syll=0	src=stanza
+  116.01-  116.23  就	lemma=就	upos=SCONJ	feats=-	phon=jiu4	syll=1	src=stanza
+  116.27-  116.49  送	lemma=送	upos=VERB	feats=-	phon=song4	syll=1	src=stanza
+  116.53-  116.75  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+  116.79-  117.24  上车	lemma=上车	upos=VERB	feats=-	phon=shang4 che1	syll=2	src=stanza
+  117.28-  117.28  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 21]
+  117.65-  117.87  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+  117.91-  118.13  给	lemma=给	upos=VERB	feats=-	phon=gei3	syll=1	src=stanza
+  118.17-  118.40  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+  118.44-  118.88  拣定	lemma=拣定	upos=VERB	feats=-	phon=jian3 ding4	syll=2	src=stanza
+  118.92-  119.14  了	lemma=了	upos=AUX	feats=Aspect=Perf	phon=le5	syll=1	src=stanza
+  119.18-  119.40  靠	lemma=靠	upos=VERB	feats=-	phon=kao4	syll=1	src=stanza
+  119.44-  119.89  车门	lemma=车门	upos=NOUN	feats=-	phon=che1 men2	syll=2	src=stanza
+  119.93-  120.15  的	lemma=的	upos=SCONJ	feats=-	phon=de5	syll=1	src=stanza
+  120.19-  120.41  一	lemma=一	upos=NUM	feats=NumType=Card	phon=yi1	syll=1	src=stanza
+  120.45-  120.68  张	lemma=张	upos=NOUN	feats=-	phon=zhang1	syll=1	src=stanza
+  120.72-  121.16  椅子	lemma=椅子	upos=NOUN	feats=-	phon=yi3 zi5	syll=2	src=stanza
+  121.20-  121.20  ；	lemma=；	upos=PUNCT	feats=-	phon=；	syll=0	src=stanza
+  121.28-  121.50  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+  121.54-  121.76  将	lemma=将	upos=ADP	feats=-	phon=jiang1	syll=1	src=stanza
+  121.80-  122.03  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+  122.07-  122.29  给	lemma=给	upos=VERB	feats=-	phon=gei3	syll=1	src=stanza
+  122.33-  122.55  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+  122.59-  122.81  做	lemma=做	upos=VERB	feats=-	phon=zuo4	syll=1	src=stanza
+  122.85-  123.08  的	lemma=的	upos=SCONJ	feats=-	phon=de5	syll=1	src=stanza
+  123.12-  123.34  紫	lemma=紫	upos=NOUN	feats=-	phon=zi3	syll=1	src=stanza
+  123.38-  123.60  毛	lemma=毛	upos=NOUN	feats=-	phon=mao2	syll=1	src=stanza
+  123.64-  124.08  大衣	lemma=大衣	upos=NOUN	feats=-	phon=da4 yi1	syll=2	src=stanza
+  124.12-  124.57  铺好	lemma=铺好	upos=VERB	feats=-	phon=pu4 hao3	syll=2	src=stanza
+  124.61-  125.05  座位	lemma=座位	upos=NOUN	feats=-	phon=zuo4 wei4	syll=2	src=stanza
+  125.09-  125.09  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 22]
+  125.46-  125.69  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+  125.73-  125.95  嘱	lemma=嘱	upos=VERB	feats=-	phon=zhu3	syll=1	src=stanza
+  125.99-  126.21  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+  126.25-  126.69  路上	lemma=路上	upos=NOUN	feats=-	phon=lu4 shang4	syll=2	src=stanza
+  126.73-  127.18  小心	lemma=小心	upos=ADJ	feats=-	phon=xiao3 xin1	syll=2	src=stanza
+  127.22-  127.22  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+  127.30-  127.74  夜里	lemma=夜里	upos=NOUN	feats=-	phon=ye4 li3	syll=2	src=stanza
+  127.78-  128.23  要警	lemma=要警	upos=VERB	feats=-	phon=yao4 jing3	syll=2	src=stanza
+  128.27-  128.71  醒些	lemma=醒些	upos=VERB	feats=-	phon=xing3 xie1	syll=2	src=stanza
+  128.75-  128.75  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+  128.83-  129.28  不要	lemma=要	upos=AUX	feats=Polarity=Neg	phon=bu2 yao4	syll=2	src=stanza
+  129.32-  129.76  受凉	lemma=受凉	upos=VERB	feats=-	phon=shou4 liang2	syll=2	src=stanza
+  129.80-  129.80  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 23]
+  130.17-  130.39  又	lemma=又	upos=SCONJ	feats=-	phon=you4	syll=1	src=stanza
+  130.43-  130.88  嘱托	lemma=嘱托	upos=VERB	feats=-	phon=zhu3 tuo1	syll=2	src=stanza
+  130.92-  131.58  茶房好	lemma=茶房好	upos=ADJ	feats=-	phon=cha2 fang2 hao3	syll=3	src=stanza
+  131.62-  132.07  好照	lemma=好照	upos=ADJ	feats=-	phon=hao3 zhao4	syll=2	src=stanza
+  132.11-  132.33  应	lemma=应	upos=AUX	feats=-	phon=ying1	syll=1	src=stanza
+  132.37-  132.59  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+  132.63-  132.63  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza
+
+[SENTENCE 24]
+  133.00-  133.23  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+  133.27-  133.71  心里	lemma=心里	upos=NOUN	feats=-	phon=xin1 li3	syll=2	src=stanza
+  133.75-  134.19  暗笑	lemma=暗笑	upos=VERB	feats=-	phon=an4 xiao4	syll=2	src=stanza
+  134.23-  134.46  他	lemma=他	upos=PRON	feats=Person=3	phon=ta1	syll=1	src=stanza
+  134.50-  134.72  的	lemma=的	upos=PART	feats=Case=Gen	phon=de5	syll=1	src=stanza
+  134.76-  134.98  迂	lemma=迂	upos=NOUN	feats=-	phon=yu1	syll=1	src=stanza
+  135.02-  135.02  ；	lemma=；	upos=PUNCT	feats=-	phon=；	syll=0	src=stanza
+  135.10-  135.55  他们	lemma=他	upos=PRON	feats=Number=Plur|Person=3	phon=ta1 men5	syll=2	src=stanza
+  135.59-  136.03  只认	lemma=只认	upos=VERB	feats=-	phon=zhi3 ren4	syll=2	src=stanza
+  136.07-  136.51  得钱	lemma=得钱	upos=VERB	feats=-	phon=de2 qian2	syll=2	src=stanza
+  136.55-  136.55  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+  136.63-  136.86  托	lemma=托	upos=VERB	feats=-	phon=tuo1	syll=1	src=stanza
+  136.90-  137.34  他们	lemma=他	upos=PRON	feats=Number=Plur|Person=3	phon=ta1 men5	syll=2	src=stanza
+  137.38-  137.60  只	lemma=只	upos=ADV	feats=-	phon=zhi3	syll=1	src=stanza
+  137.64-  137.87  是	lemma=是	upos=AUX	feats=-	phon=shi4	syll=1	src=stanza
+  137.91-  138.35  白托	lemma=白托	upos=PROPN	feats=-	phon=bai2 tuo1	syll=2	src=stanza
+  138.39-  138.39  ！	lemma=！	upos=PUNCT	feats=-	phon=！	syll=0	src=stanza
+
+[SENTENCE 25]
+  138.76-  139.20  而且	lemma=而且	upos=SCONJ	feats=-	phon=er2 qie3	syll=2	src=stanza
+  139.24-  139.47  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+  139.51-  139.95  这样	lemma=这样	upos=PRON	feats=-	phon=zhe4 yang4	syll=2	src=stanza
+  139.99-  140.21  大	lemma=大	upos=PART	feats=-	phon=da4	syll=1	src=stanza
+  140.25-  140.70  年纪	lemma=年纪	upos=NOUN	feats=-	phon=nian2 ji4	syll=2	src=stanza
+  140.74-  140.96  的	lemma=的	upos=PART	feats=Case=Gen	phon=de5	syll=1	src=stanza
+  141.00-  141.22  人	lemma=人	upos=NOUN	feats=-	phon=ren2	syll=1	src=stanza
+  141.26-  141.26  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+  141.34-  141.79  难道	lemma=难道	upos=VERB	feats=-	phon=nan2 dao4	syll=2	src=stanza
+  141.83-  142.05  还	lemma=还	upos=SCONJ	feats=-	phon=hai2	syll=1	src=stanza
+  142.09-  142.53  不能	lemma=能	upos=AUX	feats=Polarity=Neg	phon=bu4 neng2	syll=2	src=stanza
+  142.57-  143.02  料理	lemma=料理	upos=VERB	feats=-	phon=liao4 li3	syll=2	src=stanza
+  143.06-  143.50  自己	lemma=自己	upos=PRON	feats=-	phon=zi4 ji3	syll=2	src=stanza
+  143.54-  143.76  么	lemma=么	upos=PART	feats=PartType=Int	phon=me5	syll=1	src=stanza
+  143.80-  143.80  ？	lemma=？	upos=PUNCT	feats=-	phon=？	syll=0	src=stanza
+
+[SENTENCE 26]
+  144.17-  144.40  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+  144.44-  144.88  现在	lemma=现在	upos=NOUN	feats=-	phon=xian4 zai4	syll=2	src=stanza
+  144.92-  145.37  想想	lemma=想想	upos=VERB	feats=-	phon=xiang3 xiang3	syll=2	src=stanza
+  145.41-  145.41  ，	lemma=，	upos=PUNCT	feats=-	phon=，	syll=0	src=stanza
+  145.49-  145.71  我	lemma=我	upos=PRON	feats=Person=1	phon=wo3	syll=1	src=stanza
+  145.75-  146.19  那时	lemma=那时	upos=NOUN	feats=-	phon=na4 shi2	syll=2	src=stanza
+  146.23-  146.45  真	lemma=真	upos=ADV	feats=-	phon=zhen1	syll=1	src=stanza
+  146.49-  146.72  是	lemma=是	upos=AUX	feats=-	phon=shi4	syll=1	src=stanza
+  146.76-  146.98  太	lemma=太	upos=ADV	feats=-	phon=tai4	syll=1	src=stanza
+  147.02-  147.46  聪明	lemma=聪明	upos=ADJ	feats=-	phon=cong1 ming2	syll=2	src=stanza
+  147.50-  147.73  了	lemma=了	upos=PART	feats=-	phon=le5	syll=1	src=stanza
+  147.77-  147.77  。	lemma=。	upos=PUNCT	feats=-	phon=。	syll=0	src=stanza

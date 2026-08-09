@@ -1,0 +1,215 @@
+[SENTENCE 1]
+    0.00-    0.22  Недавно	lemma=недавно	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+    0.26-    0.48  я	lemma=я	upos=PRON	feats=Case=Nom|Number=Sing|Person=1|PronType=Prs	phon=-	syll=1	src=stanza
+    0.52-    0.75  прочитал	lemma=прочесть	upos=VERB	feats=Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+    0.79-    1.01  книгу	lemma=книга	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+    1.05-    1.27  о	lemma=о	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+    1.31-    1.53  том	lemma=то	upos=PRON	feats=Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing|PronType=Dem	phon=-	syll=1	src=stanza
+    1.57-    1.57  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+    1.65-    1.88  как	lemma=как	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+    1.92-    2.14  ставить	lemma=ставить	upos=VERB	feats=Aspect=Imp|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+    2.18-    2.40  и	lemma=и	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+    2.44-    2.66  достигать	lemma=достигать	upos=VERB	feats=Aspect=Imp|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+    2.70-    2.92  цели	lemma=цель	upos=NOUN	feats=Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+    2.96-    2.96  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 2]
+    3.33-    3.56  Поэтому	lemma=поэтому	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+    3.60-    3.82  я	lemma=я	upos=PRON	feats=Case=Nom|Number=Sing|Person=1|PronType=Prs	phon=-	syll=1	src=stanza
+    3.86-    4.08  решил	lemma=решить	upos=VERB	feats=Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+    4.12-    4.34  составить	lemma=составить	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+    4.38-    4.61  свой	lemma=свой	upos=DET	feats=Case=Acc|Gender=Masc|Number=Sing|Poss=Yes|PronType=Prs|Reflex=Yes	phon=-	syll=1	src=stanza
+    4.65-    4.87  план	lemma=план	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+    4.91-    5.13  на	lemma=на	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+    5.17-    5.39  год	lemma=год	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+    5.43-    5.43  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 3]
+    5.80-    6.02  Вот	lemma=вот	upos=PART	feats=-	phon=-	syll=1	src=stanza
+    6.06-    6.06  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+    6.14-    6.37  как	lemma=как	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+    6.41-    6.63  он	lemma=он	upos=PRON	feats=Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	phon=-	syll=1	src=stanza
+    6.67-    6.89  выглядит	lemma=выглядеть	upos=VERB	feats=Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+    6.93-    6.93  :	lemma=:	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 4]
+    7.13-    7.35  1	lemma=1	upos=NUM	feats=NumType=Card	phon=-	syll=1	src=stanza
+    7.39-    7.39  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 5]
+    7.76-    7.99  Улучшить	lemma=улучшить	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+    8.03-    8.25  английский	lemma=английский	upos=ADJ	feats=Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+    8.29-    8.51  язык	lemma=язык	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+    8.55-    8.55  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 6]
+    8.92-    9.14  Я	lemma=я	upos=PRON	feats=Case=Nom|Number=Sing|Person=1|PronType=Prs	phon=-	syll=1	src=stanza
+    9.18-    9.40  достаточно	lemma=достаточно	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+    9.44-    9.67  хорошо	lemma=хорошо	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+    9.71-    9.93  говорю	lemma=говорить	upos=VERB	feats=Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+    9.97-   10.19  на	lemma=на	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   10.23-   10.45  английском	lemma=английский	upos=ADJ	feats=Case=Loc|Degree=Pos|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+   10.49-   10.49  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   10.57-   10.80  но	lemma=но	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   10.84-   10.84  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   10.92-   11.14  если	lemma=если	upos=SCONJ	feats=-	phon=-	syll=1	src=stanza
+   11.18-   11.40  я	lemma=я	upos=PRON	feats=Case=Nom|Number=Sing|Person=1|PronType=Prs	phon=-	syll=1	src=stanza
+   11.44-   11.66  хочу	lemma=хотеть	upos=VERB	feats=Aspect=Imp|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   11.70-   11.92  устроиться	lemma=устроиться	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Mid	phon=-	syll=1	src=stanza
+   11.96-   12.19  работу	lemma=работа	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+   12.23-   12.45  в	lemma=в	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   12.49-   12.71  международную	lemma=международный	upos=ADJ	feats=Case=Acc|Degree=Pos|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+   12.75-   12.97  компанию	lemma=компания	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+   13.01-   13.01  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   13.09-   13.32  моего	lemma=мой	upos=DET	feats=Case=Gen|Gender=Masc|Number=Sing|Poss=Yes|PronType=Prs	phon=-	syll=1	src=stanza
+   13.36-   13.58  уровня	lemma=уровень	upos=NOUN	feats=Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+   13.62-   13.84  будет	lemma=быть	upos=AUX	feats=Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   13.88-   14.10  недостаточно	lemma=недостаточный	upos=ADJ	feats=Degree=Pos|Gender=Neut|Number=Sing|Variant=Short	phon=-	syll=1	src=stanza
+   14.14-   14.14  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 7]
+   14.51-   14.73  Мне	lemma=я	upos=PRON	feats=Case=Dat|Number=Sing|Person=1|PronType=Prs	phon=-	syll=1	src=stanza
+   14.77-   15.00  нужно	lemma=нужный	upos=ADJ	feats=Degree=Pos|Gender=Neut|Number=Sing|Variant=Short	phon=-	syll=1	src=stanza
+   15.04-   15.26  будет	lemma=быть	upos=AUX	feats=Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   15.30-   15.52  пройти	lemma=пройти	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+   15.56-   15.78  дополнительные	lemma=дополнительный	upos=ADJ	feats=Animacy=Inan|Case=Acc|Degree=Pos|Number=Plur	phon=-	syll=1	src=stanza
+   15.82-   16.05  курсы	lemma=курс	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Masc|Number=Plur	phon=-	syll=1	src=stanza
+   16.09-   16.31  бизнес	lemma=бизнес	upos=NOUN	feats=Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+   16.35-   16.35  -	lemma=-	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   16.43-   16.65  английского	lemma=английский	upos=ADJ	feats=Case=Gen|Degree=Pos|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+   16.69-   16.91  и	lemma=и	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   16.95-   17.17  получить	lemma=получить	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+   17.21-   17.44  сертификат	lemma=сертификат	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+   17.48-   17.48  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 8]
+   17.85-   18.07  2	lemma=2	upos=NUM	feats=NumType=Card	phon=-	syll=1	src=stanza
+   18.11-   18.11  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 9]
+   18.48-   18.70  Сходить	lemma=сходить	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+   18.74-   18.96  в	lemma=в	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   19.00-   19.23  поход	lemma=поход	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+   19.27-   19.27  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 10]
+   19.64-   19.86  Я	lemma=я	upos=PRON	feats=Case=Nom|Number=Sing|Person=1|PronType=Prs	phon=-	syll=1	src=stanza
+   19.90-   20.12  всегда	lemma=всегда	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+   20.16-   20.38  хотел	lemma=хотеть	upos=VERB	feats=Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   20.42-   20.64  провести	lemma=провести	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+   20.68-   20.91  ночь	lemma=ночь	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+   20.95-   21.17  на	lemma=на	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   21.21-   21.43  природе	lemma=природа	upos=NOUN	feats=Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+   21.47-   21.47  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 11]
+   21.84-   22.06  Даже	lemma=даже	upos=PART	feats=-	phon=-	syll=1	src=stanza
+   22.10-   22.33  купил	lemma=купить	upos=VERB	feats=Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   22.37-   22.59  палатку	lemma=палатка	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+   22.63-   22.63  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 12]
+   23.00-   23.22  В	lemma=в	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   23.26-   23.48  этом	lemma=этот	upos=DET	feats=Case=Loc|Gender=Masc|Number=Sing|PronType=Dem	phon=-	syll=1	src=stanza
+   23.52-   23.74  году	lemma=год	upos=NOUN	feats=Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+   23.78-   24.01  я	lemma=я	upos=PRON	feats=Case=Nom|Number=Sing|Person=1|PronType=Prs	phon=-	syll=1	src=stanza
+   24.05-   24.27  обязательно	lemma=обязательно	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+   24.31-   24.53  поеду	lemma=поехать	upos=VERB	feats=Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   24.57-   24.79  с	lemma=с	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   24.83-   25.06  палаткой	lemma=палатка	upos=NOUN	feats=Animacy=Inan|Case=Ins|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+   25.10-   25.32  к	lemma=к	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   25.36-   25.58  морю	lemma=море	upos=NOUN	feats=Animacy=Inan|Case=Dat|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+   25.62-   25.84  или	lemma=или	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   25.88-   26.10  в	lemma=в	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   26.14-   26.37  горы	lemma=гора	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Fem|Number=Plur	phon=-	syll=1	src=stanza
+   26.41-   26.41  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 13]
+   26.78-   27.00  Для	lemma=для	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   27.04-   27.26  этого	lemma=это	upos=PRON	feats=Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing|PronType=Dem	phon=-	syll=1	src=stanza
+   27.30-   27.52  мне	lemma=я	upos=PRON	feats=Case=Dat|Number=Sing|Person=1|PronType=Prs	phon=-	syll=1	src=stanza
+   27.56-   27.79  надо	lemma=надо	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+   27.83-   28.05  будет	lemma=быть	upos=AUX	feats=Aspect=Imp|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   28.09-   28.31  разработать	lemma=разработать	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+   28.35-   28.57  маршрут	lemma=маршрут	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+   28.61-   28.61  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   28.69-   28.91  собрать	lemma=собрать	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+   28.95-   29.18  друзей	lemma=друг	upos=NOUN	feats=Animacy=Anim|Case=Acc|Gender=Masc|Number=Plur	phon=-	syll=1	src=stanza
+   29.22-   29.44  и	lemma=и	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   29.48-   29.70  организовать	lemma=организовывать	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+   29.74-   29.96  поездку	lemma=поездка	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+   30.00-   30.00  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 14]
+   30.37-   30.60  3	lemma=3	upos=NUM	feats=NumType=Card	phon=-	syll=1	src=stanza
+   30.64-   30.64  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 15]
+   31.01-   31.23  Сдать	lemma=сдать	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+   31.27-   31.49  на	lemma=на	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   31.53-   31.75  права	lemma=право	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Neut|Number=Plur	phon=-	syll=1	src=stanza
+   31.79-   31.79  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 16]
+   32.16-   32.38  Я	lemma=я	upos=PRON	feats=Case=Nom|Number=Sing|Person=1|PronType=Prs	phon=-	syll=1	src=stanza
+   32.42-   32.65  давно	lemma=давно	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+   32.69-   32.91  откладывал	lemma=откладывать	upos=VERB	feats=Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   32.95-   33.17  деньги	lemma=деньги	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Fem|Number=Plur	phon=-	syll=1	src=stanza
+   33.21-   33.43  на	lemma=на	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   33.47-   33.70  машину	lemma=машина	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+   33.74-   33.74  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   33.82-   34.04  работая	lemma=работать	upos=VERB	feats=Aspect=Imp|Tense=Pres|VerbForm=Conv|Voice=Act	phon=-	syll=1	src=stanza
+   34.08-   34.30  на	lemma=на	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   34.34-   34.56  каникулах	lemma=каникулы	upos=NOUN	feats=Animacy=Inan|Case=Loc|Gender=Fem|Number=Plur	phon=-	syll=1	src=stanza
+   34.60-   34.82  и	lemma=и	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   34.86-   35.09  по	lemma=по	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   35.13-   35.35  вечерам	lemma=вечер	upos=NOUN	feats=Animacy=Inan|Case=Dat|Gender=Masc|Number=Plur	phon=-	syll=1	src=stanza
+   35.39-   35.39  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 17]
+   35.76-   35.98  Но	lemma=но	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   36.02-   36.02  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   36.10-   36.32  прежде	lemma=прежде	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+   36.36-   36.59  чем	lemma=чем	upos=SCONJ	feats=-	phon=-	syll=1	src=stanza
+   36.63-   36.85  купить	lemma=купить	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+   36.89-   37.11  авто	lemma=авто	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+   37.15-   37.15  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   37.23-   37.45  мне	lemma=я	upos=PRON	feats=Case=Dat|Number=Sing|Person=1|PronType=Prs	phon=-	syll=1	src=stanza
+   37.49-   37.71  надо	lemma=надо	upos=ADV	feats=Degree=Pos	phon=-	syll=1	src=stanza
+   37.75-   37.98  получить	lemma=получить	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+   38.02-   38.24  права	lemma=право	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Neut|Number=Plur	phon=-	syll=1	src=stanza
+   38.28-   38.28  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 18]
+   38.65-   38.87  В	lemma=в	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   38.91-   39.13  этом	lemma=этот	upos=DET	feats=Case=Loc|Gender=Masc|Number=Sing|PronType=Dem	phon=-	syll=1	src=stanza
+   39.17-   39.40  году	lemma=год	upos=NOUN	feats=Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+   39.44-   39.66  я	lemma=я	upos=PRON	feats=Case=Nom|Number=Sing|Person=1|PronType=Prs	phon=-	syll=1	src=stanza
+   39.70-   39.92  запишусь	lemma=записаться	upos=VERB	feats=Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Fut|VerbForm=Fin|Voice=Mid	phon=-	syll=1	src=stanza
+   39.96-   40.18  в	lemma=в	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   40.22-   40.44  школу	lemma=школа	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+   40.48-   40.71  вождения	lemma=вождение	upos=NOUN	feats=Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+   40.75-   40.75  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   40.83-   41.05  пройду	lemma=пройти	upos=VERB	feats=Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   41.09-   41.31  обучение	lemma=обучение	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+   41.35-   41.35  ,	lemma=,	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+   41.43-   41.65  выучу	lemma=выучать	upos=VERB	feats=Aspect=Perf|Mood=Ind|Number=Sing|Person=1|Tense=Fut|VerbForm=Fin|Voice=Act	phon=-	syll=1	src=stanza
+   41.69-   41.92  правила	lemma=правило	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Neut|Number=Plur	phon=-	syll=1	src=stanza
+   41.96-   42.18  дорожного	lemma=дорожный	upos=ADJ	feats=Case=Gen|Degree=Pos|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+   42.22-   42.44  движения	lemma=движение	upos=NOUN	feats=Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	phon=-	syll=1	src=stanza
+   42.48-   42.70  и	lemma=и	upos=CCONJ	feats=-	phon=-	syll=1	src=stanza
+   42.74-   42.96  сдам	lemma=сдам	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+   43.00-   43.23  экзамен	lemma=экзамен	upos=NOUN	feats=Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+   43.27-   43.27  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
+
+[SENTENCE 19]
+   43.64-   43.86  Я	lemma=я	upos=PRON	feats=Case=Nom|Number=Sing|Person=1|PronType=Prs	phon=-	syll=1	src=stanza
+   43.90-   44.12  полон	lemma=полный	upos=ADJ	feats=Degree=Pos|Gender=Masc|Number=Sing|Variant=Short	phon=-	syll=1	src=stanza
+   44.16-   44.38  решимости	lemma=решимость	upos=NOUN	feats=Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	phon=-	syll=1	src=stanza
+   44.42-   44.65  достичь	lemma=достичь	upos=VERB	feats=Aspect=Perf|VerbForm=Inf|Voice=Act	phon=-	syll=1	src=stanza
+   44.69-   44.91  своих	lemma=свой	upos=DET	feats=Case=Gen|Number=Plur|Poss=Yes|PronType=Prs|Reflex=Yes	phon=-	syll=1	src=stanza
+   44.95-   45.17  целей	lemma=цель	upos=NOUN	feats=Animacy=Inan|Case=Gen|Gender=Fem|Number=Plur	phon=-	syll=1	src=stanza
+   45.21-   45.43  в	lemma=в	upos=ADP	feats=-	phon=-	syll=1	src=stanza
+   45.47-   45.69  этом	lemma=этот	upos=DET	feats=Case=Loc|Gender=Masc|Number=Sing|PronType=Dem	phon=-	syll=1	src=stanza
+   45.73-   45.96  году	lemma=год	upos=NOUN	feats=Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	phon=-	syll=1	src=stanza
+   46.00-   46.00  .	lemma=.	upos=PUNCT	feats=-	phon=-	syll=0	src=stanza
