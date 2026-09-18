@@ -1,1 +1,1 @@
-
+Uses language_features.csv directly. The figure has all 102 rows: 58 with a morphology index, plus 44 whose morphology index is NA because the run has no matching UD treebank; these are shown in an NA strip at their observed lambda/s x-position rather than being imputed. Labels are the spreadsheet's ISO 639-3 codes. Family mapping is included explicitly in the script for reproducibility.
