@@ -1,0 +1,1730 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs,longtable,array,tabularx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{url}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\graphicspath{{../figures/}}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=green!40!black,urlcolor=blue!60!black}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setstretch{1.06}
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\emergencystretch=3em
+\fancyhf{}
+\lhead{Information Locality}
+\rhead{Adrija Chatterjee}
+\cfoot{\thepage}
+\titleformat{\section}{\Large\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{0.6em}{}
+\setlist{itemsep=0.25em,topsep=0.2em}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible}
+
+\newcommand{\lch}{\lambda_{\mathrm{char}}}
+\newcommand{\ltm}{\lambda_{\mathrm{time}}}
+\newcommand{\dd}{\,\mathrm{d}}
+
+\title{\vspace{-1em}\textbf{Information Locality, Morphosyntactic Structure, and Speech Time}\\[0.4em]
+\large A mathematical and statistical analysis across 102 FLEURS languages}
+\author{Adrija Chatterjee}
+\date{18 September 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+This report develops a self-contained mathematical and statistical analysis of information locality in a 102-language FLEURS (Few-shot Learning Evaluation of Universal Representations of Speech) sample. The central empirical object is the amount of predictive information retained as progressively more preceding character context is supplied. For each language, a held-out character-level interpolated Kneser--Ney model is used to estimate context-order cross-entropy, from which an information-retention sequence and a positive-prefix exponential decay summary are obtained. Two primary decay rates are reported: a character-domain rate, $\lch$, and a speech-time rate, $\ltm$, obtained using measured FLEURS duration information.
+
+The report also studies an analytic--synthetic information decomposition based on controlled text perturbations. A key methodological distinction is that this morphology index is a text-derived entropy statistic; UD annotation is not mathematically required for its definition. Universal Dependencies instead supplies annotation-dependent predictors such as morphological-feature density and dependency distance. In the current result table, 58 morphology-index values are populated and 44 are missing because the present computation routes the text perturbation through the UD-processing branch. The 44 rows remain fully valid for FLEURS locality estimation and should not be interpreted as languages without morphology.
+
+The locality curves are generally well summarized by an exponential model, with a median log-scale fit $R^2$ near 0.972. Character-domain decay ranges from about 0.393 to 1.192 per character, while time-domain decay ranges from about 1.246 to 11.841 per second. Cross-language Ridge models use standardized numerical predictors, one-hot region and script indicators, and leave-one-language-out cross-validation. The resulting LOCO-CV $R^2$ values are negative for both outcomes. The report therefore separates three claims: the within-language curves can be well approximated by a simple parametric decay law; the morphology index provides a structured descriptive decomposition; and the current predictor set does not transport reliably across held-out languages.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{How to read this report}
+This report is intended to be read as a small textbook, not as a paper that assumes a technical background. The first part therefore introduces the mathematical language used later, and the later sections repeat the key idea in plain words before presenting the corresponding formula. You should never need to stop and search for the meaning of a symbol in order to follow the argument.
+
+\subsection*{The one-sentence idea of the project}
+We take speech transcripts in many languages, ask a probability model how well it can predict the next character from the preceding characters, measure how much prediction improves when the past becomes longer, summarize that improvement by a decay rate, and then study whether language-structure variables are associated with that rate.
+
+\subsection*{The complete map of the analysis}
+The same idea can be written as the following chain:
+\begin{align*}
+&\text{speech transcript}
+\to \text{normalized characters}
+\to \text{predicted probabilities}\\
+&\to \text{prediction cost in bits}
+\to \text{information gained from extra context}\\
+&\to \text{decay rate}
+\to \text{cross-language comparison}.
+\end{align*}
+Every arrow is explained in this report. In particular, ``probability'', ``bit'', ``entropy'', ``cross-entropy'', ``language model'', ``Kneser--Ney'', ``bootstrap'', ``correlation'', ``regression'', ``Ridge'', ``cross-validation'', and ``Universal Dependencies'' are not assumed to be familiar terms.
+
+\subsection*{A five-minute toy version}
+Imagine that we have only one tiny language transcript, such as
+\[
+\texttt{the cat eats}.
+\]
+After normalization, the characters are represented as a sequence. A language model tries to assign a probability to each next character. If it assigns probability $1/2$ to the character that actually occurs, that character contributes
+\[
+-\log_2(1/2)=1
+\]
+bit of prediction cost. If it assigns probability $1/8$, the cost is
+\[
+-\log_2(1/8)=3
+\]
+bits. Averaging these costs over many held-out characters gives a cross-entropy $S_t$.
+
+Now suppose that with one previous character the average cost is $3.0$ bits and with two previous characters it is $2.7$ bits. Then the additional character of context provided
+\[
+I_2=S_1-S_2=3.0-2.7=0.3
+\]
+bit of predictive improvement. We repeat this at several context distances and obtain a curve
+\[
+I_1,I_2,I_3,\ldots.
+\]
+If the curve approximately follows
+\[
+I_t=Ae^{-\lambda t},
+\]
+then $\lambda$ is a compact description of how quickly the usefulness of additional context decreases.
+
+The project does this separately for 102 languages. We then ask descriptive questions such as whether a morphology index, speech rate, lexical diversity, or dependency distance is associated with $\lambda$. Finally, a predictive regression asks whether these variables can predict an unseen language's decay rate. This last step is deliberately separated from causal interpretation: a predictor can be useful for prediction without being a cause.
+
+\subsection*{What is data and what is mathematics?}
+A useful distinction is:
+\begin{enumerate}
+\item \textbf{Data} are the actual observed utterances, durations, language labels, and external annotations.
+\item \textbf{Definitions} specify exactly how the project turns those observations into quantities such as entropy, information increment, morphology index, and decay rate.
+\item \textbf{Models} are simplified mathematical descriptions, such as an exponential curve or a Ridge regression.
+\item \textbf{Estimates} are the numbers obtained when the definitions or models are applied to finite data.
+\end{enumerate}
+A model is therefore not the same thing as a fact. For example, the equation $I_t=Ae^{-\lambda t}$ is a chosen approximation to the observed information curve; it is not a theorem saying that all languages must obey an exponential law.
+
+This report is written so that a reader who knows only basic school mathematics can follow the analysis from the beginning. Every specialized mathematical or statistical term used later is introduced before it is needed. Equations are followed by a plain-language interpretation, and small numerical examples are included whenever the idea is easy to misunderstand.
+
+The project has one central chain of ideas:
+\begin{align*}
+&\text{text}\to\text{probabilities}\to\text{information}\to\text{decay with distance}\\
+&\hspace{2em}\to\text{cross-language statistics}.
+\end{align*}
+The first part of the report explains each arrow. The second part applies those ideas to the 102-language dataset.
+
+The reader does not need prior knowledge of information theory, language modeling, regression, Universal Dependencies, or statistical hypothesis testing. The report defines those ideas before using them. Whenever a formula is important, the text also explains what each symbol means and what numerical operation the formula performs.\par
+
+\subsection*{A notation promise}
+A symbol is a name for a mathematical object. For example, $x$ may denote one number, while $x_1,\ldots,x_n$ denotes a list of $n$ numbers. A hat, as in $\hat p$, means an estimated quantity rather than an unknown population quantity. A bar, as in $\bar x$, means an average. The symbol $\log_2$ means logarithm to base 2. The symbol $\sum$ means "add all the terms indicated by the index." The symbol $\exp(x)$ means $e^x$, where $e\approx2.71828$.
+
+\subsection*{One distinction that prevents many confusions}
+There are three different objects in this study:
+\begin{enumerate}
+\item a \textbf{language-generating process}, which is the idealized probability mechanism that produces linguistic sequences;
+\item a \textbf{finite corpus}, which is the actual collection of sentences or utterances that we observed; and
+\item a \textbf{statistical estimate}, which is a number computed from that finite corpus to approximate a property of the underlying process.
+\end{enumerate}
+For example, the entropy rate of a language process is an abstract population quantity, while the Kneser--Ney cross-entropy reported here is an empirical estimate based on the available training and held-out text.
+
+\subsection*{A tiny dictionary for mathematical notation}
+Before the formal foundations, here are the symbols that appear most often:
+\begin{center}
+\begin{tabularx}{0.96\textwidth}{p{0.15\textwidth}X}
+\toprule
+Symbol & Meaning \\
+\midrule
+$=$ & ``is equal to''; both sides have the same numerical value. \\
+$\neq$ & ``is not equal to''. \\
+$>$, $<$ & greater than, less than. \\
+$\ge$, $\le$ & greater than or equal to, less than or equal to. \\
+$\sum$ & add a list of terms. For example, $\sum_{i=1}^3x_i=x_1+x_2+x_3$. \\
+$\prod$ & multiply a list of terms. \\
+$\sqrt{x}$ & the nonnegative number whose square is $x$. \\
+$|x|$ & absolute value, or distance of $x$ from zero. \\
+$\infty$ & infinity: a direction of unbounded growth, not an ordinary number. \\
+$\hat\theta$ & an estimate of an unknown quantity $\theta$. \\
+$\bar x$ & the arithmetic mean of observed values $x_1,\ldots,x_n$. \\
+$\arg\min$ & the input that makes an expression as small as possible. \\
+$\top$ & transpose; turns a column vector into a row vector. \\
+$\ell$ or $i$ & an index used to label a language, observation, or position; its meaning is stated locally. \\
+$\approx$ & approximately equal; the two values are close but not exactly equal. \\
+$\propto$ & proportional to: changing one side by a multiplicative factor changes the other in the same way. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+A \textbf{unit} tells us what a number measures. For example, $0.5$ bits per character is different from $5$ bits per second. Checking units is a simple way to catch many algebraic mistakes. The report uses ``per character'' for quantities whose denominator is one character and ``per second'' for quantities whose denominator is one second of speech.
+
+\newpage
+\section{Part I: Mathematical foundations}
+
+\subsection{Numbers, variables, functions, and averages}
+A \textbf{variable} is simply a symbol whose value can change. If we write $x=4$, then the variable $x$ currently has value 4. A collection of observed values is often written
+\[
+x_1,x_2,\ldots,x_n.
+\]
+Here $x_i$ means the $i$th observation and $n$ is the number of observations.
+
+A \textbf{function} is a rule that takes an input and returns an output. We write $y=f(x)$. In this report, one important example is the exponential function
+\[
+f(t)=Ae^{-\lambda t}.
+\]
+The constants $A>0$ and $\lambda>0$ determine the height and speed of the decay.
+
+The \textbf{arithmetic mean} or average is
+\[
+\bar x=\frac{1}{n}\sum_{i=1}^n x_i.
+\]
+For example, the mean of $2,4,9$ is $(2+4+9)/3=5$.
+
+The \textbf{median} is the middle value after sorting the observations. Unlike the mean, the median is less affected by one exceptionally large or small observation.
+
+The \textbf{variance} measures squared spread around the mean:
+\[
+s^2=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar x)^2.
+\]
+The \textbf{standard deviation} is $s=\sqrt{s^2}$. It is expressed in the same units as the original variable.
+
+\paragraph{Why this matters here.}
+The report repeatedly summarizes 102 language-level quantities using means or medians, and regression features are standardized using a scale related to their spread.
+
+\subsection{Functions of many variables and vectors}
+A \textbf{vector} is an ordered list of numbers, for example
+\[
+\mathbf x=
+\begin{pmatrix}
+2\\3\\5
+\end{pmatrix}.
+\]
+In regression, each language is represented by one vector of predictors such as speech rate, word length, morphology index, and region indicators.
+
+The notation
+\[
+\mathbf x^\top\boldsymbol\beta
+\]
+means the ordinary dot product:
+\[
+x_1\beta_1+x_2\beta_2+\cdots+x_p\beta_p.
+\]
+The superscript $\top$ means transpose: it changes a column vector into a row vector so that matrix multiplication is defined.
+
+The symbol
+\[
+\|\boldsymbol\beta\|_2^2
+=\sum_{j=1}^p\beta_j^2
+\]
+is the squared \textbf{Euclidean norm}. It is just the sum of squared coefficients.
+
+\subsection{Powers, exponentials, and logarithms}
+A power such as $2^3$ means $2\times2\times2=8$. The exponential $e^x$ is a continuous analogue of repeated multiplication.
+
+The \textbf{logarithm} reverses exponentiation. The statement
+\[
+2^3=8
+\]
+is equivalent to
+\[
+\log_2 8=3.
+\]
+Thus $\log_2 p$ asks: "What power of 2 gives $p$?"
+
+Logarithms turn products into sums:
+\[
+\log(ab)=\log a+\log b.
+\]
+That is useful in probability because the probability of a sequence is a product of conditional probabilities, while the logarithm converts that product into an additive score.
+
+For $0<p\le 1$, the quantity $-\log_2p$ is nonnegative. Rare events have larger values. This quantity will become the definition of \textbf{surprisal}.
+
+\subsection{Probability}
+A \textbf{probability} is a number between 0 and 1 describing how plausible an event is. Probability 0 means impossible; probability 1 means certain.
+
+If a random variable $X$ takes values $x$ with probabilities $p(x)$, then
+\[
+\sum_xp(x)=1.
+\]
+
+A \textbf{random variable} is a numerical label for an uncertain outcome. For example, $X$ could be the next character in a text.
+
+The \textbf{conditional probability} of $X=x$ given that $Y=y$ is written
+\[
+p(x\mid y).
+\]
+It answers: "After learning $Y=y$, how probable is $X=x$?"
+
+The multiplication rule is
+\[
+p(x,y)=p(y)p(x\mid y),
+\]
+where $p(x,y)$ is the probability of observing both events together.
+
+A \textbf{conditional distribution} is simply the collection of probabilities $p(x\mid y)$ over possible values of $x$, for a fixed $y$.
+
+A \textbf{stochastic process} is a sequence of random quantities indexed by time or position. Here the character at each position is treated as a random outcome whose probability depends on preceding characters.
+
+A \textbf{parametric model} is a model whose full behavior is determined by a finite set of parameters. The exponential curve $Ae^{-\lambda t}$ is parametric because the two numbers $A$ and $\lambda$ determine the curve.
+
+The abbreviation \textbf{iid} means "independent and identically distributed": independent observations do not affect one another's probability law, and identically distributed observations all follow the same distribution. The language rows in this project are not treated as iid because languages can share historical and geographic relationships.
+
+\subsection{Expectation}
+The \textbf{expectation} or theoretical average of a discrete random variable is
+\[
+\mathbb E[X]=\sum_xxp(x).
+\]
+For example, if a fair die takes values 1 through 6, then
+\[
+\mathbb E[X]=\frac{1+2+3+4+5+6}{6}=3.5.
+\]
+Expectation is a property of a probability distribution. An empirical sample mean is an estimate of that property.
+
+\subsection{Sampling and estimation}
+A \textbf{sample} is the finite data we actually observe. A \textbf{population} in statistics means the conceptual collection of all possible observations from the process we care about. An \textbf{estimator} is a rule that converts a sample into a numerical estimate.
+
+A \textbf{limit} describes what a quantity approaches as an index or input gets arbitrarily large or arbitrarily close to a target value. The symbol $\infty$ means "without an upper bound" rather than a very large ordinary number. Thus $\lim_{t\to\infty}a_t$ asks what value the sequence $a_t$ approaches as $t$ keeps increasing.
+
+For example, if $X_1,\ldots,X_n$ are observed values, then
+\[
+\hat\mu=\frac{1}{n}\sum_{i=1}^nX_i
+\]
+is an estimator of the population mean $\mu$.
+
+An estimate can have \textbf{sampling error}: even if the underlying process stays fixed, a different finite sample would generally give a somewhat different estimate. Many quantities in this report, including entropy rates and decay rates, have exactly this property.
+
+\newpage
+\section{Information theory from first principles}
+
+\subsection{Surprisal: information carried by one event}
+Suppose an event has probability $p$. Its surprisal is
+\[
+\boxed{s=-\log_2p.}
+\]
+The unit is the \textbf{bit}. If $p=1$, then $s=0$ bits because a completely certain event carries no surprise. If $p=1/2$, then $s=1$ bit. If $p=1/8$, then $s=3$ bits.
+
+\paragraph{In words.}
+Surprisal is a numerical measure of unexpectedness. Less probable events carry more surprisal.
+
+\subsection{Entropy: average uncertainty}
+If $X$ has possible values $x$ with probabilities $p(x)$, its Shannon entropy is
+\[
+\boxed{H(X)=-\sum_xp(x)\log_2p(x).}
+\]
+This is the expected surprisal:
+\[
+H(X)=\mathbb E[-\log_2p(X)].
+\]
+
+\paragraph{Example.}
+For a fair binary variable with two outcomes, both have probability $1/2$, so
+\[
+H=-\frac12\log_2\frac12-\frac12\log_2\frac12=1\text{ bit}.
+\]
+For a binary variable with probabilities $0.9$ and $0.1$,
+\[
+H=-0.9\log_2(0.9)-0.1\log_2(0.1)\approx0.469\text{ bits}.
+\]
+The second variable is less uncertain because one outcome is much more common.
+
+\subsection{Conditional entropy: uncertainty after context is known}
+If $X$ is the next character and $Y$ is some context, the conditional entropy is
+\[
+\boxed{H(X\mid Y)=-\sum_{x,y}p(x,y)\log_2p(x\mid y).}
+\]
+It measures how much uncertainty about $X$ remains after $Y$ is known.
+
+The identity
+\[
+H(X,Y)=H(Y)+H(X\mid Y)
+\]
+says that uncertainty about the pair can be split into uncertainty about $Y$ plus the remaining uncertainty about $X$ after $Y$ is known.
+
+\subsection{Mutual information}
+The \textbf{mutual information} between $X$ and $Y$ is
+\[
+I(X;Y)=H(X)-H(X\mid Y).
+\]
+It is the average reduction in uncertainty about $X$ obtained from knowing $Y$.
+
+In the locality setting, more context is useful precisely when it reduces predictive uncertainty about the current character.
+
+\subsection{Entropy rate of a sequence}
+For a sequence $C_1,C_2,\ldots$ of characters, the \textbf{entropy rate} is the average number of bits needed to describe one character when arbitrarily long relevant past context is available. One formal definition for a stationary process is
+\[
+H_{\infty}=\lim_{t\to\infty}H(C_t\mid C_{t-1},\ldots,C_1),
+\]
+when the limit exists under the chosen indexing convention.
+
+The project does not observe this infinite-context quantity directly. Instead, it estimates predictive uncertainty for a sequence of finite context lengths and studies how much uncertainty decreases as context grows.
+
+\subsection{Cross-entropy: how well a probability model predicts data}
+Suppose the true data distribution is $p$ but a fitted model uses probabilities $q(x)$. The cross-entropy is
+\[
+H(p,q)=-\sum_xp(x)\log_2q(x).
+\]
+A model is good when it assigns high probability to what actually occurs, making $-\log_2q(x)$ small.
+
+For a held-out sequence $x_1,\ldots,x_N$, the empirical cross-entropy is
+\[
+\boxed{\hat H_{\mathrm{cross}}=-\frac1N\sum_{i=1}^N\log_2q(x_i).}
+\]
+This is the form used by the locality estimator.
+
+A key distinction is this. \textbf{Entropy} describes uncertainty inside a probability distribution. \textbf{Cross-entropy} measures the average coding or prediction cost when the probabilities supplied by one model are used on observations generated by another distribution.
+
+\newpage
+\section{Language models and context length}
+
+\subsection{What a language model is}
+A \textbf{language model} is a probability model for sequences of linguistic units. In this project the unit is an orthographic character after normalization.
+
+A model answers questions such as
+\[
+P(\text{next character}=e\mid\text{previous characters}={\tt th}).
+\]
+The model does not need to generate text for this project; it only needs to assign probabilities to held-out characters.
+
+\subsection{What an $n$-gram is}
+An \textbf{$n$-gram} is a sequence of $n$ consecutive characters. A bigram has length 2, a trigram length 3, and so on.
+
+An order-$t$ character model predicts the current character from up to $t-1$ preceding characters. For example, with order 4, a possible context is
+\[
+(c_{i-3},c_{i-2},c_{i-1})
+\]
+for target character $c_i$.
+
+The project is interested in the sequence
+\[
+S_0,S_1,S_2,\ldots,
+\]
+where $S_t$ is the held-out cross-entropy produced by a model using context length $t$ in the study's lag convention.
+
+\subsection{Why held-out data are necessary}
+If we evaluate a model on the same examples used to fit its probabilities, the model can appear artificially accurate because it has already seen those examples. A \textbf{held-out set} is text that is not used for estimating the model parameters and is reserved for evaluation.
+
+The project randomly divides utterances into approximately 80\% training and 20\% validation data. The same held-out target positions are used for every context order. Therefore, when $S_t$ changes with $t$, the evaluation population is held fixed.
+
+\subsection{Conditional prediction as a coding problem}
+The expression
+\[
+-\log_2q(c_i\mid\text{context})
+\]
+can be interpreted as the number of idealized bits required to encode the observed character when the model assigns it probability $q$. High predicted probability means low coding cost; low predicted probability means high coding cost.
+
+This gives an intuitive interpretation of the locality curve: increasing context length lets the predictor compress the held-out sequence better whenever the additional context contains useful information.
+
+\newpage
+\section{Kneser--Ney smoothing explained from the beginning}
+
+\subsection{The problem of raw counts}
+A simple language model can estimate
+\[
+P(w\mid h)=\frac{c(h,w)}{c(h)},
+\]
+where $c(h,w)$ is the number of times context $h$ is followed by character $w$, and $c(h)=\sum_wc(h,w)$ is the total number of observations of context $h$.
+
+This creates a problem: a context or context--character combination that was not observed receives probability zero. Then one unseen held-out event would contribute
+\[
+-\log_2(0)=\infty,
+\]
+which makes the average cross-entropy unusable.
+
+The remedy is \textbf{smoothing}: deliberately move a small amount of probability mass away from observed events and give some probability to events that were not observed.
+
+\subsection{Discounting}
+The project uses discount $D=0.75$. Instead of using the raw count $c(h,w)$ directly, the model uses
+\[
+\max\{c(h,w)-D,0\}.
+\]
+A positive count is therefore reduced slightly. The removed mass is redistributed to lower-order probabilities.
+
+\subsection{Backing off and interpolation}
+A high-order model may have too little evidence for a particular context. The model therefore combines the current-order estimate with a lower-order model. This is called \textbf{interpolation}.
+
+For the top order, the implemented form is
+\[
+\boxed{
+P_{KN}(w\mid h)=
+\frac{\max\{c(hw)-D,0\}}{c(h)}
++\lambda(h)P_{KN}(w\mid h')
+}
+\]
+where $h'$ is the shorter context obtained by removing the oldest character, and
+\[
+\lambda(h)=D\frac{N_{1+}(h\,*)}{c(h)}.
+\]
+Here $N_{1+}(h\,*)$ means the number of distinct character types that have actually been observed after context $h$.
+
+Below the top order, the project uses \textbf{continuation counts}. These count distinct ways a smaller string has appeared in different larger contexts. For a character $w$,
+\[
+N_{1+}(\ast w)
+\]
+is the number of distinct characters that have appeared immediately before $w$ at least once. The order-1 continuation probability is
+\[
+\boxed{
+P_{KN}(w)=
+\frac{N_{1+}(\ast w)}{N_{1+}(\ast\ast)}
+}
+\]
+where the denominator counts the total number of distinct observed bigram types.
+
+\paragraph{Why distinct contexts matter.}
+Suppose a character is very frequent but almost always follows the same single character. Raw frequency says it is common; continuation counts say that its contextual use is narrow. Kneser--Ney gives the lower-order model a way to distinguish these cases.
+
+\subsection{What the recursion is doing}
+The high-order probability answers:
+\begin{quote}
+"Given a long context, what character is likely next?"
+\end{quote}
+If that exact context has useful counts, use them. If the evidence is weak or absent, pass some probability mass to a shorter context. Repeat until reaching the continuation distribution.
+
+The result is a probability for every relevant held-out target rather than zero probability for unseen events.
+
+\subsection{Cross-entropy at each context length}
+For each context order, the held-out score is
+\[
+S_t=-\frac{1}{N_t}\sum_{i=1}^{N_t}\log_2\hat P_t(c_i\mid c_{i-t:i-1}),
+\]
+where $N_t$ is the number of evaluated target positions and $\hat P_t$ is the fitted Kneser--Ney probability.
+
+A smaller $S_t$ means better predictive performance in the bits-per-character sense used here.
+
+\newpage
+\section{From predictive improvement to information locality}
+
+\subsection{The information increment $I_t$}
+The project defines
+\[
+\boxed{I_t=S_{t-1}-S_t.}
+\]
+This is simply a difference of two cross-entropies.
+
+\paragraph{In words.}
+$S_{t-1}$ is the predictive uncertainty before adding one more unit of context, and $S_t$ is the uncertainty after adding it. Their difference is the amount of predictive uncertainty removed by that extra context.
+
+If
+\[
+S_{t-1}=4.0\text{ bits},\qquad S_t=3.7\text{ bits},
+\]
+then
+\[
+I_t=0.3\text{ bits}.
+\]
+The new context position improves prediction by 0.3 bits on average.
+
+If the difference is close to zero, that extra context contributes little measurable predictive information. A negative difference would mean the estimated higher-order model performed worse on the held-out sample; that can happen because all quantities are finite-sample estimates.
+
+\subsection{Why monotonic correction is used}
+In theory, giving a predictor more information should not increase the optimal expected uncertainty. In finite data, however, estimated $S_t$ values can wiggle up and down.
+
+The implementation therefore replaces the raw sequence by its cumulative minimum:
+\[
+\tilde S_t=\min(S_0,S_1,\ldots,S_t).
+\]
+This guarantees
+\[
+\tilde S_t\le \tilde S_{t-1}
+\]
+for every $t$, so the derived increments
+\[
+\tilde I_t=\tilde S_{t-1}-\tilde S_t
+\]
+are nonnegative up to numerical precision.
+
+This is an estimation convention, not an empirical discovery. It prevents random upward fluctuations in cross-entropy from being interpreted as genuine negative information.
+
+\subsection{What the locality curve means}
+The sequence
+\[
+I_1,I_2,I_3,\ldots
+\]
+is the project's \textbf{information-locality curve}.
+
+The horizontal axis is context distance in characters. The vertical axis is the estimated predictive information contributed by the character at that distance.
+
+A curve that drops rapidly means that most measurable predictive benefit arrives from nearby context. A slower decline means that useful predictive information extends farther into the past.
+
+The word "locality" here therefore has a precise operational meaning: it is locality in the predictor's context-distance coordinate, not physical distance or geographical proximity.
+
+\subsection{Exponential decay}
+The project summarizes the positive beginning of the locality curve with
+\[
+\boxed{I_t=Ae^{-\lambda_{char}t}.}
+\]
+The symbol $A>0$ is the fitted amplitude, meaning the extrapolated value at $t=0$. The parameter $\lambda_{char}>0$ is the character-domain decay rate.
+
+Large $\lambda_{char}$ means faster decrease. Small $\lambda_{char}$ means slower decrease.
+
+Taking the natural logarithm gives
+\[
+\ln I_t=\ln A-\lambda_{char}t.
+\]
+So an exponential curve becomes a straight line if we plot $\ln I_t$ against $t$. The implementation nevertheless fits the original positive information values directly by \textbf{nonlinear least squares}: it chooses positive $A$ and $\lambda$ to minimize the sum of squared differences between the observed $I_t$ values and $Ae^{-\lambda t}$, with the time-scale conversion built into the fitted model.
+
+\subsection{Half-life}
+The \textbf{half-life} is the distance required for the fitted curve to fall to half its initial value. We solve
+\[
+Ae^{-\lambda h_{1/2}}=\frac A2.
+\]
+Dividing by $A$ and taking logarithms gives
+\[
+e^{-\lambda h_{1/2}}=\frac12,
+\]
+so
+\[
+\boxed{h_{1/2}=\frac{\ln2}{\lambda}.}
+\]
+For example, if $\lambda=0.5$, then $h_{1/2}\approx1.386$ characters in the fitted mathematical curve.
+
+\subsection{$R^2$ for the exponential fit}
+The coefficient of determination is
+\[
+R^2=1-\frac{\sum_i(y_i-\hat y_i)^2}{\sum_i(y_i-\bar y)^2}.
+\]
+Here $y_i$ is an observed positive-prefix information value and $\hat y_i$ is the fitted exponential value.
+
+The numerator is the \textbf{residual sum of squares}, measuring remaining squared discrepancy after fitting. The denominator is the \textbf{total sum of squares}, measuring variation around the sample mean.
+
+An $R^2$ close to 1 means the fitted curve closely follows the observed points in the scale on which the fit statistic is evaluated. It does not prove that the true language process is exactly exponential.
+
+\subsection{The finite positive-prefix rule}
+The implementation does not fit every available lag indiscriminately. It takes the contiguous sequence beginning at lag 1 while the estimated information is finite and above a small positive floor. The fit requires at least four consecutive points.
+
+This matters because a long-lag tail can be dominated by estimation noise or by the monotone correction itself. Excluding a non-positive tail is a deliberate definition of which portion is treated as observed positive decay.
+
+\newpage
+\section{Bootstrap uncertainty in beginner language}
+
+\subsection{What a confidence interval is trying to do}
+An estimate such as $\hat\lambda$ is computed from one finite sample. We therefore want to understand how much it might vary under repeated samples.
+
+A \textbf{bootstrap} is a resampling method. The basic idea is:
+
+A \textbf{confidence interval} is a range of values intended to communicate estimator uncertainty. In a repeated-sampling interpretation, a procedure designed for 95\% coverage would contain the target parameter in about 95\% of repeated samples under the assumptions of the procedure. A particular interval is not itself a statement that the unknown parameter has a 95\% probability of being inside it.
+\begin{enumerate}
+\item fit the model to the observed data;
+\item keep the fitted values;
+\item repeatedly resample residuals with replacement;
+\item add the resampled residuals back to the fitted values;
+\item refit the model each time.
+\end{enumerate}
+The collection of bootstrap estimates approximates the sampling variability of the estimator.
+
+\subsection{Residuals}
+A \textbf{residual} is observed value minus fitted value:
+\[
+e_i=y_i-\hat y_i.
+\]
+A residual is positive when the model underpredicts the observation and negative when it overpredicts.
+
+The present implementation performs a residual bootstrap on the fitted positive-prefix information curve. It retains only bootstrap samples for which the entire original positive prefix remains above the positive floor and then refits the decay rate.
+
+The reported 2.5th and 97.5th percentiles of the retained bootstrap estimates form a percentile interval. Such an interval is an approximation; it is not a guarantee that the unknown parameter lies inside the interval with exactly 95\% probability.
+
+\subsection{Why some languages have small bootstrap sample sizes}
+The bootstrap requires a valid fitted prefix and sufficient successful resamples. Some languages have fewer than the requested 300 accepted bootstrap replicates because the positive-prefix requirement rejects many perturbations. The current results record the actual accepted number rather than silently pretending that all 300 were valid.
+
+\newpage
+\section{The alternative Hilberg-style comparison}
+A second descriptive family is fitted to the positive information curve. It is useful first to define a \textbf{power law}. A power law has the general shape $t^{-\alpha}$, meaning that distance $t$ is raised to a power $-\\alpha$. Unlike an exponential, a power law can decrease more slowly at large distances. The word ``Hilberg-style'' here means that this comparison uses a power-law-related functional form inspired by information-theoretic scaling discussions; it does not mean that the analysis proves a universal Hilberg law.
+
+The functional basis used in the implementation is
+\[
+g_\alpha(t)=t^{-\alpha}-(t+1)^{-\alpha},
+\]
+and the fitted form is
+\[
+I_t=A g_\alpha(t).
+\]
+The parameter $\alpha$ controls the shape of the power-law-like tail.
+
+This is not the same as the exponential model. The comparison asks whether the observed finite positive prefix is better summarized by one mathematical shape or the other under the specific fitting protocol.
+
+The fitted $R^2$ is interpreted exactly as before: a descriptive goodness-of-fit statistic for the observed finite curve. A negative $R^2$ means that the fitted curve has a larger squared error than the constant predictor $\bar y$ on that set of points.
+
+\newpage
+\section{The memory-cost statistic}
+The report defines a truncated weighted memory quantity
+\[
+\boxed{M_T=\sum_{t=1}^{T}tI_t.}
+\]
+The factor $t$ gives more weight to information that occurs farther away.
+
+\paragraph{Numerical example.}
+If
+\[
+I_1=0.4,\quad I_2=0.2,\quad I_3=0.1,
+\]
+then
+\[
+M_3=1(0.4)+2(0.2)+3(0.1)=1.1.
+\]
+The term at distance 3 contributes $3\times0.1=0.3$, so distance is explicitly part of the score.
+
+In the numerical implementation, non-finite or non-positive empirical increments are treated as zero in this weighted sum. This is a diagnostic convention and should not be confused with the raw information curve itself.
+
+\subsection{Why decay rate and memory cost move in opposite directions}
+For an exponential curve
+\[
+I_t=Ae^{-\lambda t},
+\]
+smaller $\lambda$ means a slower decay, so more information remains at large $t$. Because $M_T$ gives large $t$ larger weights, a slower decay tends to produce a larger memory score. The observed negative correlation between memory cost and $\lambda_{char}$ is therefore consistent with the algebraic shape of the two summaries. It is not an independent causal result.
+
+\newpage
+\section{Morphology, words, and controlled perturbations}
+
+\subsection{Token and type}
+A \textbf{word token} is one occurrence of a word in the corpus. If the sentence is
+\[
+\text{the cat sees the cat},
+\]
+there are 5 word tokens.
+
+A \textbf{word type} is a distinct word form. The same sentence has four word types: the, cat, sees, and (depending on tokenization) no fifth new type. Thus repeated occurrences count multiple times as tokens but only once as a type.
+
+The \textbf{type-token ratio} (TTR) is
+\[
+\mathrm{TTR}=\frac{\text{number of distinct word types}}{\text{number of word tokens}}.
+\]
+It is a simple lexical-diversity statistic.
+
+\subsection{What the morphology analysis is trying to isolate}
+A language can encode distinctions using the arrangement of separate words, such as word order, or using structure inside words, such as inflectional or derivational material. The project uses controlled text perturbations to ask how much predictive structure is lost when each source of organization is disrupted.
+
+This is an operational information-theoretic decomposition. It is not a claim that all linguistic morphology can be represented by one number.
+
+\subsection{Original text and two perturbations}
+Let the normalized utterances be the observed text.
+
+\paragraph{Perturbation 1: destroy word order.}
+Within each utterance, the complete word tokens are randomly permuted. The same words remain, but their order changes. Word identities and word lengths are therefore preserved while ordinary local ordering relationships are disrupted.
+
+If the original entropy-rate estimate is $H_{original}$ and the word-order-destroyed estimate is $H_{order}$, define
+\[
+\boxed{D_{order}=H_{order}-H_{original}.}
+\]
+A positive value means that destroying word order made the text harder for the entropy estimator to predict.
+
+\paragraph{Perturbation 2: destroy within-word character structure.}
+Each distinct word type of length at least two is assigned one random replacement string of the same length, built from the corpus character alphabet. The same original word type receives the same replacement everywhere, while word order and word lengths are retained.
+
+Thus repetitions of a word type remain repetitions, but the original character arrangement inside the word is destroyed. Let the resulting entropy-rate estimate be $H_{structure}$. Then
+\[
+\boxed{D_{structure}=H_{structure}-H_{original}.}
+\]
+
+The implementation does not replace negative values by zero. Instead, it defines the morphology index only when both raw differences are nonnegative and their sum is positive.
+
+\subsection{The morphology index}
+When
+\[
+D_{order}\ge0,\qquad D_{structure}\ge0,\qquad D_{order}+D_{structure}>0,
+\]
+the morphology index is
+\[
+\boxed{
+M=\frac{D_{structure}}{D_{order}+D_{structure}}.
+}
+\]
+
+Because the numerator is one nonnegative component of the denominator, valid identified values satisfy
+\[
+0\le M\le1.
+\]
+
+\paragraph{How to read the number.}
+If $M=0.2$, then the within-word structural redundancy contributes one fifth of the total of the two measured perturbation redundancies. If $M=0.8$, it contributes four fifths. This is a relative share, not a percentage of all information in the language.
+
+\paragraph{Example.}
+Suppose
+\[
+H_{original}=4.0,\quad H_{order}=4.5,\quad H_{structure}=5.0.
+\]
+Then
+\[
+D_{order}=0.5,\qquad D_{structure}=1.0,
+\]
+and therefore
+\[
+M=\frac{1.0}{0.5+1.0}=\frac23\approx0.667.
+\]
+
+\subsection{Why UD is separate}
+\textbf{Universal Dependencies (UD)} is an annotation standard for syntactic and morphological structure. A UD treebank is a collection of sentences that have been manually or computationally annotated with information such as part of speech (POS), morphological features, syntactic heads, and dependency relations. POS is simply a grammatical category such as NOUN, VERB, or ADJ.
+
+For example, an annotated token can have a universal part-of-speech tag such as NOUN or VERB, feature values such as Number=Sing, and a syntactic relation such as subject or object. These annotations support four variables used in the project: morphological-feature density; mean features per token; dependency-direction entropy; and mean dependency distance.
+
+Those variables genuinely require annotation. The text-perturbation morphology index does not require knowing the part of speech or dependency tree; it requires only the text transformations and entropy calculation.
+
+\subsection{Why 44 morphology values are currently missing}
+The current results contain 102 language rows, of which 58 have a current morphology index and 44 have a missing value. The 44 missing rows are marked with the UD status \texttt{no\_matching\_treebank}. Their FLEURS locality estimates are still present.
+
+The reason is computational rather than linguistic: the current pipeline calls the text-based perturbation calculation from inside the branch that first discovers and loads a matching UD treebank. Therefore, a language without a matching UD treebank can reach the locality stage but fail to materialize the perturbation outputs in the current result.
+
+This is important enough to state explicitly:
+\[
+\boxed{\text{No UD treebank }\neq\text{ no morphology index in principle}.}
+\]
+It means only that the current computation did not run that text-only calculation for that row.
+
+\newpage
+\section{Time-domain locality}
+Suppose speech proceeds at an average character rate $r_c$ measured in characters per second. If a context is $t$ characters away, the corresponding approximate speech time is
+\[
+\tau=\frac{t}{r_c}.
+\]
+Rearranging gives
+\[
+t=r_c\tau.
+\]
+
+Start from the character-domain decay
+\[
+I_t=Ae^{-\lambda_{char}t}.
+\]
+Substitute $t=r_c\tau$:
+\[
+I(\tau)=Ae^{-\lambda_{char}r_c\tau}.
+\]
+Therefore the time-domain decay rate is
+\[
+\boxed{\lambda_{time}=\lambda_{char}r_c.}
+\]
+
+\paragraph{Units.}
+If $\lambda_{char}$ has units of inverse characters, meaning "per character," and $r_c$ has units of characters per second, then
+\[
+\frac{1}{\text{character}}
+\times
+\frac{\text{character}}{\text{second}}
+=
+\frac{1}{\text{second}}.
+\]
+So $\lambda_{time}$ is correctly measured per second.
+
+This identity is algebraic, not an estimated regression law. The current numerical values satisfy it up to floating-point rounding error. For this reason the time-domain cross-language regression excludes $r_c$ as an ordinary predictor: including it would reintroduce a quantity that is mathematically built into the response.
+
+\newpage
+\section{Correlation: measuring simple association}
+
+\subsection{Pearson correlation}
+The \textbf{Pearson correlation coefficient} measures linear association between two numerical variables $X$ and $Y$:
+\[
+\boxed{
+r=\frac{\sum_i(x_i-\bar x)(y_i-\bar y)}
+{\sqrt{\sum_i(x_i-\bar x)^2}\sqrt{\sum_i(y_i-\bar y)^2}}.}
+\]
+Its value lies between $-1$ and $1$.
+
+A positive value means that larger $X$ tends to accompany larger $Y$ in a linear sense. A negative value means that larger $X$ tends to accompany smaller $Y$. A value near zero means little linear association.
+
+\paragraph{Example.}
+If every point satisfies $Y=2X+1$, Pearson correlation is $+1$ because the relation is perfectly linear and increasing. If $Y=-2X+1$, it is $-1$.
+
+\subsection{Spearman correlation}
+The \textbf{Spearman correlation} first replaces observations by their ranks and then computes Pearson correlation on those ranks. It therefore measures a monotonic ordering relationship rather than specifically a straight-line relationship.
+
+\subsection{Correlation is not causation}
+If two language variables are correlated, this does not establish that changing one variable would cause the other to change. Correlation can arise through shared history, geography, corpus composition, or other unmeasured variables.
+
+\subsection{$p$-values}
+A \textbf{hypothesis} is a precise statistical statement about a population or probability model. A \textbf{null hypothesis} is the baseline statement against which the observed data are compared. A \textbf{statistical test} compares an observed test statistic with what would be expected if the null hypothesis were true.
+
+A \textbf{$p$-value} is a probability calculated under a specified null model. In the standard test associated with Pearson correlation, the null hypothesis is that the population linear correlation is zero under the assumptions of that test.
+
+A small $p$-value means that the observed statistic would be relatively unusual under that null model. It does not mean "the probability that the null hypothesis is true." Nor does it measure the size or practical importance of the association.
+
+The correlations in this report are exploratory language-level summaries, so their $p$-values should not be treated as a collection of independent confirmatory tests.
+
+\newpage
+\section{Regression from first principles}
+
+\subsection{What regression does}
+Regression asks whether one or more measured variables can be used to predict another measured variable.
+
+The quantity being predicted is the \textbf{response} or \textbf{outcome}. The variables used for prediction are called \textbf{predictors}, \textbf{features}, or \textbf{covariates}.
+
+For language $\ell$, let $Y_\ell$ be the response and let
+\[
+\mathbf X_\ell=(X_{\ell1},\ldots,X_{\ell p})
+\]
+be its predictor vector.
+
+\subsection{Why the analysis uses $\log\lambda$}
+Decay rates are positive. A logarithm converts positive multiplicative changes into additive changes:
+\[
+\log(ab)=\log a+\log b.
+\]
+The primary regression outcomes are therefore
+\[
+Y_{\ell,char}=\log\lambda_{char},
+\qquad
+Y_{\ell,time}=\log\lambda_{time}.
+\]
+A one-unit increase in log decay corresponds to multiplying the original decay rate by $e$ when natural logarithms are used.
+
+\subsection{Standardization}
+Numerical predictors can have very different units: speech rate may be measured in characters per second, word length in characters, and entropy in bits.
+
+The project standardizes a numerical feature using
+\[
+X^*=\frac{X-\operatorname{median}(X)}{s},
+\]
+where $s$ is the scale used by the preprocessing pipeline.
+
+After standardization, a numerical coefficient corresponds approximately to the fitted change in the log outcome associated with a one-standard-deviation increase in that predictor, with the other transformed predictors held fixed.
+
+\subsection{Categorical predictors and one-hot encoding}
+A categorical variable records membership in a finite set of labels, such as region or writing script. A writing script is the symbol system used to write a language, such as Latin, Cyrillic, or Devanagari. A regression algorithm needs numerical columns, so the project uses \textbf{one-hot encoding}.
+
+For example, if the only possible regions were A, B, and C, we could represent a language from B by
+\[
+(0,1,0).
+\]
+One category is omitted from the fitted coefficient table as a reference. The coefficient of another category describes the fitted difference relative to that reference category.
+
+\subsection{Median imputation}
+If a numerical predictor is missing for one language, the pipeline replaces the missing value by the predictor's median among the training data used for that fit. This is called \textbf{median imputation}.
+
+For categorical predictors, the pipeline uses the most frequent observed category. These are preprocessing rules; they are not estimates of the true missing linguistic property.
+
+\subsection{Interaction terms}
+Sometimes the effect of one predictor may depend on another. An \textbf{interaction term} represents this explicitly.
+
+For morphology $M$ and syllable rate $R$, an interaction has the form
+\[
+M\times R.
+\]
+A model containing $M$, $R$, and $MR$ allows the fitted contribution of morphology to vary with syllable rate.
+
+\newpage
+\section{Least squares and optimization from first principles}
+The regression sections use a very general mathematical idea: choose numbers that make a specified error as small as possible.
+
+Suppose observed values are $y_1,\ldots,y_n$ and predictions are $\hat y_1,\ldots,\hat y_n$. The \textbf{error} or \textbf{residual} at observation $i$ is
+\[
+e_i=y_i-\hat y_i.
+\]
+The \textbf{squared error} is $e_i^2$. Squaring removes the sign, so an error of $-2$ and an error of $+2$ both have squared size $4$. The \textbf{sum of squared errors} is
+\[
+\mathrm{SSE}=\sum_{i=1}^n(y_i-\hat y_i)^2.
+\]
+\textbf{Least squares} means choosing the model parameters that make this sum as small as possible.
+
+The word \textbf{objective function} means the numerical quantity that we are trying to minimize or maximize. The notation
+\[
+\hat\theta=\arg\min_\theta Q(\theta)
+\]
+means: among all possible values of $\theta$, choose the one that gives the smallest value of $Q(\theta)$. You do not need calculus to understand this notation; it is simply a precise way of saying ``choose the best value according to the stated criterion''. Calculus is one mathematical tool that can be used to locate such minima, but the report's conceptual argument does not require the reader to perform derivatives by hand.
+
+A \textbf{coefficient} is a number multiplying a predictor. In the simple model
+\[
+Y=\beta_0+\beta_1X,
+\]
+$\beta_1$ is the slope or coefficient of $X$, and $\beta_0$ is the \textbf{intercept}, the predicted value when $X=0$. In a multivariable model there is one coefficient for each transformed predictor.
+
+The project uses Ridge regression, which modifies least squares by adding a penalty for large coefficients. The next section explains exactly why that penalty is useful.
+
+\section{Ridge regression in detail}
+The project uses \textbf{Ridge regression}. Ridge is ordinary least squares with an additional penalty that discourages very large coefficients.
+
+For transformed predictors $X^*$, the fitted coefficients solve
+\[
+\boxed{
+\hat\beta_{\alpha}=\arg\min_{\beta_0,\beta}
+\left[
+\sum_{\ell=1}^n
+\left(Y_\ell-\beta_0-X_\ell^{*\top}\beta\right)^2
++\alpha\sum_{j=1}^p\beta_j^2
+\right].
+}
+\]
+
+\subsection{Reading the objective function}
+The first term,
+\[
+\sum_{\ell=1}^n(Y_\ell-\hat Y_\ell)^2,
+\]
+is the total squared prediction error on the training data.
+
+The second term,
+\[
+\alpha\sum_j\beta_j^2,
+\]
+is the ridge penalty.
+
+The symbol $\alpha$ controls the trade-off. Larger $\alpha$ penalizes large coefficients more strongly. When $\alpha$ is small, the model behaves more like ordinary least squares.
+
+The symbol $\arg\min$ means "the parameter value at which the expression is as small as possible."
+
+Full column rank means that no column of the design matrix can be written exactly as a linear combination of the other columns; in that case the matrix inverse in the following expression exists.\par
+
+When the design matrix has full column rank, the closed-form solution is
+\[
+\boxed{\hat\beta=(X^\top X+\alpha I)^{-1}X^\top Y.}
+\]
+Here $I$ is the identity matrix, whose diagonal entries are 1 and off-diagonal entries are 0.
+
+\subsection{Why use a penalty?}
+With many correlated predictors, ordinary regression can produce unstable coefficient estimates. Ridge shrinks the coefficient vector toward zero, usually reducing variance (sensitivity of an estimate to the particular sample) at the price of some bias (systematic tendency to be pulled away from the target). In predictive work this can improve stability.
+
+The project chooses $\alpha$ by cross-validation from 80 logarithmically spaced candidates between $10^{-4}$ and $10^4$.
+
+\subsection{Sensitivity models: Bayesian Ridge and Elastic Net}
+A \textbf{sensitivity model} is an alternative reasonable modeling method used to check whether the main predictive conclusion changes. The primary method is Ridge regression, while the current sensitivity analysis also uses Bayesian Ridge and Elastic Net.
+
+In \textbf{Bayesian Ridge regression}, the linear model is written as $Y=X\beta+\varepsilon$, with random error $\varepsilon$. The coefficients $\beta$ are given a normal prior centered at zero. After observing the data, Bayes' rule produces a posterior distribution for $\beta$. The practical purpose here is not to claim a probability distribution for a language parameter from first principles, but to check whether a closely related regularized linear model gives similar out-of-sample behavior.
+
+\textbf{Elastic Net regression} combines an $L_1$ and an $L_2$ penalty. A convenient form of its objective is
+\[
+\sum_i(Y_i-\hat Y_i)^2
++\lambda\left[\eta\sum_j|\beta_j|+\frac{1-\eta}{2}\sum_j\beta_j^2\right].
+\]
+The $L_1$ term is the sum of absolute coefficient values. It can make some coefficients exactly zero. The $L_2$ term is the Ridge-type squared-coefficient penalty. The current sensitivity analysis uses $\eta=0.5$, so the two penalty components are mixed equally apart from the factor of one half in the $L_2$ term.
+
+\newpage
+\section{Cross-validation and the LOCO design}
+
+\subsection{What cross-validation is}
+\textbf{Cross-validation} is a way of estimating how well a fitted model will predict observations that were not used to fit it.
+
+The data are repeatedly divided into training and validation portions. The model is fitted on the training portion and evaluated on the left-out portion.
+
+\subsection{Why languages are left out one at a time}
+A random split of languages can put closely related languages into both the training and validation sets. That can make prediction appear easier than it would be when confronting a genuinely unseen language.
+
+The project's main procedure is \textbf{leave-one-language-out cross-validation} (LOCO-CV). For each language $\ell$:
+\begin{enumerate}
+\item remove language $\ell$ from the training set;
+\item fit the complete preprocessing and regression pipeline on the other languages;
+\item predict the response for language $\ell$;
+\item restore it and repeat for the next language.
+\end{enumerate}
+
+Thus every language is evaluated exactly once as the held-out target.
+
+\subsection{Residual and prediction metrics}
+For held-out language $\ell$, the prediction error is
+\[
+e_\ell=Y_\ell-\hat Y_\ell.
+\]
+The \textbf{mean absolute error} is
+\[
+\boxed{\mathrm{MAE}=\frac1n\sum_\ell|e_\ell|.}
+\]
+It measures average absolute prediction error.
+
+The \textbf{root mean squared error} is
+\[
+\boxed{\mathrm{RMSE}=\sqrt{\frac1n\sum_\ell e_\ell^2}.}
+\]
+Because errors are squared before averaging, RMSE gives more weight to large mistakes.
+
+The cross-validated coefficient of determination is
+\[
+\boxed{
+R^2_{CV}=1-\frac{\sum_\ell e_\ell^2}
+{\sum_\ell(Y_\ell-\bar Y)^2}.
+}
+\]
+
+\paragraph{Why can $R^2$ be negative?}
+The baseline model that always predicts the held-out-set mean has squared error equal to the denominator of this expression. If the regression's squared error is larger, then
+\[
+\sum_\ell e_\ell^2>
+\sum_\ell(Y_\ell-\bar Y)^2,
+\]
+which gives $R^2_{CV}<0$.
+
+A negative cross-validated $R^2$ therefore means that, under this evaluation design, the predictor set did worse in squared-error prediction than the constant mean baseline. It is not an impossible value and it is not a sign that the arithmetic is wrong.
+
+\subsection{Why preprocessing must occur inside each fold}
+Imputation, scaling, category encoding, and regularization choices can all leak information from held-out languages into the model if they are computed using the full dataset before cross-validation. The pipeline therefore performs preprocessing within the cross-validation procedure so that the held-out language remains genuinely unseen during model fitting.
+
+\newpage
+\section{Model assumptions: what is and is not being assumed}
+The word \textbf{assumption} means a condition under which an estimator or interpretation is justified.
+
+\subsection{For the locality estimator}
+The underlying theoretical language-process discussion is most naturally phrased in terms of a stable stochastic process. A process is \textbf{stationary} if its probability law does not change with absolute position in time. Real multilingual corpora are finite and heterogeneous, so stationarity is an approximation, not an observable fact proven by the data.
+
+Kneser--Ney also relies on the practical assumption that the training corpus contains enough repeated patterns for its smoothed probability estimates to be useful.
+
+The held-out evaluation assumes that the validation utterances are generated by a sufficiently similar process to the training utterances that the predictive comparison is meaningful.
+
+\subsection{For the exponential decay summary}
+The exponential model assumes that the retained positive-prefix curve is adequately summarized by
+\[
+I_t=Ae^{-\lambda t}.
+\]
+This is a model of the observed curve, not a logical consequence of the data.
+
+\subsection{For the bootstrap}
+Residual bootstrap reasoning assumes that the fitted residuals are informative about how estimation error behaves in repeated samples. The present implementation uses a simple resampling scheme and should therefore be read as an uncertainty diagnostic rather than a complete stochastic model of corpus generation.
+
+\subsection{For cross-language regression}
+Ridge regression assumes a linear relationship in the transformed predictor space, while the use of one-hot indicators imposes additive category effects relative to a reference level. Standard statistical interpretations of independent errors are not literally appropriate because languages are related and geographically clustered.
+
+The key validation question is therefore predictive transportability, not causal estimation under an iid population model.
+
+\newpage
+\section{A compact glossary for every recurring technical term}
+\begin{longtable}{p{0.26\textwidth}p{0.68\textwidth}}
+\toprule
+\textbf{Term} & \textbf{Meaning in this report}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Term} & \textbf{Meaning in this report}\\
+\midrule
+\endhead
+\textbf{character} & One normalized written character in the sequential stream used by the locality model.\\
+\textbf{utterance} & One speech/transcript item in FLEURS; the unit used for the train/validation split.\\
+\textbf{token} & One occurrence of a word.\\
+\textbf{type} & One distinct word form.\\
+\textbf{corpus} & The finite collection of text observations used in an analysis.\\
+\textbf{probability} & A number from 0 to 1 representing uncertainty or relative frequency under a model.\\
+\textbf{conditional probability} & $p(x\mid y)$, the probability of $x$ after conditioning on the fact that $y$ is known.\\
+\textbf{random variable} & A mathematical variable whose value is determined by an uncertain outcome.\\
+\textbf{expectation} & The probability-weighted average of a random variable.\\
+\textbf{entropy} & Average surprisal, measured in bits.\\
+\textbf{surprisal} & $-\log_2 p$: the information or unexpectedness of one event.\\
+\textbf{cross-entropy} & Average $-\log_2 q(x)$ when model probabilities $q$ are evaluated on data.\\
+\textbf{entropy rate} & Average information per symbol in a long sequence when the dependence structure is taken into account.\\
+\textbf{language model} & A probability model assigning probabilities to next linguistic units given context.\\
+\textbf{$n$-gram} & A consecutive block of $n$ characters.\\
+\textbf{context/order} & The amount of preceding sequence supplied to a predictor.\\
+\textbf{smoothing} & Adjusting empirical probabilities so unseen or rare events receive sensible probability rather than zero.\\
+\textbf{Kneser--Ney} & A smoothed count-based language model that uses discounted counts and continuation counts.\\
+\textbf{continuation count} & A count of distinct larger contexts in which a smaller sequence has appeared.\\
+\textbf{stochastic process} & A sequence of random quantities indexed by time or position.\\
+\textbf{parametric model} & A model described by a finite set of parameters.\\
+\textbf{non-parametric method} & A method that does not restrict the target relationship to a fixed finite-dimensional parametric form.\\
+\textbf{stationary process} & A stochastic process whose probability law does not change when the whole sequence is shifted in position.\\
+\textbf{iid} & Independent and identically distributed.\\
+\textbf{lossless compression} & Encoding data so the original sequence can be recovered exactly after decoding.\\
+\textbf{Lempel--Ziv} & A family of sequence methods based on repeated substrings; the project uses a longest-previous-factor entropy estimator.\\
+\textbf{held-out data} & Observations reserved for evaluation rather than parameter fitting.\\
+\textbf{information locality} & The way predictive information changes as the distance of usable past context increases.\\
+\textbf{information increment} & $I_t=S_{t-1}-S_t$, the improvement from adding one more lag of context.\\
+\textbf{decay rate} & The positive parameter $\lambda$ controlling how quickly an exponential curve decreases.\\
+\textbf{half-life} & The distance or time at which an exponential quantity falls to half its starting value.\\
+\textbf{amplitude} & The multiplicative constant $A$ in the exponential decay model.\\
+\textbf{residual} & Observed value minus fitted value.\\
+\textbf{bootstrap} & Repeated resampling procedure used to approximate estimator variability.\\
+\textbf{correlation} & A numerical summary of association between two variables.\\
+\textbf{Pearson correlation} & Correlation based directly on deviations from the means; sensitive to linear association.\\
+\textbf{Spearman correlation} & Pearson correlation after converting observations to ranks.\\
+\textbf{$p$-value} & Probability, under a specified null model, of obtaining a statistic at least as extreme as the observed one.\\
+\textbf{predictor / feature / covariate} & A measured variable supplied to a predictive model.\\
+\textbf{response/outcome} & The measured quantity the regression attempts to predict.\\
+\textbf{matrix} & A rectangular array of numbers; the regression design matrix stores predictor values in rows and columns.\\
+\textbf{identity matrix} & A square matrix with 1s on the diagonal and 0s elsewhere; it plays the role of 1 in matrix multiplication.\\
+\textbf{standardization} & Rescaling a numerical predictor to a common center and spread so coefficient magnitudes are comparable in transformed units.\\
+\textbf{one-hot encoding} & Replacing a categorical label by binary indicator columns.\\
+\textbf{imputation} & Replacing a missing predictor value using a predefined rule.\\
+\textbf{interaction} & A product such as $XY$ allowing the contribution of one variable to depend on another.\\
+\textbf{Ridge regression} & Least-squares regression with an $L_2$ penalty on the coefficient size.\\
+\textbf{Bayesian Ridge} & A regularized linear model with a Gaussian prior on coefficients and a Gaussian error model, producing a posterior distribution for the coefficients.\\
+\textbf{Elastic Net} & A regression method using both an $L_1$ absolute-value penalty and an $L_2$ squared-coefficient penalty.\\
+\textbf{$L_1$ norm} & The sum of absolute coefficient values, $\|\beta\|_1=\sum_j|\beta_j|$.\\
+\textbf{Gaussian / normal distribution} & A symmetric bell-shaped probability distribution used here to describe coefficient priors or error models.\\
+\textbf{prior distribution} & A probability distribution for an unknown parameter before observing the data.\\
+\textbf{posterior distribution} & The probability distribution for an unknown parameter after combining the data with the prior.\\
+\textbf{Bayes' rule} & The probability identity used to update a prior distribution with observed evidence.\\
+\textbf{sensitivity model} & An alternative reasonable method used to check whether a conclusion depends strongly on the primary modeling choice.\\
+\textbf{nonlinear least squares} & Choosing parameters to minimize squared prediction errors when the model is nonlinear in those parameters.\\
+\textbf{regularization} & Penalizing model complexity to control coefficient size or instability.\\
+\textbf{cross-validation} & Repeated fitting and evaluation on held-out subsets to estimate out-of-sample performance.\\
+\textbf{LOCO-CV} & Leave-one-language-out cross-validation, in which each language is held out once.\\
+\textbf{MAE} & Mean absolute prediction error.\\
+\textbf{RMSE} & Root mean squared prediction error.\\
+\textbf{$R^2$} & A relative goodness-of-fit or predictive-performance measure based on squared errors; it can be negative in out-of-sample settings.\\
+\textbf{algebraic identity} & An equality that follows from definitions and ordinary algebra rather than from a fitted statistical relationship.\\
+\textbf{typology} & The study and classification of languages by structural properties such as word order or morphological patterns.\\
+\textbf{orthography} & The writing conventions used to represent a language with symbols such as letters or characters.\\
+\textbf{transportability} & How well a fitted relationship predicts a held-out language.\\
+\textbf{genealogical relationship} & Historical relationship among languages due to descent from common earlier languages.\\
+\textbf{areal relationship} & Dependence or similarity associated with languages being spoken in the same geographical region.\\
+\textbf{morpheme} & A smallest meaningful grammatical or lexical unit inside a word.\\
+\textbf{phonological segmentation} & Dividing speech into sound units such as phonemes or syllables.\\
+
+\textbf{UD} & Universal Dependencies, a cross-linguistic annotation framework for syntactic and morphological structure.\\
+\textbf{treebank} & A corpus with linguistic annotations such as syntactic dependency trees and morphological features.\\
+\textbf{dependency} & A grammatical relation connecting one token to another, represented by a directed head-dependent link.\\
+\textbf{morphological feature} & An annotation such as Number, Gender, Case, Tense, or Person describing grammatical properties of a token.\\
+\textbf{morphology index} & The ratio $D_{structure}/(D_{order}+D_{structure})$ when the required nonnegative redundancy conditions hold.\\
+\bottomrule
+\end{longtable}
+
+\section{Executive summary}
+The analysis contains 102 language rows. Every row has a FLEURS-derived character-domain locality estimate and a speech-time locality estimate. The current morphology index is populated for 58 languages and missing for 44, with the missing rows also marked `no\_matching\_treebank` in the UD status field.
+
+The main numerical summary is shown in Table~\ref{tab:summary}.
+
+\begin{table}[H]\centering
+\caption{Core numerical summary of the current analysis.}\label{tab:summary}
+\input{tables/summary_metrics.tex}
+\end{table}
+
+The central methodological point is that a text-derived morphology index and a UD-derived morphology feature count are different objects. A text corpus is enough to define the perturbation-based index; UD is required for the annotation-specific structural variables. This separation is maintained throughout the report.
+
+\section{Motivation}
+Natural language can be treated as a sequential stochastic process in which the probability of a current linguistic unit depends on preceding context. The information-locality perspective asks how much predictive information is stored at different context distances.
+
+For a context-lag index $t$, let $S_t$ denote expected predictive surprisal when the retained context extends $t$ units into the past. The marginal information associated with adding one further lag is represented by
+\[
+I_t = S_{t-1}-S_t.
+\]
+If $I_t$ decreases rapidly with $t$, predictive information is concentrated near the current unit; if it decreases slowly, information is distributed farther into the past. A distance-weighted finite-horizon memory quantity is
+\[
+M_T = \sum_{t=1}^{T} t I_t.
+\]
+This connects the empirical estimator to the memory-limit interpretation developed in work on information locality and lossy context.
+
+The project is intentionally careful about the distinction between an empirical curve, a parametric summary of that curve, and a cross-language regression on the summary. A good exponential fit within a language is not evidence that a set of language-level predictors will predict locality well for another language.
+
+\section{Research questions}
+\begin{enumerate}
+\item How rapidly does predictive information decay with character distance across the 102-language sample?
+\item How does the decay parameter change after converting character lag into elapsed speech time?
+\item How can information carried by word order and within-word structure be separated by controlled text perturbations?
+\item To what extent can cross-language locality be predicted from speech, lexical, structural, and regional variables?
+\end{enumerate}
+
+\section{Data and sources}
+\subsection{FLEURS speech and transcript data}
+The primary source is the Google FLEURS multilingual speech dataset. In this project FLEURS plays three roles: it supplies transcript text, it supplies the speech-duration calibration, and it supplies the material on which the held-out character language models operate.
+
+For an utterance containing $n_s$ audio samples at 16 kHz, the duration proxy is
+\[
+\operatorname{duration}(s)=\frac{n_s}{16000}.
+\]
+No phoneme-duration model is required for the primary speech-time calibration.
+
+\subsection{Universal Dependencies}
+UD version 2.18 supplies independently annotated structural information for languages with matching treebanks. Relevant fields include token text, universal POS tags, morphological features, dependency heads, and dependency relations. These annotations support quantities that cannot be recovered from raw text by the present implementation, such as morphological-feature density and mean dependency distance.
+
+The conceptual separation is therefore:
+\[
+\text{FLEURS}\rightarrow \text{locality, durations, text-based morphology index},
+\]
+\[
+\text{UD}\rightarrow \text{annotation-dependent morphology and syntax diagnostics}.
+\]
+
+\subsection{Language sample}
+The language sample contains 102 FLEURS rows and 16 broad family labels. Family labels are descriptive metadata used to annotate plots; they are not fitted effects in the locality estimator.
+
+\begin{table}[H]\centering
+\caption{Family-level structural-annotation coverage in the current result.}\label{tab:family}
+\input{tables/family_coverage.tex}
+\end{table}
+
+\subsection{Why are 44 morphology values missing?}
+The current result contains 44 rows with a missing morphology index. Those rows share the status `ud\_status = no\_matching\_treebank`, while their FLEURS locality fields remain populated. The mathematical definition of the morphology index does not require UD. The missingness instead arises from the current pipeline architecture: the text perturbation is invoked from within the UD-processing branch. Thus, a missing UD treebank prevents the present run from materializing the text-only morphology outputs for that row. This is a processing-coverage condition, not a statement that the language lacks morphology or that a morphology index is undefined in principle.
+
+\begin{table}[H]\centering
+\caption{Languages with missing morphology index in the current result.}\label{tab:missing}
+\small
+\input{tables/missing_44.tex}
+\end{table}
+
+\section{Data processing}
+\subsection{Text normalization}
+Unicode is the standard used to represent text characters across writing systems. NFC (Normalization Form C) is one standard way of representing equivalent Unicode text consistently. Unicode text is normalized to NFC form. Letters, numbers, and combining marks are retained; punctuation and non-spacing symbols are replaced by spaces; repeated whitespace is collapsed; and leading/trailing whitespace is removed. The locality stream is formed by joining normalized utterances with single spaces.
+
+The estimator is character based. Character distance is an operational representation, not a claim that orthographic characters are perceptually or cognitively primitive.
+
+\subsection{Held-out split}
+Usable utterances are randomly permuted with a fixed seed and divided into nominal 80/20 training and validation subsets. The split is at utterance level. The held-out target population is fixed across model orders so that changes in cross-entropy are attributable to context order rather than a changing evaluation population.
+
+The nominal locality budgets are 100,000 training characters and 20,000 validation characters. The actual effective counts are recorded because some languages do not reach the nominal caps.
+
+\subsection{Kneser--Ney estimation}
+For context $h$ followed by character $w$, a generic interpolated Kneser--Ney probability can be written as
+\[
+P_{\mathrm{KN}}(w\mid h)=
+\frac{\max\{c(hw)-D,0\}}{c(h)}+\lambda(h)P_{\mathrm{KN}}(w\mid h'),
+\]
+where $D=0.75$ in the production configuration and $h'$ is the backed-off history. Lower-order continuation counts are constructed from distinct left-extension types.
+
+At context order $t$, the held-out cross-entropy estimate is
+\[
+\hat S_t=-\frac{1}{N_t}\sum_{i=1}^{N_t}\log_2 \hat P_t(c_i\mid c_{i-t:i-1}).
+\]
+The corresponding information increment is
+\[
+\hat I_t=\hat S_{t-1}-\hat S_t.
+\]
+Because these are finite-sample estimates, larger-lag increments may fluctuate around zero or become negative.
+
+\subsection{Positive-prefix and exponential fit}
+The production estimator applies a monotone non-increasing correction to the empirical surprisal sequence, then retains the contiguous prefix for which the resulting information increments are finite and positive. The decay rate is estimated from
+\[
+I_t=Ae^{-\lch t},
+\]
+which becomes linear after taking logarithms:
+\[
+\log I_t=\log A-\lch t.
+\]
+The fitted half-life in the character domain is
+\[
+h_{1/2}=\frac{\log 2}{\lch}.
+\]
+
+\section{Information-theoretic foundations}
+For a discrete variable $X$ with probability mass function $p(x)$, Shannon entropy is
+\[
+H(X)=-\sum_x p(x)\log_2 p(x).
+\]
+Conditional entropy and mutual information are
+\[
+H(X\mid Y)=-\sum_{x,y}p(x,y)\log_2p(x\mid y),
+\qquad
+I(X;Y)=H(X)-H(X\mid Y).
+\]
+Pointwise surprisal is $-\log_2 p$.
+
+If the current character is $C_t$ and the available context is restricted to the previous $t$ characters, the empirical cross-entropy behaves as a finite-sample estimate of the corresponding conditional entropy. The locality increment is the reduction in predictive surprisal obtained by adding one more unit of retained context.
+
+The memory-cost quantity used in the analysis is
+\[
+M_T=\sum_{t=1}^{T}tI_t.
+\]
+The factor $t$ gives greater weight to long-distance retained information. This makes the memory quantity naturally sensitive to the tail of the locality curve.
+
+\section{How the main formulas connect}\label{sec:formula-connection}
+The formulas in the project are easiest to understand as one sequence rather than as unrelated equations. First the language model assigns a probability to each held-out character. Probability is converted into surprisal by $-\log_2 p$. Averaging these values gives cross-entropy. Repeating this for different context lengths gives $S_t$. Taking successive differences gives information increments $I_t=S_{t-1}-S_t$. Fitting an exponential gives a compact locality parameter $\lambda_{char}$. Multiplying by speech-character rate converts that parameter into seconds, $\lambda_{time}=\lambda_{char}r_c$.
+
+In symbols, the central chain is
+\[
+\hat P_t\ \longrightarrow\ -\log_2\hat P_t\ \longrightarrow\ S_t\ \longrightarrow\ I_t\ \longrightarrow\ Ae^{-\lambda_{char}t}\ \longrightarrow\ \lambda_{time}=\lambda_{char}r_c.
+\]
+
+This single chain explains why the report contains probability, information theory, curve fitting, and regression: each stage transforms the output of the previous stage into the quantity needed by the next stage.
+
+\section{Temporal calibration}
+Let $r_c$ be the empirical speech-character rate, measured in characters per second. Then character lag and speech time are related by
+\[
+\tau=\frac{t}{r_c}.
+\]
+Substituting $t=r_c\tau$ into the character-domain exponential gives
+\[
+I(\tau)=Ae^{-\lch r_c\tau},
+\]
+so
+\[
+\boxed{\ltm=\lch r_c}.
+\]
+The current values satisfy this identity to floating-point precision.
+
+The time-domain regression therefore omits speech-character rate from its predictor matrix. Including it as a free predictor would allow the model to recover an algebraic component of the response rather than testing an independent empirical relation.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.86\textwidth]{12_lambda_time_vs_speech_rate.png}
+\caption{Speech-character rate against time-domain locality rate. The relationship is partly algebraically induced by $\ltm=\lch r_c$, so the figure is a calibration diagnostic rather than independent evidence of causation.}
+\end{figure}
+
+\section{Global locality results}
+\begin{figure}[H]\centering
+\includegraphics[width=0.98\textwidth]{01_global_locality_curves_characters.png}
+\caption{Global information locality curves in character space. The mean and median summaries describe the sample of language-level curves.}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.98\textwidth]{02_global_locality_curves_seconds.png}
+\caption{The same locality curves after character lag is converted to speech time using empirical durations.}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.98\textwidth]{03_information_retention_heatmap.png}
+\caption{Language-by-lag information-retention heatmap. Ordering languages by fitted character-domain decay makes heterogeneity visible without requiring 102 overlapping line colours.}
+\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.74\textwidth]{04_lambda_character_distribution.png}
+\caption{Distribution of character-domain decay rates.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.74\textwidth]{05_lambda_time_distribution.png}
+\caption{Distribution of speech-time decay rates.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.86\textwidth]{24_locality_fit_quality.png}
+\caption{Quality of the exponential summary across languages. The fit statistic is computed on the retained positive-prefix log-information curve.}\end{figure}
+
+Across the 102 languages, the character-domain decay rate ranges from approximately 0.393 to 1.192 per character, with median approximately 0.580. The time-domain rate ranges from approximately 1.246 to 11.841 per second, with median approximately 5.072.
+
+The median exponential log-scale fit $R^2$ is approximately 0.972. Only two languages have $R^2<0.90$ in the current results. A high value of this statistic means that the selected exponential curve summarizes the retained positive prefix closely; it does not prove that the language is generated by an exact exponential mechanism outside the observed range.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.78\textwidth]{07_lambda_character_extremes.png}
+\caption{Extreme character-domain locality rates.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.78\textwidth]{08_lambda_time_extremes.png}
+\caption{Extreme speech-time locality rates.}\end{figure}
+
+\section{Memory cost}
+The current memory quantity is the truncated weighted sum
+\[
+M_T=\sum_{t=1}^{T}tI_t.
+\]
+For the numerical summary, non-finite or negative empirical information increments are excluded from the weighted sum after the locality curve has been estimated. This convention stabilizes the memory diagnostic without altering the displayed raw locality curve.
+
+The Pearson correlation between memory cost and $\lch$ is approximately $-0.356$, while the Spearman correlation is approximately $-0.384$. The negative direction is coherent with the geometry of exponential decay: smaller $\lch$ corresponds to a slower tail and therefore tends to place more information at larger distances.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.78\textwidth]{18_memory_cost_vs_lambda.png}
+\caption{Truncated weighted memory cost against character-domain decay rate.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.78\textwidth]{40_memory_cost_vs_half_life.png}
+\caption{Memory cost against character-domain half-life.}\end{figure}
+
+\section{Analytic--synthetic information decomposition}
+\subsection{How entropy is estimated for the morphology calculation}
+The morphology calculation uses a non-parametric \textbf{Lempel--Ziv (LZ) longest-previous-factor estimator}, not the Kneser--Ney estimator used for the primary locality curve. Lempel--Ziv methods are a family of \textbf{lossless compression} methods: lossless means that the original sequence can be recovered exactly after decoding.
+
+For a normalized character sequence
+\[
+x_1,x_2,\ldots,x_N,
+\]
+look at each position $i$. Find the longest string beginning at $i$ that already occurred earlier in the sequence. Let the length of that longest previous match be $L_i$, and define $l_i=L_i+1$. The estimator used in the code is
+\[
+\boxed{\widehat H_{LZ}=\left[\frac{1}{N}\sum_{i=2}^{N}\frac{l_i}{\log_2 i}\right]^{-1}.}
+\]
+Here $N$ is the number of characters and $i$ is the current position. Long repeated patterns produce long previous matches and make the sequence easier to describe; short matches indicate less repetition and therefore a larger estimated information rate.
+
+The original text and both perturbed texts are fed into this same estimator. The resulting numbers can therefore be compared directly as entropy-rate estimates under the chosen representation.
+
+\paragraph{Why Kneser--Ney and Lempel--Ziv are both present.}
+Kneser--Ney is a finite-context predictive language model used to estimate held-out cross-entropy at controlled context lengths. Lempel--Ziv is a sequence-complexity estimator based on repeated substrings and is used here for the text-perturbation morphology calculation. They answer different computational questions.
+
+\subsection{Operational construction}
+The morphology calculation is performed on characters, even though the two perturbations are defined in terms of words.
+
+For the first perturbation, whole word tokens are randomly permuted inside each utterance. Let $H_{original}$ be the Lempel--Ziv entropy-rate estimate for the original text and $H_{order}$ the estimate after word-order randomization. Define
+\[
+D_{order}=H_{order}-H_{original}.
+\]
+
+For the second perturbation, each distinct word type of length at least two receives one random replacement string of the same length, constructed from the corpus character alphabet. The same original word type receives the same replacement everywhere. Word order and word length are preserved, while the original sequence of characters inside the word is destroyed. Let the resulting entropy-rate estimate be $H_{structure}$. Define
+\[
+D_{structure}=H_{structure}-H_{original}.
+\]
+
+The implementation identifies the morphology index only when
+\[
+D_{order}\ge0,\qquad D_{structure}\ge0,
+\qquad D_{order}+D_{structure}>0.
+\]
+It then computes
+\[
+M=\frac{D_{structure}}{D_{order}+D_{structure}}.
+\]
+
+The quantity $M$ is a relative structural-share statistic. It is a computational proxy for how much of the two measured perturbation effects is associated with within-word structure; it is not a complete typological measure of linguistic morphology.
+
+\subsection{Morphology and locality}
+For the 58 populated morphology rows in the current result table, the median index is approximately 0.652. The simple association with character-domain locality is nearly zero: Pearson $r\approx 0.019$ and Spearman $\rho\approx -0.024$.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{13_morphology_tradeoff_map.png}
+\caption{Word-order versus word-structure redundancy for languages with populated perturbation outputs.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{14_morphology_index_vs_lambda_character.png}
+\caption{Simple morphology-index relation with character-domain locality for the 58 populated morphology rows.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{15_morphology_index_vs_lambda_time.png}
+\caption{Simple morphology-index relation with speech-time locality for the 58 populated morphology rows.}\end{figure}
+
+The weak simple association means that the scalar balance $M$ does not, by itself, account for the cross-language spread in the locality parameter. This is a statement about the present representation and data, not evidence that morphology is irrelevant to information locality in general.
+
+\subsection{All-language family-coded locality views}
+The two new family-coded views retain all 102 language rows. Where $M$ is populated, the language is placed at its measured morphology coordinate. Where $M$ is missing in the current result, the row remains visible in a hatched NA strip at its observed locality coordinate.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.98\textwidth]{41_morphology_index_vs_lambda_character_102_family.png}
+\caption{Family-coded character-domain view with all 102 language rows retained. The measured morphology points are shown in the ordinary panel; the 44 current NA rows are retained in the hatched strip at their observed $\lch$ coordinate.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.98\textwidth]{42_morphology_index_vs_lambda_time_102_family.png}
+\caption{Family-coded speech-time view with all 102 language rows retained. The structural missingness concerns the morphology-index field, not the FLEURS locality estimate.}\end{figure}
+
+\section{Other structural and lexical diagnostics}
+Pearson correlation is
+\[
+r=\frac{\sum_i(x_i-\bar x)(y_i-\bar y)}{\sqrt{\sum_i(x_i-\bar x)^2\sum_i(y_i-\bar y)^2}},
+\]
+while Spearman's $\rho$ is Pearson correlation applied to ranks.
+
+\begin{table}[H]\centering\small
+\caption{Descriptive bivariate associations with character-domain locality.}\label{tab:corr}
+\input{tables/correlations.tex}
+\end{table}
+
+The strongest simple negative Pearson associations among the listed UD-derived variables are seen for morphological-feature density and mean dependency distance. Lexical TTR has a positive Pearson association while its rank association is smaller. These are narrow descriptive questions on a structurally selected subset and should not be treated as independent causal tests.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.78\textwidth]{19_ud_morph_feature_density_vs_lambda.png}
+\caption{UD morphological-feature density against character-domain locality.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.78\textwidth]{20_dependency_distance_vs_lambda.png}
+\caption{UD mean dependency distance against character-domain locality.}\end{figure}
+
+\section{Cross-language statistical model}
+\subsection{Outcome transformation}
+The outcomes are positive decay rates, so the primary regression uses
+\[
+Y_{\ell,char}=\log \lch,
+\qquad
+Y_{\ell,time}=\log \ltm.
+\]
+The logarithm turns multiplicative differences into additive differences and makes standardized coefficient interpretation easier.
+
+\subsection{Design matrix}
+Numerical predictors are median-imputed and standardized:
+\[
+X^*_{\ell j}=\frac{X_{\ell j}-\operatorname{median}(X_j)}{s_j}.
+\]
+Categorical region and script variables are mode-imputed and one-hot encoded, with unknown levels ignored during held-out prediction. The current predictor set contains speech, lexical, text-entropy, morphology, UD-structure, and corpus-size variables. Interaction terms include morphology times syllable rate, word length times syllable rate, and morphology times word length.
+
+\subsection{Ridge regression}
+For penalty $\alpha>0$, the Ridge estimate minimizes
+\[
+\hat\beta_{\alpha}=\arg\min_{\beta_0,\beta}
+\left\{\sum_{\ell=1}^n(Y_\ell-\beta_0-X_\ell^{*\top}\beta)^2+\alpha\|\beta\|_2^2\right\}.
+\]
+When the preprocessed design is of full column rank,
+\[
+\hat\beta=(X^{*\top}X^*+\alpha I)^{-1}X^{*\top}Y.
+\]
+The penalty parameter is selected over 80 logarithmically spaced values from $10^{-4}$ to $10^4$. In the current run, the selected value is $10^{-4}$ for both outcomes.
+
+\subsection{LOCO-CV}
+Because languages share genealogical and areal history, random row splits can obscure transportability. The main validation removes one language at a time. For held-out language $\ell$,
+\[
+e_\ell=Y_\ell-\hat f_{-\ell}(X_\ell).
+\]
+The pooled cross-validated coefficient of determination is
+\[
+R^2_{CV}=1-\frac{\sum_\ell e_\ell^2}{\sum_\ell(Y_\ell-\bar Y)^2}.
+\]
+Negative values mean that the cross-validated squared error exceeds the baseline sum of squares.
+
+\begin{table}[H]\centering\small
+\caption{Stored cross-language predictive performance.}\label{tab:reg}
+\input{tables/regression_metrics.tex}
+\end{table}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{27_regression_cv_performance.png}
+\caption{LOCO-CV performance for the primary and sensitivity models.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{28_character_observed_vs_predicted.png}
+\caption{Observed versus LOCO-CV predicted log character-domain locality.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{29_time_observed_vs_predicted.png}
+\caption{Observed versus LOCO-CV predicted log speech-time locality.}\end{figure}
+
+The primary Ridge values are $R^2_{CV}\approx-0.392$ for character-domain log decay and $R^2_{CV}\approx-0.173$ for time-domain log decay. Bayesian Ridge and Elastic Net sensitivities are also negative. This means the current predictor representation does not transport reliably to held-out language rows.
+
+\section{Statistical assumptions}
+The assumptions should be separated by the part of the analysis they support.
+
+\begin{enumerate}
+\item \textbf{Stable stochastic target.} The information-locality interpretation is naturally stated for a stationary process, while the empirical corpora are finite and heterogeneous.
+\item \textbf{Held-out validity.} The validation targets are treated as representative of the same language-generating process as the training stream.
+\item \textbf{Positive smoothed probabilities.} Kneser--Ney smoothing ensures that held-out character strings do not receive zero probability under the fitted model.
+\item \textbf{Positive-prefix estimation.} The exponential fit is restricted to a finite region in which the empirical information increments are finite and positive.
+\item \textbf{Exponential summary.} The retained positive prefix is assumed to be adequately summarized by a straight line in $(t,\log I_t)$ space.
+\item \textbf{Residual bootstrap approximation.} Bootstrap confidence intervals for $\lambda$ treat the fitted log-information residuals as approximately exchangeable, meaning that their order is treated as unimportant for the resampling approximation.
+\item \textbf{Cross-language dependence.} Languages are not literally iid observations; shared genealogy, area, and source conventions remain possible.
+\item \textbf{Linear conditional mean.} The Ridge model assumes that conditional mean log decay is adequately approximated by an additive function of the transformed predictors.
+\item \textbf{No Gaussian requirement for Ridge fitting.} Squared-error minimization and Ridge regularization do not require Gaussian residuals. Gaussianity would matter for classical exact small-sample inference, which is not claimed here.
+\item \textbf{No causal identification.} The regression is observational and does not identify intervention effects.
+\end{enumerate}
+
+\section{Results and interpretation}
+\subsection{Distribution of locality decay}
+The character-domain rate is approximately 0.393 at the minimum and 1.192 at the maximum, with median 0.580. The time-domain rate ranges from 1.246 to 11.841 per second, with median 5.072. In the current output, Welsh has the smallest character-domain rate and Burmese the largest; Cantonese Chinese has the smallest time-domain rate and Burmese the largest. These are run-specific descriptive extrema.
+
+\subsection{Exponential fit quality}
+The median log-scale exponential fit is approximately 0.972, indicating that the chosen two-parameter summary captures the retained positive prefix closely for most languages. Poorer fits for a small number of languages show that the exponential law should be read as an empirical summary rather than an exact universal mechanism.
+
+\subsection{Hilberg comparison}
+A Hilberg-type alternative has negative fitted $R^2$ for 83 of 102 languages in the current comparison. This is evidence that, under the present finite lag range and fitting protocol, that alternative is a weaker compact description of these estimated locality curves. It is not a general theorem about language scaling.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{26_hilberg_fit_distribution.png}
+\caption{Distribution of Hilberg-model fit quality in the current comparison.}\end{figure}
+
+\subsection{Regression coefficients}
+Numerical predictors are standardized, so a numerical coefficient measures the fitted response change associated with a one-standard-deviation increase in the predictor, holding the other transformed predictors fixed. Categorical coefficients are relative to the omitted reference category. These are descriptive fitted parameters, not causal effects.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{32_character_regression_coefficients.png}
+\caption{Character-domain Ridge coefficients.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{33_time_regression_coefficients.png}
+\caption{Time-domain Ridge coefficients.}\end{figure}
+
+The complete coefficient tables are provided in Appendix~\ref{app:coeff} so that coefficient magnitudes, signs, and feature names can be inspected without relying on a visual ranking.
+
+\section{Residual diagnostics and structural coverage}
+The largest LOCO-CV residuals identify language rows for which the current predictor set misses substantial variation.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{30_character_residuals.png}
+\caption{Character-domain LOCO-CV residuals.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{31_time_residuals.png}
+\caption{Time-domain LOCO-CV residuals.}\end{figure}
+
+The structural-annotation coverage is distinct from locality coverage. FLEURS locality is available for all 102 rows in the current result. UD-dependent variables and the currently materialized perturbation-based morphology index are available for a smaller subset.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{34_ud_coverage_by_region.png}
+\caption{Structural-annotation coverage.}\end{figure}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.82\textwidth]{36_effective_train_vs_validation.png}
+\caption{Effective train and validation character budgets by language.}\end{figure}
+
+\section{Limitations}
+\subsection{Sampling and representativeness}
+The 102 languages form a benchmark sample rather than a simple random sample from the world's languages. Results should be interpreted for the supplied language set.
+
+\subsection{Genealogical and areal dependence}
+Related and geographically proximate languages are not independent draws. LOCO-CV measures transfer to held-out language rows but does not explicitly fit a phylogenetic covariance model.
+
+\subsection{Corpus comparability}
+Multilingual benchmark corpora can differ in speaker composition, recording environment, genre, transcription conventions, and source size. These differences can influence language-model estimates.
+
+\subsection{Tokenizer and orthography dependence}
+The locality estimator works on normalized orthographic characters. Scripts and orthographic conventions differ in the amount of character material used to encode comparable linguistic content.
+
+\subsection{Finite-sample estimation}
+The empirical locality curve is itself model-based. At long lags, data sparsity increases and the positive-prefix convention can truncate the tail. Different orders, discounts, or data budgets could change the fitted parameter.
+
+\subsection{Speech-time measurement}
+Speech time is estimated from FLEURS audio sample counts. This is empirical for the benchmark recordings, but it remains sample-specific and can interact with speech rate and transcript conventions.
+
+\subsection{Morphology proxy versus linguistic morphology}
+The perturbation index measures the entropy sensitivity of a specific representation under controlled randomization. It is not equivalent to a typological morphology scale.
+
+\subsection{UD coverage and the current morphology NA pattern}
+The 44 missing morphology rows arise from the current computation's dependence on the UD branch. This is not a random missing-data process. Imputation would add assumptions beyond the current analysis, so the current results retain the missing values explicitly.
+
+\subsection{Regression misspecification}
+A linear Ridge model is useful for controlled comparison but is not a generative theory of cross-linguistic variation. The negative LOCO-CV $R^2$ values show weak predictive transport for the present feature set.
+
+\subsection{No formal causal inference}
+The cross-language regression is observational. A coefficient, regardless of sign or magnitude, does not identify the effect of intervening on the corresponding linguistic property.
+
+\section{Conclusions}
+The analysis provides a mathematically explicit pipeline from sequential text to information locality, from locality curves to exponential decay, and from language-level summaries to a cross-language predictive model.
+
+First, exponential decay provides a strong descriptive summary of most of the estimated locality curves. Second, the character and time parameterizations are linked exactly through the measured speech-character rate, so they should be treated as two representations of related but distinct quantities. Third, the perturbation-based morphology index is a useful operational decomposition but is not a complete typological measure, and in the current 58-row realization it has almost no simple linear or rank association with character-domain locality. Fourth, the cross-language Ridge model does not generalize reliably to held-out languages under LOCO-CV. Finally, the 44 morphology NA rows should be interpreted as a computational coverage condition rather than an absence of text or linguistic structure.
+
+\section{Future work}
+The clearest methodological extension is to compute the text-based morphology index directly from the same normalized FLEURS transcripts for every language, independently of UD availability. UD-derived morphology and dependency predictors can then remain a separate annotation layer. This would place all 102 languages on a common text source for the perturbation index while preserving the genuine coverage limits of the UD-specific variables.
+
+Further extensions include hierarchical uncertainty models for language-level decay rates, phylogenetic or family-aware cross-language models, better multilingual corpus matching, and morphology measures based on reliable morpheme or phonological segmentation rather than orthographic characters alone.
+
+\appendix
+\section{The 44 morphology-NA languages}
+The exact current NA pattern is given in Table~\ref{tab:missing}. All of these rows retain FLEURS locality estimates.
+
+\section{Complete 102-language summary}
+\label{app:lang}
+\small
+\input{tables/language_summary.tex}
+\normalsize
+
+\section{Complete Ridge coefficient tables}
+\label{app:coeff}
+\small
+\subsection*{Character-domain coefficients}
+\input{tables/character_coefficients.tex}
+\subsection*{Time-domain coefficients}
+\input{tables/time_coefficients.tex}
+\normalsize
+
+\section{Mathematical definitions at a glance}
+For reference, the central formulas are
+\[
+H(X)=-\sum_xp(x)\log_2p(x),
+\qquad
+I_t=S_{t-1}-S_t,
+\]
+\[
+I(\tau)=Ae^{-\lambda \tau},
+\qquad
+h_{1/2}=\frac{\log 2}{\lambda},
+\]
+\[
+M_T=\sum_{t=1}^{T}tI_t,
+\]
+\[
+D_{order}=H_{order}-H_{original}.
+\]
+\[
+D_{structure}=H_{structure}-H_{original}.
+\]
+\[
+M=\frac{D_{structure}}{D_{order}+D_{structure}},
+\qquad
+\ltm=\lch r_c,
+\]
+\[
+R^2_{CV}=1-\frac{\sum_\ell e_\ell^2}{\sum_\ell(Y_\ell-\bar Y)^2}.
+\]
+
+\begin{thebibliography}{9}
+\bibitem{conneau2022fleurs}
+A. Conneau et al. (2022). \textit{FLEURS: Few-shot Learning Evaluation of Universal Representations of Speech}. arXiv:2205.12446.
+
+\bibitem{nivre2020udv2}
+J. Nivre et al. (2020). \textit{Universal Dependencies v2: An Evergrowing Multilingual Treebank Collection}. Proceedings of LREC 2020, 4034--4043.
+
+\bibitem{kneser1995improved}
+R. Kneser and H. Ney (1995). \textit{Improved backing-off for m-gram language modeling}. Proceedings of ICASSP.
+
+\bibitem{chen1999empirical}
+S. F. Chen and J. Goodman (1999). \textit{An empirical study of smoothing techniques for language modeling}. Harvard University Computer Science Technical Report TR-10-99.
+
+\bibitem{hahn2021information}
+M. Hahn, J. Degen, and R. Futrell (2021). \textit{Information locality as a consequence of memory limitations}. Psychological Review, 128(4), 726--756. doi:10.1037/rev0000269.
+
+\bibitem{koplenig2017tradeoff}
+A. Koplenig, P. Meyer, S. Wolfer, and C. Müller-Spitzer (2017). \textit{The statistical trade-off between word order and word structure -- large-scale evidence for the principle of least effort}. PLOS ONE, 12(3), e0173614.
+
+\bibitem{debowski2020scaling}
+L. Dębowski (2020). \textit{Information-theoretic scaling laws for natural language}.
+\end{thebibliography}
+
+\end{document}
