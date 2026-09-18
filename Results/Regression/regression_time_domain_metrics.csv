@@ -1,0 +1,2 @@
+n_languages,outcome,cv_r2_log_outcome,cv_mae_log_outcome,cv_rmse_log_outcome,selected_alpha
+102,locality_lambda_per_s,-0.1731345140254945,0.24635048653913594,0.3441405386096491,0.0001

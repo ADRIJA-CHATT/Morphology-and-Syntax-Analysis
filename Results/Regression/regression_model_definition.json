@@ -1,0 +1,11 @@
+{
+  "primary_outcome": "log(locality_lambda_per_char)",
+  "model": "RidgeCV with leave-one-language-out cross-validation",
+  "sensitivity": [
+    "BayesianRidge",
+    "ElasticNetCV(l1_ratio=0.5)"
+  ],
+  "secondary_time_outcome": "log(locality_lambda_per_s)",
+  "time_domain_excludes_speech_char_rate_cps": true,
+  "reason": "lambda_per_s = lambda_per_char * speech_char_rate_cps; including the latter as a predictor would introduce algebraic coupling."
+}

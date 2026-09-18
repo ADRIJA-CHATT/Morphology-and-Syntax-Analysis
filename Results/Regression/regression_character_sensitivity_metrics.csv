@@ -1,0 +1,3 @@
+model,outcome,n_languages,cv_r2_log_outcome,cv_mae_log_outcome
+bayesian_ridge,locality_lambda_per_char,102,-0.21998955718937419,0.17852988245488832
+elastic_net,locality_lambda_per_char,102,-0.301543254795839,0.18790134973441272
