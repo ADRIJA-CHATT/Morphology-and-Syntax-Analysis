@@ -1,9 +1,0 @@
-{
-  "analysis_version": "2026-09-16-hf-fleurs-ud-v1",
-  "mode": "full",
-  "fleurs_repo": "google/fleurs",
-  "fleurs_revision": "main",
-  "ud_repo": "universal-dependencies/universal_dependencies",
-  "ud_revision": "2.18",
-  "requested_language_count": 102
-}
